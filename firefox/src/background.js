@@ -118,7 +118,7 @@
     next();
 })();
 
-// Saves options to chrome.storage
+// Saves options to browser.storage
 function saveOptions() {
 
     var turnOn = document.getElementsByName('turn-on')[0].checked;
@@ -127,12 +127,12 @@ function saveOptions() {
     blur = (blur === 'blur' ? true : false);
     inline = (inline === 'inline' ? true : false);
     try {
-        chrome.storage.sync.set({
+        browser.storage.local.set({
             turnOn: turnOn,
             blur: blur,
             inline: inline
         }, function() {
-            chrome.tabs.query({
+            browser.tabs.query({
                 "url": [
                     "*://*.fb.com/*",
                     "*://*.facebook.com/*",
@@ -143,7 +143,7 @@ function saveOptions() {
                 try {
                     if( tabs.length > 0 ){
                         for(var i = 0; i < tabs.length; i++){
-                            chrome.tabs.sendMessage(tabs[i].id, {
+                            browser.tabs.sendMessage(tabs[i].id, {
                                 action: "reloadCSS"
                             }, function(response) {});
                         }
@@ -164,7 +164,7 @@ function saveOptions() {
 
 // Restores select box and checkbox state using the preferences
 function restoreOptions() {
-    chrome.storage.sync.get({
+    browser.storage.local.get({
         turnOn: true,
         blur: true,
         inline: true
