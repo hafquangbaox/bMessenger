@@ -1,0 +1,43 @@
+{
+    "name": "bMessenger",
+    "version": "0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/logo-16.png",
+            "24": "icons/logo-24.png",
+            "32": "icons/logo-32.png",
+            "48": "icons/logo-48.png",
+            "128": "icons/logo-128.png"
+        },
+        "default_title": "That's the tool tip",
+        "default_popup": "src/popup.html"
+    },
+    "icons": {
+        "16": "icons/logo-16.png",
+        "24": "icons/logo-24.png",
+        "32": "icons/logo-32.png",
+        "48": "icons/logo-48.png",
+        "128": "icons/logo-128.png"
+    },
+    "background": {
+        "scripts": ["src/background.js"],
+        "persistent": true
+    },
+    "content_scripts": [{
+        "matches": [
+            "*://*.fb.com/*",
+            "*://*.facebook.com/*",
+            "*://*.m.me/*",
+            "*://*.messenger.com/*"
+        ],
+        "js": ["src/content.js"]
+    }],
+    "permissions": [
+        "storage",
+        "management",
+        "contextMenus", 
+        "tabs",
+        "*://*/*"
+    ]
+}

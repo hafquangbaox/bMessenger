@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bMessenger</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="text-title"></div>
+    </div>
+    <div class="block-container">
+        <span style="font-size: 1rem;">Turn on extension</span>
+        
+        <!-- Rounded switch -->
+        <label class="switch">
+          <input type="checkbox" id="turn-on" name="turn-on">
+          <span class="slider round"></span>
+        </label>
+    </div>
+    <hr>
+    <div class="block-container">
+        <p style="font-size: 1rem;">Effect</p>
+        
+        <label class="container-radio">Blur
+          <input type="radio" id="effect-blur" checked="checked" name="effect" value="blur">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-radio">Flip mirror
+          <input type="radio" id="effect-flip" checked="" name="effect" value="flip">
+          <span class="checkmark"></span>
+        </label>
+    </div>
+    <hr class="half-hr">
+    <div class="block-container">
+        <p style="font-size: 1rem;">Hover mouse to view content</p>
+        
+        <label class="container-radio">Inline
+          <input type="radio" id="hover-inline" checked="checked" name="hover" value="inline">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container-radio">Block
+          <input type="radio" id="hover-block" checked=""  name="hover" value="block">
+          <span class="checkmark"></span>
+        </label>
+    </div>
+</body>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="background.js"></script>
+</html>
