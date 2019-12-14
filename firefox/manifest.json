@@ -1,0 +1,59 @@
+{
+  "name": "bMessenger",
+  "version": "0.1",
+  "description": "This widget will blur or mirror effect for messages on Facebook and Messenger.",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/logo-16.png",
+      "24": "icons/logo-24.png",
+      "32": "icons/logo-32.png",
+      "48": "icons/logo-48.png",
+      "128": "icons/logo-128.png"
+    },
+    "default_title": "That's the tool tip",
+    "default_popup": "src/popup.html"
+  },
+  "author": "https://www.facebook.com/hafquangbaox",
+  "homepage_url": "https://www.facebook.com/hafquangbaox",
+  "icons": {
+    "16": "icons/logo-16.png",
+    "24": "icons/logo-24.png",
+    "32": "icons/logo-32.png",
+    "48": "icons/logo-48.png",
+    "128": "icons/logo-128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.fb.com/*",
+        "*://*.facebook.com/*",
+        "*://*.m.me/*",
+        "*://*.messenger.com/*"
+      ],
+      "js": [
+        "src/content.js"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "storage",
+    "management",
+    "contextMenus",
+    "tabs",
+    "*://*/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "quanngbao1994@gmail.com",
+      "strict_min_version": "42.0"
+    }
+  }
+}

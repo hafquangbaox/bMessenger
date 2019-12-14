@@ -683,7 +683,7 @@ var selector = {
 };
 
 function applyCSS() {
-    chrome.storage.sync.get({
+    browser.storage.local.get({
         turnOn: true,
         blur: true,
         inline: true
@@ -892,7 +892,7 @@ function handleFB(config) {
 
 applyCSS();
 
-chrome.runtime.onMessage.addListener(
+browser.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         try {
             if (request.action == "reloadCSS") {
