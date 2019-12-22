@@ -1,3 +1,10 @@
+/**
+ * @author Bao Ha <quangbao1994@gmail.com> 
+ * @facebook Hà Quang Bão <https://www.facebook.com/hafquangbaox>
+ * @github lozthiensu <https://github.com/lozthiensu/bMessenger>
+ * This extension is called bMessenger on firefox add-ons store. But the bastard who reviews this extension on browser.extensions doesn't allow using that name. So I had to change the name to "Protect message". But its name on github is still https://github.com/lozthiensu/bMessenger
+ */
+
 (function() {
     // ——————————————————————————————————————————————————
     // TextScramble
@@ -94,6 +101,7 @@
     // ——————————————————————————————————————————————————
 
     var phrases = [
+        'Protect message setting',
         'Hi ^_^',
         'Now you can see me',
         'you\'re going to realize',
@@ -200,5 +208,5 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-109078055-6', 'auto'); // Enter your GA identifier
 ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-// ga('require', 'displayfeatures');
+ga('require', 'displayfeatures');
 ga('send', 'pageview', '/popup.html'); // Specify the virtual path
