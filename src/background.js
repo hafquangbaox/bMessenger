@@ -101,6 +101,7 @@
     // ——————————————————————————————————————————————————
 
     var phrases = [
+        'Protect message setting',
         'Hi ^_^',
         'Now you can see me',
         'you\'re going to realize',

@@ -39,7 +39,7 @@ body {
 }
 
 .dud {
-    color: #0f0;
+    color: #000;
 }
 .block-container{
     padding: 15px;
@@ -93,11 +93,11 @@ float: right;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #ff5000;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #ff5000;
 }
 
 input:checked + .slider:before {
@@ -148,7 +148,7 @@ input:checked + .slider:before {
 }
 
 .container-radio input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #ff5000;
 }
 
 .checkmark:after {

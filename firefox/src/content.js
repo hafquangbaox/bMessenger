@@ -1,3 +1,10 @@
+/**
+ * @author Bao Ha <quangbao1994@gmail.com> 
+ * @facebook Hà Quang Bão <https://www.facebook.com/hafquangbaox>
+ * @github lozthiensu <https://github.com/lozthiensu/bMessenger>
+ * This extension is called bMessenger on firefox add-ons store. But the bastard who reviews this extension on browser.extensions doesn't allow using that name. So I had to change the name to "Protect message". But its name on github is still https://github.com/lozthiensu/bMessenger
+ */
+
 var styleEffect = {
     // One attr
     unblur10: '{ filter: none; }',
