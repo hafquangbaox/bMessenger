@@ -10,3 +10,6 @@ The utility will allow to automatically change the message with two optional eff
 Users will be able to see the message with settings when hovering over the message window or line of messages.
 Our application does not collect any user information, all changes are handled by the chrome browser.
 Video on how to use the gadget on youtube: https://www.youtube.com/watch?v=WnJ2VM802QQ
+
+Chrome: https://chrome.google.com/webstore/detail/protect-message/fgnnjldhcpkgffephopliioangockjgk
+Firefox: https://addons.mozilla.org/en-US/firefox/addon/bmessenger/
