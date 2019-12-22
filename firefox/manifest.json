@@ -1,7 +1,7 @@
 {
   "name": "bMessenger",
-  "version": "0.1",
-  "description": "This widget will blur or mirror effect for messages on Facebook and Messenger.",
+  "version": "1.0",
+  "description": "This extension will take effect blur or mirror for messages on Facebook and Messenger.",
   "manifest_version": 2,
   "browser_action": {
     "default_icon": {
@@ -11,11 +11,11 @@
       "48": "icons/logo-48.png",
       "128": "icons/logo-128.png"
     },
-    "default_title": "That's the tool tip",
+    "default_title": "bMessenger setting",
     "default_popup": "src/popup.html"
   },
   "author": "https://www.facebook.com/hafquangbaox",
-  "homepage_url": "https://www.facebook.com/hafquangbaox",
+  "homepage_url": "https://github.com/lozthiensu/bMessenger",
   "icons": {
     "16": "icons/logo-16.png",
     "24": "icons/logo-24.png",
@@ -42,13 +42,14 @@
       ]
     }
   ],
-  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;",
   "permissions": [
     "storage",
-    "management",
     "contextMenus",
-    "tabs",
-    "*://*/*"
+    "*://*.fb.com/*",
+    "*://*.facebook.com/*",
+    "*://*.m.me/*",
+    "*://*.messenger.com/*"
   ],
   "browser_specific_settings": {
     "gecko": {
