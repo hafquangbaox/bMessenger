@@ -1,28 +1,28 @@
 {
-    "name": "bMessenger security",
-    "short_name": "bMessenger",
+    "name": "Protect message",
+    "short_name": "bMessage",
     "version": "1.0",
-    "description": "This extension will take effect blur or mirror for messages on Facebook and Messenger.",
+    "description": "This extension will allow users to prevent peeking messages on Messenger and Facebook by blurring messages or creating a reverse mirror message effect. The utility will allow to automatically change the message with two optional effects: blur and reflection. Users will be able to see the message with settings when hovering over the message window or line of messages. Our application does not collect any user information, all changes are handled by the chrome browser. Video on how to use the gadget on youtube: https://www.youtube.com/watch?v=o6MONZKAB7Y",
     "manifest_version": 2,
     "browser_action": {
         "default_icon": {
-            "16": "icons/logo-16.png",
-            "24": "icons/logo-24.png",
-            "32": "icons/logo-32.png",
-            "48": "icons/logo-48.png",
-            "128": "icons/logo-128.png"
+            "16": "icons/16.png",
+            "24": "icons/24.png",
+            "32": "icons/32.png",
+            "48": "icons/48.png",
+            "128": "icons/128.png"
         },
-        "default_title": "bMessenger setting",
+        "default_title": "Protect message setting",
         "default_popup": "src/popup.html"
     },
     "author": "https://www.facebook.com/hafquangbaox",
     "homepage_url": "https://github.com/lozthiensu/bMessenger",
     "icons": {
-        "16": "icons/logo-16.png",
-        "24": "icons/logo-24.png",
-        "32": "icons/logo-32.png",
-        "48": "icons/logo-48.png",
-        "128": "icons/logo-128.png"
+        "16": "icons/16.png",
+        "24": "icons/24.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
     },
     "background": {
         "scripts": ["src/background.js"],
