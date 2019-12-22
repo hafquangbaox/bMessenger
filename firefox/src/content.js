@@ -709,13 +709,19 @@ function handleStyle(config) {
     if (hostname === 'www.messenger.com') {
         handleM(config);
     } else if (hostname === 'www.facebook.com') {
-        handleFB(config);
+        var href = document.location.href;
+        if( href.indexOf('https://www.facebook.com/messages/t/') >= 0 ) {
+            handleM(config);
+        } else {
+            handleFB(config);
+        }
     } else {
         console.log('No same domain');
     }
 }
 
 function handleM(config) {
+    console.log('Apply m style');
     var styleText = '';
     if (config.blur) {
         for (var pos in selector.m.blur) {
@@ -821,6 +827,7 @@ function handleM(config) {
 }
 
 function handleFB(config) {
+    console.log('Apply fb style');
     var styleText = '';
     if (config.blur) {
         for (var pos in selector.fb.blur) {
