@@ -17,7 +17,7 @@ Chrome: https://chrome.google.com/webstore/detail/protect-message/fgnnjldhcpkgff
 Firefox: https://addons.mozilla.org/en-US/firefox/addon/bmessenger/
 
 ## Images proof
-Some images of extension on chrome browser:
+Some images of extension on chrome browser <br />
 ![alt text](https://raw.githubusercontent.com/lozthiensu/bMessenger/master/images/1400x560.png) <br />
 ![alt text](https://raw.githubusercontent.com/lozthiensu/bMessenger/master/images/1280x800.png) <br />
 ![alt text](https://raw.githubusercontent.com/lozthiensu/bMessenger/master/images/920x680.png) <br />
@@ -28,7 +28,7 @@ Some images of extension on chrome browser:
 * **Hà Quang Bão** - *Initial work* - [Facebook](https://www.facebook.com/hafquangbaox)
 
 # Todo
-`Add domain https://www.facebook.com/messages`
-`Porting an extension from chrome to opera`
-`Porting an extension from chrome to edge browser`
-`Setting with input dynamic css`
+`Add domain https://www.facebook.com/messages`<br />
+`Porting an extension from chrome to opera`<br />
+`Porting an extension from chrome to edge browser`<br />
+`Setting with input dynamic css`<br />
