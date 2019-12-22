@@ -1,5 +1,6 @@
 {
-    "name": "bMessenger",
+    "name": "bMessenger security",
+    "short_name": "bMessenger",
     "version": "1.0",
     "description": "This extension will take effect blur or mirror for messages on Facebook and Messenger.",
     "manifest_version": 2,
