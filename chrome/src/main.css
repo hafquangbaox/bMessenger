@@ -1,7 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+/*@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';*/
 
 html,
 body {
+    /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Roboto Mono', monospace;
     background: #ffffff;
     height: 100%;
@@ -10,7 +11,13 @@ body {
     margin: 0px;
     font-size: 0.9rem;
 }
+.author-center{
+  text-align: justify;
+}
+.line-1-rem{
+    font-size: 1rem;
 
+}
 .container {
     height: 100%;
     width: 100%;

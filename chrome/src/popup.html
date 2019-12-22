@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>bMessenger</title>
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -11,7 +14,7 @@
         <div class="text-title"></div>
     </div>
     <div class="block-container">
-        <span style="font-size: 1rem;">Turn on extension</span>
+        <span class="line-1-rem">Turn on extension</span>
         <label class="switch">
           <input type="checkbox" id="turn-on" name="turn-on">
           <span class="slider round"></span>
@@ -19,7 +22,7 @@
     </div>
     <hr>
     <div class="block-container">
-        <p style="font-size: 1rem;">Effect</p>
+        <p class="line-1-rem">Effect</p>
         
         <label class="container-radio">Blur
           <input type="radio" id="effect-blur" checked="checked" name="effect" value="blur">
@@ -32,7 +35,7 @@
     </div>
     <hr class="half-hr">
     <div class="block-container">
-        <p style="font-size: 1rem;">Hover mouse to view content</p>
+        <p class="line-1-rem">Hover mouse to view content</p>
         
         <label class="container-radio">Inline
           <input type="radio" id="hover-inline" checked="checked" name="hover" value="inline">
@@ -45,7 +48,7 @@
     </div>
     <hr class="half-hr">
     <div class="block-container">
-        <a href="https://github.com/lozthiensu/bMessenger" target="_blank" style="text-align: justify;">https://github.com/lozthiensu/bMessenger</a>
+        <a href="https://github.com/lozthiensu/bMessenger" target="_blank" class="author-center">https://github.com/lozthiensu/bMessenger</a>
     </div>
 </body>
 <link rel="stylesheet" type="text/css" href="main.css">
