@@ -695,17 +695,21 @@ function applyCSS() {
         blur: true,
         inline: true
     }, function(items) {
+        console.log(items);
         handleStyle(items);
     });
 }
 
 function handleStyle(config) {
+
     if (!config.turnOn) {
         var element = document.getElementById('bMessenger');
         if (!!element === true) element.innerHTML = '';
         return;
     }
     var hostname = document.location.hostname;
+    
+    console.log(hostname);
     if (hostname === 'www.messenger.com') {
         handleM(config);
     } else if (hostname === 'www.facebook.com') {
@@ -905,7 +909,7 @@ function handleFB(config) {
 }
 
 applyCSS();
-
+console.log('Running');
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         try {
