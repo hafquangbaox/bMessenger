@@ -1,4 +1,5 @@
-<img align="left" src="https://raw.githubusercontent.com/lozthiensu/bMessenger/master/icons/48.png"> # bMessenger - Protect message extension for web browser
+<img align="left" src="https://raw.githubusercontent.com/lozthiensu/bMessenger/master/icons/48.png"> - Protect message extension for web browser
+# bMessenger - Protect message extension for web browser
 This extension will allow users to prevent peeking messages on Messenger and Facebook by blurring messages or creating a reverse mirror message effect.<br />
 
 ## Getting Started
