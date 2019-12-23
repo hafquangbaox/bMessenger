@@ -10,7 +10,8 @@ body {
     font-family: 'Roboto Mono', monospace;
     background: #ffffff;
     height: 100%;
-    width: 350px;
+    width: auto;
+    min-width: 280px;
     height: 430px;
     margin: 0px;
     font-size: 0.9rem;
@@ -43,6 +44,10 @@ body {
 }
 .block-container{
     padding: 15px;
+}
+.block-container-author{
+    padding: 15px;
+    text-align: center;
 }
 hr{
     margin-block-start: 0;
@@ -169,3 +174,18 @@ input:checked + .slider:before {
     border-radius: 50%;
     background: white;
 }
+
+button.opera-panel {
+  line-height: 0px;
+  font-weight: bold;
+  padding: 0 00px;
+  background: #ff9000;
+  border: none;
+  border-radius: 50%;
+  z-index: 999999999;
+  position: absolute;
+}
+button.opera-panel:hover {
+  background: #ff5000;
+}
+

@@ -52,10 +52,12 @@
     "*://*.m.me/*",
     "*://*.messenger.com/*"
   ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "quanngbao1994@gmail.com",
-      "strict_min_version": "42.0"
-    }
+  "sidebar_action": {
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    },
+    "default_title": "Protect mesage",
+    "default_panel": "src/popup.html"
   }
 }

@@ -28,7 +28,8 @@ Some images of extension on chrome browser <br />
 * **Hà Quang Bão** - *Initial work* - [Facebook](https://www.facebook.com/hafquangbaox)
 
 # Todo
-`Add domain https://www.facebook.com/messages`<br />
-`Porting an extension from chrome to opera`<br />
-`Porting an extension from chrome to edge browser`<br />
+~~Add domain https://www.facebook.com/messages~~<br />
+~~Porting an extension from chrome to opera~~<br />
+`Submit into opera store`<br />
 `Setting with input dynamic css`<br />
+`Porting an extension from chrome to edge browser`<br />

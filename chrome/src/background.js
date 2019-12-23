@@ -128,7 +128,7 @@
 
 // Saves options to chrome.storage
 function saveOptions() {
-
+    var browserSupportSync = false;
     var turnOn = document.getElementsByName('turn-on')[0].checked;
     var blur = document.querySelector('input[name="effect"]:checked').value;
     var inline = document.querySelector('input[name="hover"]:checked').value;
@@ -140,6 +140,8 @@ function saveOptions() {
             blur: blur,
             inline: inline
         }, function() {
+            browserSupportSync = true;
+
             chrome.tabs.query({
                 "url": [
                     "*://*.fb.com/*",
@@ -149,8 +151,8 @@ function saveOptions() {
                 ]
             }, function(tabs) {
                 try {
-                    if( tabs.length > 0 ){
-                        for(var i = 0; i < tabs.length; i++){
+                    if (tabs.length > 0) {
+                        for (var i = 0; i < tabs.length; i++) {
                             chrome.tabs.sendMessage(tabs[i].id, {
                                 action: "reloadCSS"
                             }, function(response) {});
@@ -164,6 +166,7 @@ function saveOptions() {
                 }
             });
         });
+
     } catch (e) {
         console.log(e);
         alert("Error from background Extensions bMessenger, restart browser and contact to author");
@@ -172,15 +175,161 @@ function saveOptions() {
 
 // Restores select box and checkbox state using the preferences
 function restoreOptions() {
+    var browserSupportSync = false;
     chrome.storage.sync.get({
         turnOn: true,
-        blur: true,
-        inline: true
+        blur: false,
+        inline: false
     }, function(items) {
+        browserSupportSync = true;
+
         if (!!document.getElementById('turn-on') === true) document.getElementById('turn-on').checked = items.turnOn;
         if (!!document.getElementById('effect-blur') === true && items.blur) document.getElementById('effect-blur').checked = items.blur;
         if (!!document.getElementById('hover-inline') === true && items.inline) document.getElementById('hover-inline').checked = items.inline;
     });
+
+}
+
+function createContextMenu(config) {
+    chrome.contextMenus.removeAll(function() {
+
+        chrome.contextMenus.create({
+            type: 'radio',
+            id: "enable",
+            title: 'Enable extension',
+            checked: config.turnOn === true ? true : false,
+            onclick: getActionContext
+        });
+        chrome.contextMenus.create({
+            type: 'radio',
+            id: "disable",
+            title: 'Disable extension',
+            checked: config.turnOn === true ? false : true,
+            onclick: getActionContext
+        });
+        chrome.contextMenus.create({
+            type: 'separator'
+        });
+
+        chrome.contextMenus.create({
+            type: 'radio',
+            id: "blur",
+            title: 'Effect blur',
+            checked: config.blur === true ? true : false,
+            onclick: getActionContext
+        });
+        chrome.contextMenus.create({
+            type: 'radio',
+            id: "mirror",
+            title: 'Effect mirror',
+            checked: config.blur === true ? false : true,
+            onclick: getActionContext
+        });
+        chrome.contextMenus.create({
+            type: 'separator'
+        });
+
+        chrome.contextMenus.create({
+            type: 'radio',
+            id: "inline",
+            title: 'Hover inline',
+            checked: config.inline === true ? true : false,
+            onclick: getActionContext
+        });
+        chrome.contextMenus.create({
+            type: 'radio',
+            id: "block",
+            title: 'Hover block',
+            checked: config.inline === true ? false : true,
+            onclick: getActionContext
+        });
+    });
+    console.log('Run create context');
+
+};
+
+
+function getActionContext(info, tab) {
+    console.log(info);
+    var keyChange = '';
+    var valueChange = info.checked;
+    if (info.menuItemId === 'enable' || info.menuItemId === 'disable') {
+        valueChange = info.menuItemId === 'enable' ? true : false;
+        keyChange = 'turnOn';
+    } else if (info.menuItemId === 'blur' || info.menuItemId === 'mirror') {
+        valueChange = info.menuItemId === 'blur' ? true : false;
+
+        keyChange = 'blur';
+    } else if (info.menuItemId === 'inline' || info.menuItemId === 'block') {
+        valueChange = info.menuItemId === 'inline' ? true : false;
+        keyChange = 'inline';
+    }
+
+    var browserSupportSync = false;
+    chrome.storage.sync.get({
+        turnOn: true,
+        blur: false,
+        inline: false
+    }, function(items) {
+        browserSupportSync = true;
+        items[keyChange] = valueChange;
+
+        updateContextSetting(items);
+
+    });
+
+}
+initConfig();
+function initConfig(){
+    var browserSupportSync = false;
+    chrome.storage.sync.get({
+        turnOn: true,
+        blur: false,
+        inline: false
+    }, function(items) {
+        browserSupportSync = true;
+            
+        createContextMenu(items);
+
+    });
+}
+
+function updateContextSetting(configs){
+    console.log('Update', configs);
+    var browserSupportSync = false;
+    try {
+        chrome.storage.sync.set(configs, function() {
+            browserSupportSync = true;
+
+            chrome.tabs.query({
+                "url": [
+                    "*://*.fb.com/*",
+                    "*://*.facebook.com/*",
+                    "*://*.m.me/*",
+                    "*://*.messenger.com/*"
+                ]
+            }, function(tabs) {
+                try {
+                    if (tabs.length > 0) {
+                        for (var i = 0; i < tabs.length; i++) {
+                            chrome.tabs.sendMessage(tabs[i].id, {
+                                action: "reloadCSS"
+                            }, function(response) {});
+                        }
+                    } else {
+                        console.log('Not have tabs match with query');
+                    }
+                } catch (e) {
+                    console.log(e);
+                    alert("Error from background Extensions bMessenger, restart browser and contact to author");
+                }
+            });
+        });
+
+    } catch (e) {
+        console.log(e);
+        alert("Error from background Extensions bMessenger, restart browser and contact to author");
+    }
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
@@ -201,12 +350,19 @@ if (!!document.getElementById('hover-block') === true) document.getElementById('
 });
 
 // Standard Google Universal Analytics code
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); // Note: https protocol here
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga'); // Note: https protocol here
 
 ga('create', 'UA-109078055-6', 'auto'); // Enter your GA identifier
-ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
+ga('set', 'checkProtocolTask', function() {}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
 ga('require', 'displayfeatures');
 ga('send', 'pageview', '/popup.html'); // Specify the virtual path
