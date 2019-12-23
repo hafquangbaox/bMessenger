@@ -169,3 +169,18 @@ input:checked + .slider:before {
     border-radius: 50%;
     background: white;
 }
+
+button.opera-panel {
+  line-height: 0px;
+  font-weight: bold;
+  padding: 0 00px;
+  background: #ff9000;
+  border: none;
+  border-radius: 50%;
+  z-index: 999999999;
+  position: absolute;
+}
+button.opera-panel:hover {
+  background: #ff5000;
+}
+
