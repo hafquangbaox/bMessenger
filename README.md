@@ -26,7 +26,8 @@ Some images of extension on chrome browser <br />
 
 ## Authors
 * **Hà Quang Bão** - *Initial work* - [Facebook](https://www.facebook.com/hafquangbaox)
-* **Buy me a coffe** - *Donate gate* - [Buymeacoffee](https://www.buymeacoffee.com/zvZJONX)
+## Donate gate
+**Buy me a coffe** - [Buymeacoffee](https://www.buymeacoffee.com/zvZJONX)
 
 # Todo
 ~~Add domain https://www.facebook.com/messages~~<br />
