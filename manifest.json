@@ -15,6 +15,14 @@
         "default_title": "Protect message setting",
         "default_popup": "src/popup.html"
     },
+    "sidebar_action": {
+        "default_icon": {   
+            "19": "icons/19.png",
+            "38": "icons/38.png"
+        },
+        "default_title": "Protect mesage",
+        "default_panel": "src/popup.html"
+    },
     "author": "https://www.facebook.com/hafquangbaox",
     "homepage_url": "https://github.com/lozthiensu/bMessenger",
     "icons": {
