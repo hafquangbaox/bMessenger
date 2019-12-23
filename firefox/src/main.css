@@ -9,10 +9,10 @@ body {
     /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Roboto Mono', monospace;
     background: #ffffff;
-    height: 100%;
+    height: auto;
     width: auto;
     min-width: 280px;
-    height: 430px;
+    min-height: 390px;
     margin: 0px;
     font-size: 0.9rem;
 }
@@ -43,10 +43,10 @@ body {
     color: #000;
 }
 .block-container{
-    padding: 15px;
+    padding: 8px 15px;
 }
 .block-container-author{
-    padding: 15px;
+    padding: 8px 15px;
     text-align: center;
 }
 hr{
@@ -178,7 +178,7 @@ input:checked + .slider:before {
 button.opera-panel {
   line-height: 0px;
   font-weight: bold;
-  padding: 0 00px;
+  padding: 0px 0px;
   background: #ff9000;
   border: none;
   border-radius: 50%;
@@ -188,4 +188,34 @@ button.opera-panel {
 button.opera-panel:hover {
   background: #ff5000;
 }
+
+a:hover {
+  color: #ff5000;
+}
+
+a {
+  color: #000;
+}
+
+a:active {
+  color: #ff5000;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #ff5000;
+}
+
+
+a.author-center-donate {
+  color: #ff5000;
+}
+
+a.author-center-donate:hover {
+  color: #ff8000;
+}
+
 
