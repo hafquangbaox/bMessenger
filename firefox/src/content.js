@@ -714,63 +714,6 @@ function applyCSS() {
         handleStyle(items);
     });
 
-    setTimeout(function(){
-        if( browserSupportSync === false ){
-            // Browser not support sync storage, so need read from localstorage
-            console.log('Browser not support sync storage, so need read from localstorage');
-            // 1. Create the button
-            var div = document.createElement("div");
-            div.className = "opera-panel";
-            var button = document.createElement("button");
-            button.innerHTML = '<img src="https://raw.githubusercontent.com/lozthiensu/bMessenger/master/icons/48.png">';
-            button.className = "opera-panel";
-            // 2. Append somewhere
-            var body = document.getElementsByTagName("body")[0];
-            var divInner = document.createElement("div");
-            divInner.innerHTML = " Protect message ";
-
-            div.appendChild(button);
-            div.appendChild(divInner);
-            body.appendChild(div);
-            // 3. Add event handler
-            button.addEventListener ("click", function() {
-                var iframe = document.createElement('iframe');
-                iframe.style.display = "block";
-                iframe.innerHTML = httpGet('browser.extension://kfliafgmhoeleinaafidgabnpnmbhpdf/src/popup.html');
-                body.appendChild(iframe);
-
-            });
-
-            var style = document.createElement('style');
-            style.type = 'text/css';
-            var textnode = document.createTextNode('button.opera-panel { line-height: 0px; font-weight: bold; padding: 0 00px; width: 40px; height: 40px; margin: 5px 5px; display: inline-block; position: relative; border: none; background: transparent; } div.opera-panel { background: #ff6000; width: 100%; height: 50px; position: absolute; z-index: 1; bottom: 0px; } div.opera-panel > div { display: inline-block; position: inherit; vertical-align: baseline; line-height: 50px; font-size: 0.9rem; color: #fff; } button.opera-panel > img { width: 100%; }');
-            style.appendChild(textnode);
-            style.setAttribute('id', 'opera-panel-css');
-            document.body.appendChild(style);
-
-
-            var configData = localStorage.getItem('bMessenger');
-            console.log('configData', configData);
-            var defaultConfigs = {
-                turnOn: true,
-                blur: false,
-                inline: false
-            };
-            var configs = defaultConfigs;
-            try{
-                if( !!configData === true ) configs = JSON.parse(configData);
-
-            } catch(e){
-                console.log('Parse config json error', e);
-            }
-
-            console.log(configs);
-            handleStyle(configs);
-
-        } else {
-            console.log('The browser.storage.local.working fine!');
-        }
-    }, 1000);
 }
 
 function handleStyle(config) {

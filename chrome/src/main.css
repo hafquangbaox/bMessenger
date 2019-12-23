@@ -10,7 +10,8 @@ body {
     font-family: 'Roboto Mono', monospace;
     background: #ffffff;
     height: 100%;
-    width: 350px;
+    width: auto;
+    min-width: 280px;
     height: 430px;
     margin: 0px;
     font-size: 0.9rem;
@@ -43,6 +44,10 @@ body {
 }
 .block-container{
     padding: 15px;
+}
+.block-container-author{
+    padding: 15px;
+    text-align: center;
 }
 hr{
     margin-block-start: 0;
