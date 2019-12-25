@@ -45,3 +45,8 @@ cd opera && zip -r opera.zip . -x "*.DS_Store" && cd ..
 #uglifyjs ./src/background.js -c -o ./chrome/src/background.js
 #html-minifier-terser --file-ext html --input-dir ./src --output-dir ./chrome/src --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace
 #html-minifier-terser --file-ext css --input-dir ./src --output-dir ./chrome/src --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --minify-css true
+
+
+git add .
+git commit -am 'Auto commit with build'
+

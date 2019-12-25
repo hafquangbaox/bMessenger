@@ -695,7 +695,11 @@ function applyCSS() {
     browser.storage.local.get({
         turnOn: true,
         blur: false,
-        inline: false
+        inline: false,
+        turnAvatar: true,
+        turnName: true,
+        turnMessage: true,
+        turnOther: true,
     }, function(items) {
         browserSupportSync = true;
         handleStyle(items);

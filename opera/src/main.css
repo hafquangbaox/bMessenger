@@ -12,7 +12,7 @@ body {
     height: auto;
     width: auto;
     min-width: 230px;
-    min-height: 340px;
+    min-height: 300px;
     margin: 0px;
     font-size: 0.8rem;
 }
@@ -43,11 +43,12 @@ body {
     color: #000;
 }
 .block-container{
-    padding: 5px 10px 0px 10px;
+    padding: 5px 10px 5px 10px;
 }
 .block-container-author{
     padding: 5px 10px;
     text-align: center;
+    margin-bottom: 10px;
 }
 p {
   margin-block-start: 0rem;
@@ -111,9 +112,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
+  -webkit-transform: translate3d(20px, 0, 0);
+  -ms-transform: translate3d(20px, 0, 0);
+  transform: translate3d(20px, 0, 0);
 }
 
 .slider.round {
@@ -260,14 +261,12 @@ label.toggle::before {
   height: 0px;
   overflow: hidden;
   transition: height 0.5s;
-  background: url(http://placekitten.com/g/600/300);
-  color: #FFF;
 }
 div#expand>section {
   padding: 0 20px;
 }
 input#toggle:checked ~ #expand {
-  height: 250px;
+  height: 110px;
 }
 input#toggle:checked ~ label.toggle::before {
   content: "-";
