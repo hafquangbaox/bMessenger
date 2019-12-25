@@ -11,10 +11,10 @@ body {
     background: #ffffff;
     height: auto;
     width: auto;
-    min-width: 280px;
-    min-height: 390px;
+    min-width: 230px;
+    min-height: 340px;
     margin: 0px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .author-center{
   text-align: justify;
@@ -43,11 +43,15 @@ body {
     color: #000;
 }
 .block-container{
-    padding: 8px 15px;
+    padding: 5px 10px;
 }
 .block-container-author{
-    padding: 8px 15px;
+    padding: 5px 10px;
     text-align: center;
+}
+p {
+
+    margin-block-start: 0rem;
 }
 hr{
     margin-block-start: 0;
@@ -62,9 +66,9 @@ hr{
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
-float: right;
+  width: 35px;
+  height: 15px;
+  float: right;
 }
 
 .switch input {
@@ -88,10 +92,10 @@ float: right;
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
+  height: 10px;
+  width: 10px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
@@ -106,13 +110,13 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 .slider.round {
-  border-radius: 24px;
+  border-radius: 15px;
 }
 
 .slider.round:before {
@@ -142,8 +146,8 @@ input:checked + .slider:before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -167,8 +171,8 @@ input:checked + .slider:before {
 }
 
 .container-radio .checkmark:after {
-    top: 9px;
-    left: 9px;
+    top: 6px;
+    left: 6px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -214,8 +218,58 @@ a.author-center-donate {
   color: #ff5000;
 }
 
+a.author-center-donate>img {
+  height: 40px;
+  border-radius: 5px;
+}
+
 a.author-center-donate:hover {
   color: #ff8000;
+}
+
+
+input#toggle {
+  display: none;
+  visibility: hidden;
+}
+label.toggle {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  font-size: 1.0rem;
+  font-weight: bolder;
+}
+label.toggle:hover {
+  color: #000;
+}
+label.toggle::before {
+  font-family: Consolas, monaco, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  content: "+";
+  vertical-align: text-top;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background: radial-gradient(ellipse at center, #CCC 50%, transparent 50%);
+}
+#expand {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  background: url(http://placekitten.com/g/600/300);
+  color: #FFF;
+}
+div#expand>section {
+  padding: 0 20px;
+}
+input#toggle:checked ~ #expand {
+  height: 250px;
+}
+input#toggle:checked ~ label.toggle::before {
+  content: "-";
 }
 
 

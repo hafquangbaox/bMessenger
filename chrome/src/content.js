@@ -38,28 +38,28 @@ var selector = {
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div:last-child>span',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]'
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
                     selector: 'ul>li[role="row"]>div>a>div>div>div>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div>span',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]'
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, ],
                 'blur25': [{
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]'
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
-                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>img',
+                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>img',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]'
+                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
-                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>div>div',
+                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>div>div',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]'
+                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, ]
             },
             center: {
@@ -176,7 +176,7 @@ var selector = {
                         inlineSelector: 'div>div>div>div>div>span>div',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea'
                     }, {
-                        selector: 'span._wsc>div:first-child>div>div:first-child',
+                        selector: 'span._wsc>div:first-child>div>div:first-child>div>img',
                         inline: 'div[role="main"]>span>div:first-child',
                         inlineSelector: 'div>div:first-child',
                         block: 'div[role="main"]'
@@ -199,12 +199,6 @@ var selector = {
 
                 ],
                 'overflowHidden': [
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div>div>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div[data-hover="tooltip"]', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div.clearfix>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>div', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div:first-child>div.uiPopover>div>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div>div>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div.clearfix>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
                 ],
             },
         },
@@ -214,26 +208,26 @@ var selector = {
                     selector: 'ul>li[role="row"]>div>a>div>div>div>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div>span',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]',
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     rightAlign: true,
                     inlineBlockDisplay: true
                 }, {
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]',
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true
                 }, {
-                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>img',
+                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>img',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]',
+                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true
                 }, {
-                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>div>div',
+                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-label="Actions"]>div>div',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[aria-label="Conversations"]',
+                    inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true
                 }, ]
             },
@@ -320,15 +314,7 @@ var selector = {
                         inlineSelector: 'div:first-child>div.uiPopover>div>div>img',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         borderRadius: '25%'
-                    }, {
-                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div',
-                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                        inlineSelector: 'div>div>div>div>div',
-                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
                     },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>img', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div>div>div>div>img', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>div', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div>div>div>div>div', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
-                    // { selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div[role="img"]', inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix', inlineSelector: 'div>div>div>div>div[role="img"]', block: 'div[role="presentation"]>div>div.uiScrollableArea' },
                     {
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
                         inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
@@ -345,7 +331,7 @@ var selector = {
                         inlineSelector: 'div>div>div>div>div>span>div',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea'
                     }, {
-                        selector: 'span._wsc>div:first-child>div>div:first-child',
+                        selector: 'span._wsc>div:first-child>div>div:first-child>div>img',
                         inline: 'div[role="main"]>span>div:first-child',
                         inlineSelector: 'div>div:first-child',
                         block: 'div[role="main"]'
@@ -688,19 +674,20 @@ var selector = {
         }
     }
 };
-function httpGet(theUrl){
-    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    } else {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+function httpGet(theUrl) {
+    if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-    xmlhttp.onreadystatechange=function(){
-        if (xmlhttp.readyState==4 && xmlhttp.status==200){
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             return xmlhttp.responseText;
         }
     }
-    xmlhttp.open("GET", theUrl, false );
-    xmlhttp.send();    
+    xmlhttp.open("GET", theUrl, false);
+    xmlhttp.send();
 }
 
 function applyCSS() {
@@ -727,7 +714,7 @@ function handleStyle(config) {
         handleM(config);
     } else if (hostname === 'www.facebook.com') {
         var href = document.location.href;
-        if( href.indexOf('https://www.facebook.com/messages/t/') >= 0 ) {
+        if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
             handleM(config);
         } else {
             handleFB(config);
