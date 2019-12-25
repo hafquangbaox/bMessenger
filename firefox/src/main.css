@@ -146,8 +146,8 @@ input:checked + .slider:before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -171,8 +171,8 @@ input:checked + .slider:before {
 }
 
 .container-radio .checkmark:after {
-    top: 6px;
-    left: 6px;
+    top: 4px;
+    left: 4px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
