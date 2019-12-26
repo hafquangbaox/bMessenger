@@ -48,12 +48,13 @@ var selector = {
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, ],
                 'blur25': [{
-                    isComponent: 'message',
+                    // isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
+                    isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
