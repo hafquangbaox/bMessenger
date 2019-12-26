@@ -402,5 +402,5 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
 
 ga('create', 'UA-109078055-6', 'auto'); // Enter your GA identifier
 ga('set', 'checkProtocolTask', function() {}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-ga('require', 'displayfeatures');
+// ga('require', 'displayfeatures');
 ga('send', 'pageview', '/popup.html'); // Specify the virtual path
