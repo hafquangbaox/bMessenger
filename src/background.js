@@ -302,7 +302,8 @@ function getActionContext(info, tab) {
 
 }
 initConfig();
-function initConfig(){
+
+function initConfig() {
     var browserSupportSync = false;
     chrome.storage.sync.get({
         turnOn: true,
@@ -314,13 +315,13 @@ function initConfig(){
         turnOther: true,
     }, function(items) {
         browserSupportSync = true;
-            
+
         createContextMenu(items);
 
     });
 }
 
-function updateContextSetting(configs){
+function updateContextSetting(configs) {
     console.log('Update', configs);
     var browserSupportSync = false;
     try {
@@ -400,7 +401,6 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
     m.parentNode.insertBefore(a, m)
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga'); // Note: https protocol here
 
-ga('create', 'UA-109078055-6', 'auto'); // Enter your GA identifier
-ga('set', 'checkProtocolTask', function() {}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-// ga('require', 'displayfeatures');
-ga('send', 'pageview', '/popup.html'); // Specify the virtual path
+ga('create', 'UA-109078055-6', 'auto');
+ga('set', 'checkProtocolTask', function() {});
+ga('send', 'pageview', '/popup.html');
