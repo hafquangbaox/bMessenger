@@ -857,6 +857,17 @@ function handleM(config) {
 
                     var obj = selector.m.flip[pos][key][i];
 
+                    // Select only component will apply effect
+                    var foundComponent = false;
+                    for (var _i = 0; _i < config.arrComponents.length; _i++) {
+                        if (obj.isComponent === config.arrComponents[_i]) {
+                            foundComponent = true;
+                            break;
+                        }
+                    }
+                    if (!foundComponent) continue;
+                    // Select only component will apply effect
+
                     temp += obj.selector;
                     var tempSetDisplay = '';
                     if (!!obj.blockDisplay === true) {
