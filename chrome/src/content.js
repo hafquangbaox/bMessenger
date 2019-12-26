@@ -54,12 +54,13 @@ var selector = {
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
-                    isComponent: 'avatar',
+                    // isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
+                    isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
