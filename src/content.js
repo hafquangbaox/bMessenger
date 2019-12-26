@@ -829,17 +829,17 @@ function handleM(config) {
                     temp += obj.selector;
                     var tempSetDisplay = '';
                     if (!!obj.blockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.block);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
                     } else if (!!obj.inlineBlockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.inlineBlock);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
                     } else if (!!obj.table === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.table);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
                     } else tempSetDisplay = styleEffect[key];
                     if (!!obj.width === true) {
-                        tempSetDisplay = tempSetDisplay.replace('}', styleEffect.width);
+                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
                     }
                     if (!!obj.borderRadius === true) {
-                        tempSetDisplay = tempSetDisplay.replace('}', styleEffect.borderRadius(obj.borderRadius));
+                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.borderRadius(obj.borderRadius));
                     }
                     temp += tempSetDisplay;
 
@@ -878,18 +878,18 @@ function handleM(config) {
                     temp += obj.selector;
                     var tempSetDisplay = '';
                     if (!!obj.blockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.block);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
                     } else if (!!obj.inlineBlockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.inlineBlock);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
                     } else if (!!obj.table === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.table);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
                     } else tempSetDisplay = styleEffect[key];
                     if (!!obj.width === true) {
-                        tempSetDisplay = tempSetDisplay.replace('}', styleEffect.width);
+                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
                     }
 
                     if (!!obj.rightAlign === true) {
-                        tempSetDisplay = tempSetDisplay.replace('}', styleEffect.rightAlign);
+                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.rightAlign);
                     }
 
                     temp += tempSetDisplay;
@@ -898,7 +898,7 @@ function handleM(config) {
                         hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
 
                         if (!!obj.rightAlign === true) {
-                            hover = hover.replace('}', styleEffect.unrightAlign);
+                            hover = hover.replace(/.$/, styleEffect.unrightAlign);
                         }
                     } else {
                         if(obj.selector === 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span'){
@@ -910,7 +910,7 @@ function handleM(config) {
                             console.log(hover, 'before 1');
                         }
                         if (!!obj.rightAlign === true) {
-                            hover = hover.replace('}', styleEffect.unrightAlign);
+                            hover = hover.replace(/.$/, styleEffect.unrightAlign);
                         }
                         if(obj.selector === 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span'){
                             console.log(hover, 'after', !!obj.rightAlign === true, !!obj.rightAlign, obj.rightAlign, obj.selector );
@@ -978,14 +978,14 @@ function handleFB(config) {
                     temp += obj.selector;
                     var tempSetDisplay = '';
                     if (!!obj.blockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.block);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
                     } else if (!!obj.inlineBlockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.inlineBlock);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
                     } else if (!!obj.table === true) {
-                        tempSetDisplay = styleEffect[key].replace('}', styleEffect.table);
+                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
                     } else tempSetDisplay = styleEffect[key];
                     if (!!obj.width === true) {
-                        tempSetDisplay = tempSetDisplay.replace('}', styleEffect.width);
+                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
                     }
                     temp += tempSetDisplay;
 
