@@ -206,7 +206,7 @@ var selector = {
                         block: 'div[role="presentation"]>div>div.uiScrollableArea'
                     }, {
                         isComponent: "avatar",
-                        selector: 'span._wsc>div:first-child>div>div:first-child>div>img',
+                        selector: 'span>div:first-child>div>div:first-child>div>img',
                         inline: 'div[role="main"]>span>div:first-child',
                         inlineSelector: 'div>div:first-child',
                         block: 'div[role="main"]'
@@ -398,7 +398,7 @@ var selector = {
                     block: 'div[role="presentation"]>div>div.uiScrollableArea'
                 }, {
                     isComponent: "avatar",
-                    selector: 'span._wsc>div:first-child>div>div:first-child>div>img',
+                    selector: 'span>div:first-child>div>div:first-child>div>img',
                     inline: 'div[role="main"]>span>div:first-child',
                     inlineSelector: 'div>div:first-child',
                     block: 'div[role="main"]'
