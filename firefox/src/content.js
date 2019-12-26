@@ -749,7 +749,7 @@ function handleM(config) {
 
                     // Select only component will apply effect
                     var foundComponent = false;
-                    for( var _i = 0; _i < config.arrComponents.length. _i++){
+                    for( var _i = 0; _i < config.arrComponents.length; _i++){
                         if( obj.isComponent === config.arrComponents[_i]){
                             foundComponent = true;
                             break;
