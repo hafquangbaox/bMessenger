@@ -5,7 +5,7 @@
  */
 @font-face {
   font-family: 'Roboto Mono';
-  src: URL('RobotoMono-Regular.ttf') format('truetype');
+  src: URL('src/RobotoMono-Regular.ttf') format('truetype');
 }
 html,
 body {
