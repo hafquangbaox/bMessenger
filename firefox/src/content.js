@@ -35,6 +35,7 @@ var selector = {
         blur: {
             left: {
                 'blur10': [{
+                    isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div:last-child>span',
@@ -714,6 +715,12 @@ function handleStyle(config) {
         return;
     }
     var hostname = document.location.hostname;
+    var arrComponents = [];
+    if( turnAvatar ) arrComponents.push('avatar');
+    if( turnName ) arrComponents.push('name');
+    if( turnMessage ) arrComponents.push('message');
+    if( turnOther ) arrComponents.push('other');
+    config.arrComponents = arrComponents;
     if (hostname === 'www.messenger.com') {
         handleM(config);
     } else if (hostname === 'www.facebook.com') {
@@ -740,6 +747,16 @@ function handleM(config) {
 
                     var obj = selector.m.blur[pos][key][i];
 
+                    // Select only component will apply effect
+                    var foundComponent = false;
+                    for( var _i = 0; _i < config.arrComponents.length. _i++){
+                        if( obj.isComponent === config.arrComponents[_i]){
+                            foundComponent = true;
+                            break;
+                        }
+                    }
+                    if( !foundComponent ) continue;
+                    // Select only component will apply effect
 
                     temp += obj.selector;
                     var tempSetDisplay = '';
