@@ -4,7 +4,7 @@
  * @github lozthiensu <https://github.com/lozthiensu/bMessenger>
  */
 @font-face {
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto Mono', monospace;
   src: URL('src/RobotoMono-Regular.ttf') format('truetype');
 }
 html,
