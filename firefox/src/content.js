@@ -909,7 +909,7 @@ function handleM(config) {
                             hover = hover.replace('}', styleEffect.unrightAlign);
                         }
                         if(obj.selector === 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span'){
-                            console.log(hover, 'after');
+                            console.log(hover, 'after', !!obj.rightAlign === true, !!obj.rightAlign, obj.rightAlign, obj.selector );
                         }
                     }
                 }
