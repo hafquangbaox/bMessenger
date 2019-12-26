@@ -112,9 +112,9 @@ var selector = {
                     block: 'div[role="presentation"]>div>div.uiScrollableArea'
                 }, {
                     isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span._44ac',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div>div>span',
+                    inlineSelector: 'div>div>div>span._44ac',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea'
                 }, {
                     isComponent: "message",
@@ -329,9 +329,9 @@ var selector = {
                     inlineBlockDisplay: true
                 }, {
                     isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span._44ac',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div>div>span',
+                    inlineSelector: 'div>div>div>span._44ac',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea'
                 }, {
                     isComponent: "message",
