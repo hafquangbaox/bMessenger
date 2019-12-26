@@ -136,7 +136,7 @@ var selector = {
                     block: 'div[role="presentation"]>div>div.uiScrollableArea'
                 }, {
                     isComponent: "name",
-                    selector: 'span._wsc>div:first-child>div>div:not(:first-child)',
+                    selector: 'span>div:first-child>div>div:not(:first-child)',
                     inline: 'div[role="main"]>span>div:first-child',
                     inlineSelector: 'div>div:not(:first-child)',
                     block: 'div[role="main"]'
@@ -355,7 +355,7 @@ var selector = {
                     inlineBlockDisplay: true
                 }, {
                     isComponent: "name",
-                    selector: 'span._wsc>div:first-child>div>div:not(:first-child)',
+                    selector: 'span>div:first-child>div>div:not(:first-child)',
                     inline: 'div[role="main"]>span>div:first-child',
                     inlineSelector: 'div>div:not(:first-child)',
                     block: 'div[role="main"]'
