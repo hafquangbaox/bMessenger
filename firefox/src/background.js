@@ -374,6 +374,18 @@ if (!!document.getElementById('hover-inline') === true) document.getElementById(
 if (!!document.getElementById('hover-block') === true) document.getElementById('hover-block').addEventListener('change', function() {
     saveOptions();
 });
+if (!!document.getElementById('turn-avatar') === true) document.getElementById('turn-avatar').addEventListener('change', function() {
+    saveOptions();
+});
+if (!!document.getElementById('turn-name') === true) document.getElementById('turn-name').addEventListener('change', function() {
+    saveOptions();
+});
+if (!!document.getElementById('turn-message') === true) document.getElementById('turn-message').addEventListener('change', function() {
+    saveOptions();
+});
+if (!!document.getElementById('turn-other') === true) document.getElementById('turn-other').addEventListener('change', function() {
+    saveOptions();
+});
 
 // Standard Google Universal Analytics code
 (function(i, s, o, g, r, a, m) {
