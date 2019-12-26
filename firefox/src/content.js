@@ -247,7 +247,8 @@ var selector = {
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div:last-child>span',
-                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
+                    block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    rightAlign: true,
                 },{
                     isComponent: 'name',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
