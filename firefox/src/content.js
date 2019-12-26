@@ -716,10 +716,10 @@ function handleStyle(config) {
     }
     var hostname = document.location.hostname;
     var arrComponents = [];
-    if( turnAvatar ) arrComponents.push('avatar');
-    if( turnName ) arrComponents.push('name');
-    if( turnMessage ) arrComponents.push('message');
-    if( turnOther ) arrComponents.push('other');
+    if( config.turnAvatar ) arrComponents.push('avatar');
+    if( config.turnName ) arrComponents.push('name');
+    if( config.turnMessage ) arrComponents.push('message');
+    if( config.turnOther ) arrComponents.push('other');
     config.arrComponents = arrComponents;
     if (hostname === 'www.messenger.com') {
         handleM(config);
