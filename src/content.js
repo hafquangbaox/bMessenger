@@ -35,18 +35,20 @@ var selector = {
         blur: {
             left: {
                 'blur10': [{
-                    isComponent: 'avatar',
+                    // isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div:last-child>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, {
+                    // isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div>div>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div>div>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]'
                 }, ],
                 'blur25': [{
+                    isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
