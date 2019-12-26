@@ -905,6 +905,10 @@ function handleM(config) {
                             console.log(hover, 'before');
                         }
                         hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
+
+                        if(obj.selector === 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span'){
+                            console.log(hover, 'before 1');
+                        }
                         if (!!obj.rightAlign === true) {
                             hover = hover.replace('}', styleEffect.unrightAlign);
                         }
