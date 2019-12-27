@@ -203,7 +203,10 @@ function restoreOptions() {
         if (!!document.getElementById('turn-message') === true) document.getElementById('turn-message').checked = items.turnMessage;
         if (!!document.getElementById('turn-other') === true) document.getElementById('turn-other').checked = items.turnOther;
 
+    });
 
+    var version = getHTML('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
+        console.log(rs);
     });
 
 }
@@ -388,6 +391,27 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
     saveOptions();
 });
 
+function getHTML(url, callback) {
+
+    // Feature detection
+    if (!window.XMLHttpRequest) return;
+
+    // Create new request
+    var xhr = new XMLHttpRequest();
+
+    // Setup callback
+    xhr.onload = function() {
+        if (callback && typeof(callback) === 'function') {
+            callback(this.responseXML);
+        }
+    }
+
+    // Get the HTML
+    xhr.open('GET', url);
+    xhr.responseType = 'document';
+    xhr.send();
+
+};
 // // Standard Google Universal Analytics code
 // (function(i, s, o, g, r, a, m) {
 //     i['GoogleAnalyticsObject'] = r;
