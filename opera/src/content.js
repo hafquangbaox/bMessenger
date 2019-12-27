@@ -837,27 +837,42 @@ function handleM(config) {
                     if (!foundComponent) continue;
                     // Select only component will apply effect
 
-                    temp += obj.selector;
-                    var tempSetDisplay = '';
+                    var tempSetDisplay = obj.selector + ':not(:hover){';
                     if (!!obj.blockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
+                        tempSetDisplay += styleEffect.block;
                     } else if (!!obj.inlineBlockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
+                        tempSetDisplay += styleEffect.inlineBlock;
                     } else if (!!obj.table === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
-                    } else tempSetDisplay = styleEffect[key];
-                    if (!!obj.width === true) {
-                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
+                        tempSetDisplay += styleEffect.table;
                     }
+
                     if (!!obj.borderRadius === true) {
-                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.borderRadius(obj.borderRadius));
+                        tempSetDisplay += styleEffect.borderRadius(obj.borderRadius);
                     }
+
+                    tempSetDisplay += '}';
+
+                    // temp += obj.selector;
+                    // var tempSetDisplay = '';
+                    // if (!!obj.blockDisplay === true) {
+                    //     tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
+                    // } else if (!!obj.inlineBlockDisplay === true) {
+                    //     tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
+                    // } else if (!!obj.table === true) {
+                    //     tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
+                    // } else tempSetDisplay = styleEffect[key];
+                    // if (!!obj.width === true) {
+                    //     tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
+                    // }
+                    // if (!!obj.borderRadius === true) {
+                    //     tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.borderRadius(obj.borderRadius));
+                    // }
                     temp += tempSetDisplay;
 
-                    if (config.inline) hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
-                    else {
-                        hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
-                    }
+                    // if (config.inline) hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
+                    // else {
+                    //     hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
+                    // }
 
                 }
 
@@ -865,6 +880,8 @@ function handleM(config) {
 
             }
         }
+
+        console.log(styleText);
 
     } else {
         for (var pos in selector.m.flip) {
