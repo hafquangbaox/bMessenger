@@ -434,12 +434,14 @@ var selector = {
         blur: {
             drop: {
                 'blur10': [{
+                    isComponent: "message",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)',
                     inline: 'a.messagesContent',
                     inlineSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)'
                 }, {
+                    isComponent: "name",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
                     inline: 'a.messagesContent',
                     inlineSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
@@ -447,6 +449,7 @@ var selector = {
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)'
                 }],
                 'blur25': [{
+                    isComponent: "avatar",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
                     inline: 'a.messagesContent',
                     inlineSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
@@ -456,153 +459,193 @@ var selector = {
             },
             window: {
                 'blur10': [{
+                    isComponent: "message",
                     selector: 'div.direction_ltr blockquote',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
-                }, {
-                    selector: 'div.direction_ltr>div>div>div>div>div>span',
-                    inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
-                    block: 'div.fbDockChatTabFlyout'
-                }, {
+                }
+                // , {
+                //     isComponent: "message",
+                //     selector: 'div.direction_ltr>div>div>div>div>div>span',
+                //     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
+                //     block: 'div.fbDockChatTabFlyout'
+                // }
+                , {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>div>div>div>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div>div:first-child',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>span>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>div>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div[data-hover="tooltip"]',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(2)>div>div>a>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div>div>a>span',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:nth-child(1)>div>a>span',
                     inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(2)>div:nth-child(1)>div>a>span',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(2)>div:nth-child(1)>div>a>span'
-                }, {
-                    selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(2)',
-                    inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
-                    inlineSelector: 'div:nth-child(2)',
-                    block: 'div.fbDockChatTabFlyout'
-                }, {
+                }
+                // , {
+                //     isComponent: "name",
+                //     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(2)',
+                //     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
+                //     inlineSelector: 'div:nth-child(2)',
+                //     block: 'div.fbDockChatTabFlyout'
+                // }
+                , {
+                    isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div:nth-child(2)>div:nth-child(1)',
                     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div',
                     inlineSelector: 'div:nth-child(2)>div:nth-child(1)',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div>div>div>div:nth-child(1)>div.direction_ltr>div>div:nth-child(1)>div:nth-child(2)>div>span',
                     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div',
                     inlineSelector: 'div>div>div>div:nth-child(1)>div.direction_ltr>div>div:nth-child(1)>div:nth-child(2)>div>span',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div>div>div>div:nth-child(1)>div.clearfix:nth-child(1)>div.direction_ltr',
                     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div',
                     inlineSelector: 'div>div>div>div:nth-child(1)>div.clearfix:nth-child(1)>div.direction_ltr',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "name",
                     selector: 'div.seen>span',
                     inline: 'div.seen',
                     inlineSelector: 'span',
                     block: 'div.fbDockChatTabFlyout'
                 }],
                 'blur25': [{
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div>span>div>div>a>div>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div[role="img"]',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>div>div>span>div>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>table',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>div>div>a>div>div>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>div>div>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>div>div>a>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div:nth-child(1)>div>a>div>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div:nth-child(1)>div>a>div>img',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(1)>a>div>img',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
                     inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(1)>a>div',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(1)>a>div'
-                }, {
-                    selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(1)',
-                    inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
-                    inlineSelector: 'div:nth-child(1)',
-                    block: 'div.fbDockChatTabFlyout'
-                }, {
+                }
+                // , {
+                //     isComponent: "avatar",
+                //     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(1)',
+                //     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
+                //     inlineSelector: 'div:nth-child(1)',
+                //     block: 'div.fbDockChatTabFlyout'
+                // }
+                , {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "other",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner div.fbNubFlyoutFooter div[role="presentation"]>ul>li:last-child',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner div.fbNubFlyoutFooter',
                     inlineSelector: ' div[role="presentation"]>ul>li:last-child',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner div.direction_ltr span>div>img.img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'img.img',
                     block: 'div.fbDockChatTabFlyout'
                 }, ],
-                'overflowHidden': [{
-                    selector: 'div.direction_ltr>div[maxwidth="158"]',
-                    inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
-                    block: 'div.fbDockChatTabFlyout'
-                }]
+                'overflowHidden': [
+                // {
+                //     isComponent: "message",
+                //     selector: 'div.direction_ltr>div[maxwidth="158"]',
+                //     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
+                //     block: 'div.fbDockChatTabFlyout'
+                // }
+                ]
             }
         },
         flip: {
             drop: {
                 'flipMirror': [{
+                    isComponent: "message",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
                     inline: 'a.messagesContent',
                     inlineSelector: ' div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
@@ -610,12 +653,14 @@ var selector = {
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
                     inlineBlockDisplay: true
                 }, {
+                    isComponent: "name",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
                     inline: 'a.messagesContent',
                     inlineSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)'
                 }, {
+                    isComponent: "avatar",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
                     inline: 'a.messagesContent',
                     inlineSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
@@ -625,80 +670,95 @@ var selector = {
             },
             window: {
                 'flipMirror': [{
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div._5yn._5yo>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div._5yn._5yo>span',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div._5yn._5yo>a',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div._5yn._5yo>a',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>span>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div>div>div>div>span>span',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>div:nth-child(1)>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>div:nth-child(1)>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div:nth-child(1)>div.direction_ltr',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div:nth-child(1)>div.direction_ltr',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div:first-child>div>div:not(:first-child)>div>div>a>blockquote',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div:first-child>div>div:not(:first-child)>div>div>a>blockquote',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div>div>div>div>div>div>div>div.direction_ltr>div:first-child>div>div:not(:first-child)>div>div>div>span>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div:first-child>div>div:not(:first-child)>div>div>div>span>span',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(1)>a>div>img',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(1)>a>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div:nth-child(1)>div>a>div>img',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div:nth-child(1)>div>a>div>img',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div>div:nth-child(1)',
                     inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     inlineSelector: 'div>div>div>div:nth-child(1)',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(1)>a>div'
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
                     inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(1)>a>div',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(1)>a>div'
                 }, {
+                    isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
                     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div',
                     inlineSelector: 'div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
@@ -706,37 +766,45 @@ var selector = {
                     inlineBlockDisplay: true,
                     width: true
                 }, {
+                    isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(2)>div>div>a>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div>div>a>span',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
-                }, {
-                    selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(2)>h1',
-                    inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
-                    inlineSelector: 'div:nth-child(2)>h1',
-                    block: 'div.fbDockChatTabFlyout',
-                    table: true
-                }, {
+                }
+                // , {
+                //     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(2)>h1',
+                //     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
+                //     inlineSelector: 'div:nth-child(2)>h1',
+                //     block: 'div.fbDockChatTabFlyout',
+                //     table: true
+                // }
+                , {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
                 }, {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>span>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
                 }, {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>div>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     block: 'div.fbDockChatTabFlyout'
                 }, {
+                    isComponent: "name",
                     selector: 'div.seen>span',
                     inline: 'div.seen',
                     inlineSelector: 'span',
