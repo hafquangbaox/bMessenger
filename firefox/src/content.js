@@ -337,6 +337,13 @@ var selector = {
                 // }
                 , {
                     isComponent: "message",
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>div>div',
+                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                    inlineSelector: 'div>div>div>div>div>div>div',
+                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                }
+                , {
+                    isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
                     inline: 'div.uiScrollableAreaContent>div>div>div',
                     inlineSelector: 'span>span>div>span',
