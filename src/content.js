@@ -287,6 +287,7 @@ var selector = {
                     inline: 'div.uiScrollableAreaContent>div>div>div>div',
                     inlineSelector: 'div>div>div>div>span:not([data-hover="none"])',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    rightAlign: true,
                     inlineBlockDisplay: true
                 }, {
                     isComponent: 'message',
