@@ -18,14 +18,14 @@ var styleEffect = {
     none: 'display:none;',
     unnone: 'display:unset;',
     // Append
-    block: 'display:block;',
-    inlineBlock: 'display:inline-block;',
-    rightAlign: 'text-align:right;',
-    unrightAlign: 'text-align:inherit;',
     borderRadius: function(x) {
         return 'border-radius:' + x + ';';
     },
     unBorderRadius: 'border-radius:unset;',
+    rightAlign: 'text-align:right;',
+    unrightAlign: 'text-align:inherit;',
+    inlineBlock: 'display:inline-block;',
+    block: 'display:block;',
     table: 'display:table;',
     width: 'width:fit-content;',
 };
@@ -821,7 +821,6 @@ function handleM(config) {
         for (var pos in selector.m.blur) {
             for (var key in selector.m.blur[pos]) {
                 var temp = '';
-                var hover = '';
                 for (var i = 0; i < selector.m.blur[pos][key].length; i++) {
 
                     var obj = selector.m.blur[pos][key][i];
@@ -859,32 +858,11 @@ function handleM(config) {
                     }
 
                     tempSetDisplay += '}';
-
-                    // temp += obj.selector;
-                    // var tempSetDisplay = '';
-                    // if (!!obj.blockDisplay === true) {
-                    //     tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
-                    // } else if (!!obj.inlineBlockDisplay === true) {
-                    //     tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
-                    // } else if (!!obj.table === true) {
-                    //     tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
-                    // } else tempSetDisplay = styleEffect[key];
-                    // if (!!obj.width === true) {
-                    //     tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
-                    // }
-                    // if (!!obj.borderRadius === true) {
-                    //     tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.borderRadius(obj.borderRadius));
-                    // }
                     temp += tempSetDisplay;
-
-                    // if (config.inline) hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
-                    // else {
-                    //     hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
-                    // }
 
                 }
 
-                styleText += '\n' + temp + hover;
+                styleText += temp;
 
             }
         }
