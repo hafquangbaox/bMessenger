@@ -398,7 +398,6 @@ function getHTML(url, callback) {
     xhr.onload = function() {
         if (xhr.status === 200) {
             callback(xhr.responseText);
-            alert('User\'s name is ' + xhr.responseText);
         }
         else {
             console.log('Request failed.  Returned status of ' + xhr.status);
