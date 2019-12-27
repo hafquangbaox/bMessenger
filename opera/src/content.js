@@ -837,7 +837,15 @@ function handleM(config) {
                     if (!foundComponent) continue;
                     // Select only component will apply effect
 
-                    var tempSetDisplay = obj.selector + ':not(:hover){';
+                    var tempSetDisplay = '';
+
+                    if (config.inline) {
+                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                    } else {
+                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                    }
+                    tempSetDisplay += styleEffect[key];
+
                     if (!!obj.blockDisplay === true) {
                         tempSetDisplay += styleEffect.block;
                     } else if (!!obj.inlineBlockDisplay === true) {
