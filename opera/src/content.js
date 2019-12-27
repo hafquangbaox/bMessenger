@@ -671,23 +671,12 @@ var selector = {
             window: {
                 'flipMirror': [{
                     isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div._5yn._5yo>span',
-                    inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
-                    inlineSelector: 'div>div>div>div>div._5yn._5yo>span',
-                    block: 'div.fbDockChatTabFlyout'
-                }, {
-                    isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div._5yn._5yo>a',
-                    inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
-                    inlineSelector: 'div>div>div>div>div._5yn._5yo>a',
-                    block: 'div.fbDockChatTabFlyout'
-                }, {
-                    isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>span>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div>div>div>div>span>span',
                     block: 'div.fbDockChatTabFlyout',
-                    blockDisplay: true
+                    blockDisplay: true,
+                    rightAlign: true
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div',
@@ -702,12 +691,6 @@ var selector = {
                     block: 'div.fbDockChatTabFlyout'
                 }
                 , {
-                //     isComponent: "message",
-                //     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div',
-                //     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
-                //     inlineSelector: 'div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div',
-                //     block: 'div.fbDockChatTabFlyout'
-                // }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>a>div>div>div',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
@@ -808,15 +791,7 @@ var selector = {
                     inlineSelector: 'div>div>div:nth-child(2)>div:first-of-type>div>a',
                     block: 'div#ChatTabsPagelet',
                     blockDisplay: true
-                }
-                // , {
-                //     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(2)>h1',
-                //     inline: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a',
-                //     inlineSelector: 'div:nth-child(2)>h1',
-                //     block: 'div.fbDockChatTabFlyout',
-                //     table: true
-                // }
-                , {
+                }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>span',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
