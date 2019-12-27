@@ -873,7 +873,6 @@ function handleM(config) {
         for (var pos in selector.m.flip) {
             for (var key in selector.m.flip[pos]) {
                 var temp = '';
-                var hover = '';
                 for (var i = 0; i < selector.m.flip[pos][key].length; i++) {
 
                     var obj = selector.m.flip[pos][key][i];
@@ -889,41 +888,33 @@ function handleM(config) {
                     if (!foundComponent) continue;
                     // Select only component will apply effect
 
-                    temp += obj.selector;
                     var tempSetDisplay = '';
-                    if (!!obj.blockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
-                    } else if (!!obj.inlineBlockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
-                    } else if (!!obj.table === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
-                    } else tempSetDisplay = styleEffect[key];
-                    if (!!obj.width === true) {
-                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
-                    }
-
-                    if (!!obj.rightAlign === true) {
-                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.rightAlign);
-                    }
-
-                    temp += tempSetDisplay;
 
                     if (config.inline) {
-                        hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
-
-                        if (!!obj.rightAlign === true) {
-                            hover = hover.replace(/.$/, styleEffect.unrightAlign);
-                        }
+                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
-
-                        if (!!obj.rightAlign === true) {
-                            hover = hover.replace(/.$/, styleEffect.unrightAlign);
-                        }
+                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
+                    tempSetDisplay += styleEffect[key];
+
+                    if (!!obj.blockDisplay === true) {
+                        tempSetDisplay += styleEffect.block;
+                    } else if (!!obj.inlineBlockDisplay === true) {
+                        tempSetDisplay += styleEffect.inlineBlock;
+                    } else if (!!obj.table === true) {
+                        tempSetDisplay += styleEffect.table;
+                    }
+
+                    if (!!obj.borderRadius === true) {
+                        tempSetDisplay += styleEffect.borderRadius(obj.borderRadius);
+                    }
+
+                    tempSetDisplay += '}';
+                    temp += tempSetDisplay;
+
                 }
 
-                styleText += '\n' + temp + hover;
+                styleText += temp;
 
             }
         }
