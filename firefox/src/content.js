@@ -788,7 +788,7 @@ var selector = {
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type',
-                    inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
+                    inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(2)>div:first-of-type',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
