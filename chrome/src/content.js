@@ -785,6 +785,13 @@ var selector = {
                     inlineSelector: 'div>div>div:nth-child(1)>div>a',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true
+                }, {
+                    isComponent: "name",
+                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type',
+                    inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
+                    inlineSelector: 'div>div>div:nth-child(2)>div:first-of-type',
+                    block: 'div.fbDockChatTabFlyout',
+                    blockDisplay: true
                 }
                 // , {
                 //     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div:nth-child(1)>div>a>div:nth-child(2)>h1',
