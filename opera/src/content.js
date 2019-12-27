@@ -337,9 +337,10 @@ var selector = {
                 // }
                 , {
                     isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>div>div',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>div>div',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div>div>div>div>div>div',
+                    inlineSelector: 'div>div.clearfix>div>div>div>div',
+                    rightAlign: true,
                     block: 'div[role="presentation"]>div>div.uiScrollableArea'
                 }
                 , {
