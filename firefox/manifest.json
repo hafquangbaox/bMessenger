@@ -43,7 +43,6 @@
       ]
     }
   ],
-  "content_security_policy": "style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;",
   "permissions": [
     "storage",
     "contextMenus",
