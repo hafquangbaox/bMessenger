@@ -327,8 +327,8 @@ var selector = {
                     inlineSelector: 'span>span>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineBlockDisplay: true
-                },
-                //  {
+                }
+                // , {
                 //     isComponent: "message",
                 //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
                 //     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
