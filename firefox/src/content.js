@@ -787,9 +787,9 @@ var selector = {
                     blockDisplay: true
                 }, {
                     isComponent: "name",
-                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type',
+                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type>div>a',
                     inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
-                    inlineSelector: 'div>div>div:nth-child(2)>div:first-of-type',
+                    inlineSelector: 'div>div>div:nth-child(2)>div:first-of-type>div>a',
                     block: 'div#ChatTabsPagelet',
                     blockDisplay: true
                 }
