@@ -765,6 +765,7 @@ var selector = {
                     inlineSelector: 'div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
                     block: 'div.fbDockChatTabFlyout',
                     inlineBlockDisplay: true,
+                    rightAlign: true,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
