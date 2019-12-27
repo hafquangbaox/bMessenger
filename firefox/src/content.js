@@ -724,7 +724,8 @@ var selector = {
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div',
                     inlineSelector: 'div>div>div>div>div.direction_ltr>div:first-child>div>div:not(:first-child)>div>div>div>span>span',
                     block: 'div.fbDockChatTabFlyout',
-                    blockDisplay: true
+                    blockDisplay: true,
+                    rightAlign: true
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
@@ -764,7 +765,6 @@ var selector = {
                     inlineSelector: 'div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
                     block: 'div.fbDockChatTabFlyout',
                     inlineBlockDisplay: true,
-                    width: true
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
