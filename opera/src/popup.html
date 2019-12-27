@@ -7,13 +7,10 @@ This utility is called bMessenger on firefox add-ons store. But the bastard who 
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Protect message</title>
-    <meta http-equiv="Content-Security-Policy" content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -30,7 +27,6 @@ This utility is called bMessenger on firefox add-ons store. But the bastard who 
     <hr>
     <div class="block-container">
         <p class="line-1-rem">Effect</p>
-        
         <label class="container-radio">Blur
           <input type="radio" id="effect-blur" checked="checked" name="effect" value="blur">
           <span class="checkmark"></span>
@@ -40,7 +36,6 @@ This utility is called bMessenger on firefox add-ons store. But the bastard who 
           <span class="checkmark"></span>
         </label>
     </div>
-    <hr class="half-hr">
     <div class="block-container">
         <p class="line-1-rem">Hover mouse to view content</p>
         
@@ -53,10 +48,43 @@ This utility is called bMessenger on firefox add-ons store. But the bastard who 
           <span class="checkmark"></span>
         </label>
     </div>
-    <hr class="half-hr">
+    <input id="toggle" type="checkbox">
+    <label class="toggle" for="toggle">Component options</label>
+    <div id="expand">
+      <section>
+        <div class="block-container">
+            <span class="line-1-rem">Avatar</span>
+            <label class="switch">
+              <input type="checkbox" id="turn-avatar" name="turn-avatar">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="block-container">
+            <span class="line-1-rem">Name</span>
+            <label class="switch">
+              <input type="checkbox" id="turn-name" name="turn-name">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="block-container">
+            <span class="line-1-rem">Message</span>
+            <label class="switch">
+              <input type="checkbox" id="turn-message" name="turn-message">
+              <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="block-container">
+            <span class="line-1-rem">Other</span>
+            <label class="switch">
+              <input type="checkbox" id="turn-other" name="turn-other">
+              <span class="slider round"></span>
+            </label>
+        </div>
+      </section>
+    </div>
     <div class="block-container block-container-author">
-        <a href="https://github.com/lozthiensu/bMessenger" target="_blank" class="author-center">Github source code</a><br /><br />
-        <a href="https://www.buymeacoffee.com/zvZJONX" target="_blank" class="author-center-donate">Buy me a coffe</a>
+        <a href="https://www.buymeacoffee.com/zvZJONX" target="_blank" class="author-center-donate"><img src="https://cdn.buymeacoffee.com/buttons/arial-orange.png" alt="Buy Me A Coffee"></a><br />
+        <a href="https://github.com/lozthiensu/bMessenger" target="_blank" class="author-center">Github source code</a><br />
     </div>
 </body>
 <link rel="stylesheet" type="text/css" href="main.css">

@@ -132,13 +132,21 @@ function saveOptions() {
     var turnOn = document.getElementsByName('turn-on')[0].checked;
     var blur = document.querySelector('input[name="effect"]:checked').value;
     var inline = document.querySelector('input[name="hover"]:checked').value;
+    var turnAvatar = document.getElementsByName('turn-avatar')[0].checked;
+    var turnName = document.getElementsByName('turn-name')[0].checked;
+    var turnMessage = document.getElementsByName('turn-message')[0].checked;
+    var turnOther = document.getElementsByName('turn-other')[0].checked;
     blur = (blur === 'blur' ? true : false);
     inline = (inline === 'inline' ? true : false);
     try {
         chrome.storage.sync.set({
             turnOn: turnOn,
             blur: blur,
-            inline: inline
+            inline: inline,
+            turnAvatar: turnAvatar,
+            turnName: turnName,
+            turnMessage: turnMessage,
+            turnOther: turnOther,
         }, function() {
             browserSupportSync = true;
 
@@ -179,13 +187,23 @@ function restoreOptions() {
     chrome.storage.sync.get({
         turnOn: true,
         blur: false,
-        inline: false
+        inline: false,
+        turnAvatar: true,
+        turnName: true,
+        turnMessage: true,
+        turnOther: true,
     }, function(items) {
         browserSupportSync = true;
 
         if (!!document.getElementById('turn-on') === true) document.getElementById('turn-on').checked = items.turnOn;
         if (!!document.getElementById('effect-blur') === true && items.blur) document.getElementById('effect-blur').checked = items.blur;
         if (!!document.getElementById('hover-inline') === true && items.inline) document.getElementById('hover-inline').checked = items.inline;
+        if (!!document.getElementById('turn-avatar') === true) document.getElementById('turn-avatar').checked = items.turnAvatar;
+        if (!!document.getElementById('turn-name') === true) document.getElementById('turn-name').checked = items.turnName;
+        if (!!document.getElementById('turn-message') === true) document.getElementById('turn-message').checked = items.turnMessage;
+        if (!!document.getElementById('turn-other') === true) document.getElementById('turn-other').checked = items.turnOther;
+
+
     });
 
 }
@@ -269,7 +287,11 @@ function getActionContext(info, tab) {
     chrome.storage.sync.get({
         turnOn: true,
         blur: false,
-        inline: false
+        inline: false,
+        turnAvatar: true,
+        turnName: true,
+        turnMessage: true,
+        turnOther: true,
     }, function(items) {
         browserSupportSync = true;
         items[keyChange] = valueChange;
@@ -280,21 +302,26 @@ function getActionContext(info, tab) {
 
 }
 initConfig();
-function initConfig(){
+
+function initConfig() {
     var browserSupportSync = false;
     chrome.storage.sync.get({
         turnOn: true,
         blur: false,
-        inline: false
+        inline: false,
+        turnAvatar: true,
+        turnName: true,
+        turnMessage: true,
+        turnOther: true,
     }, function(items) {
         browserSupportSync = true;
-            
+
         createContextMenu(items);
 
     });
 }
 
-function updateContextSetting(configs){
+function updateContextSetting(configs) {
     console.log('Update', configs);
     var browserSupportSync = false;
     try {
@@ -348,21 +375,32 @@ if (!!document.getElementById('hover-inline') === true) document.getElementById(
 if (!!document.getElementById('hover-block') === true) document.getElementById('hover-block').addEventListener('change', function() {
     saveOptions();
 });
+if (!!document.getElementById('turn-avatar') === true) document.getElementById('turn-avatar').addEventListener('change', function() {
+    saveOptions();
+});
+if (!!document.getElementById('turn-name') === true) document.getElementById('turn-name').addEventListener('change', function() {
+    saveOptions();
+});
+if (!!document.getElementById('turn-message') === true) document.getElementById('turn-message').addEventListener('change', function() {
+    saveOptions();
+});
+if (!!document.getElementById('turn-other') === true) document.getElementById('turn-other').addEventListener('change', function() {
+    saveOptions();
+});
 
-// Standard Google Universal Analytics code
-(function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga'); // Note: https protocol here
+// // Standard Google Universal Analytics code
+// (function(i, s, o, g, r, a, m) {
+//     i['GoogleAnalyticsObject'] = r;
+//     i[r] = i[r] || function() {
+//         (i[r].q = i[r].q || []).push(arguments)
+//     }, i[r].l = 1 * new Date();
+//     a = s.createElement(o),
+//         m = s.getElementsByTagName(o)[0];
+//     a.async = 1;
+//     a.src = g;
+//     m.parentNode.insertBefore(a, m)
+// })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga'); // Note: https protocol here
 
-ga('create', 'UA-109078055-6', 'auto'); // Enter your GA identifier
-ga('set', 'checkProtocolTask', function() {}); // Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-ga('require', 'displayfeatures');
-ga('send', 'pageview', '/popup.html'); // Specify the virtual path
+// ga('create', 'UA-109078055-6', 'auto');
+// ga('set', 'checkProtocolTask', function() {});
+// ga('send', 'pageview', '/popup.html');
