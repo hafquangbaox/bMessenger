@@ -7,23 +7,16 @@
 
 var styleEffect = {
     // One attr
-    unblur10: 'filter:none;',
     blur10: 'filter:blur(10px);',
     blur25: 'filter:blur(25px);',
-    unblur25: 'filter:none;',
     overflowHidden: 'overflow:hidden!important;',
-    unoverflowHidden: 'overflow:unset;',
     flipMirror: '-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-o-transform:rotateY(180deg);-ms-transform:rotateY(180deg);unicode-bidi:bidi-override;',
-    unflipMirror: '-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);-ms-transform:rotateY(0deg);unicode-bidi:bidi-override;',
     none: 'display:none;',
-    unnone: 'display:unset;',
     // Append
     borderRadius: function(x) {
         return 'border-radius:' + x + ';';
     },
-    unBorderRadius: 'border-radius:unset;',
     rightAlign: 'text-align:right;',
-    unrightAlign: 'text-align:inherit;',
     inlineBlock: 'display:inline-block;',
     block: 'display:block;',
     table: 'display:table;',
@@ -857,6 +850,10 @@ function handleM(config) {
                         tempSetDisplay += styleEffect.borderRadius(obj.borderRadius);
                     }
 
+                    if (!!obj.rightAlign === true) {
+                        tempSetDisplay += styleEffect.rightAlign;
+                    }
+
                     tempSetDisplay += '}';
                     temp += tempSetDisplay;
 
@@ -907,6 +904,10 @@ function handleM(config) {
 
                     if (!!obj.borderRadius === true) {
                         tempSetDisplay += styleEffect.borderRadius(obj.borderRadius);
+                    }
+
+                    if (!!obj.rightAlign === true) {
+                        tempSetDisplay += styleEffect.rightAlign;
                     }
 
                     tempSetDisplay += '}';
