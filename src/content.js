@@ -275,156 +275,156 @@ var selector = {
             },
             center: {
                 'flipMirror': [{
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                    inlineSelector: 'div>div>div>div>span:not([data-hover="none"])',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    rightAlign: true,
-                    inlineBlockDisplay: true
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                    inlineSelector: 'div>div>div>a>blockquote',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix>div',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                    inlineSelector: 'div>div>div.clearfix>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: 'name',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>h5',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div.clearfix>div>a',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div[data-hover="tooltip"]>div>div',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div.clearfix>div[data-hover="tooltip"]>div>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>span>span>span',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                    inlineSelector: 'span>span>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true
-                }
-                // , {
-                //     isComponent: "message",
-                //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
-                //     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                //     inlineSelector: 'div>div>div>span',
-                //     block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                // }
-                , {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>div',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div.clearfix>div>div>div',
-                    rightAlign: true,
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }
-                , {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
-                    inline: 'div.uiScrollableAreaContent>div>div>div',
-                    inlineSelector: 'span>span>div>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>div',
-                    inline: 'div.uiScrollableAreaContent>div>div>div',
-                    inlineSelector: 'span>span>div>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>span>span>span',
-                    inline: 'div.uiScrollableAreaContent>div>div>div',
-                    inlineSelector: 'span>span>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true
-                }, {
-                    isComponent: "name",
-                    selector: 'span>div:first-child>div>div:not(:first-child)',
-                    inline: 'div[role="main"]>span>div:first-child',
-                    inlineSelector: 'div>div:not(:first-child)',
-                    block: 'div[role="main"]'
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    inlineSelector: 'div:first-of-type>div:first-of-type',
-                    block: 'div[role="main"]'
-                }, {
-                    isComponent: "name",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    inlineSelector: 'div:first-of-type>div:nth-of-type(2)',
-                    block: 'div[role="main"]'
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div:first-child>div.uiPopover>div>div>img',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    borderRadius: '25%'
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div.clearfix>div>div>a>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: "other",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div.clearfix>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
-                    inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                    inlineSelector: 'div>div>div>div>div>span>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea'
-                }, {
-                    isComponent: "avatar",
-                    selector: 'span>div:first-child>div>div:first-child>div>img',
-                    inline: 'div[role="main"]>span>div:first-child',
-                    inlineSelector: 'div>div:first-child',
-                    block: 'div[role="main"]'
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    inlineSelector: 'div:first-of-type>div:first-child',
-                    block: 'div[role="main"]'
-                }, {
-                    isComponent: "message",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    inlineSelector: 'div:last-of-type>div>span>div',
-                    block: 'div[role="main"]'
-                }, {
-                    isComponent: "other",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    inlineSelector: 'div>div>span>div>div>ul',
-                    block: 'div[role="main"]'
-                }, ],
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div',
+                        inlineSelector: 'div>div>div>div>span:not([data-hover="none"])',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        rightAlign: true,
+                        inlineBlockDisplay: true
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div',
+                        inlineSelector: 'div>div>div>a>blockquote',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix>div',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div',
+                        inlineSelector: 'div>div>div.clearfix>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: 'name',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>h5',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>div.clearfix>div>a',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div[data-hover="tooltip"]>div>div',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>div.clearfix>div[data-hover="tooltip"]>div>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>span>span>span',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div',
+                        inlineSelector: 'span>span>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true
+                    }
+                    // , {
+                    //     isComponent: "message",
+                    //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
+                    //     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                    //     inlineSelector: 'div>div>div>span',
+                    //     block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    // }
+                    , {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>div',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>div.clearfix>div>div>div',
+                        rightAlign: true,
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
+                        inline: 'div.uiScrollableAreaContent>div>div>div',
+                        inlineSelector: 'span>span>div>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>div',
+                        inline: 'div.uiScrollableAreaContent>div>div>div',
+                        inlineSelector: 'span>span>div>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>span>span>span',
+                        inline: 'div.uiScrollableAreaContent>div>div>div',
+                        inlineSelector: 'span>span>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true
+                    }, {
+                        isComponent: "name",
+                        selector: 'span>div:first-child>div>div:not(:first-child)',
+                        inline: 'div[role="main"]>span>div:first-child',
+                        inlineSelector: 'div>div:not(:first-child)',
+                        block: 'div[role="main"]'
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
+                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        inlineSelector: 'div:first-of-type>div:first-of-type',
+                        block: 'div[role="main"]'
+                    }, {
+                        isComponent: "name",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
+                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        inlineSelector: 'div:first-of-type>div:nth-of-type(2)',
+                        block: 'div[role="main"]'
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div:first-child>div.uiPopover>div>div>img',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        borderRadius: '25%'
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>div.clearfix>div>div>a>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: "other",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>div.clearfix>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
+                        inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
+                        inlineSelector: 'div>div>div>div>div>span>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea'
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'span>div:first-child>div>div:first-child>div>img',
+                        inline: 'div[role="main"]>span>div:first-child',
+                        inlineSelector: 'div>div:first-child',
+                        block: 'div[role="main"]'
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
+                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        inlineSelector: 'div:first-of-type>div:first-child',
+                        block: 'div[role="main"]'
+                    }, {
+                        isComponent: "message",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
+                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        inlineSelector: 'div:last-of-type>div>span>div',
+                        block: 'div[role="main"]'
+                    }, {
+                        isComponent: "other",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
+                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        inlineSelector: 'div>div>span>div>div>ul',
+                        block: 'div[role="main"]'
+                    },
+                ],
                 'overflowHidden': [],
             }
 
@@ -947,16 +947,48 @@ function handleFB(config) {
 
                     var obj = selector.fb.blur[pos][key][i];
 
-                    if (temp === '') temp += obj.selector;
-                    else temp += ', ' + obj.selector;
-                    if (config.inline) hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
-                    else {
-                        hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
+                    // Select only component will apply effect
+                    var foundComponent = false;
+                    for (var _i = 0; _i < config.arrComponents.length; _i++) {
+                        if (obj.isComponent === config.arrComponents[_i]) {
+                            foundComponent = true;
+                            break;
+                        }
                     }
+                    if (!foundComponent) continue;
+                    // Select only component will apply effect
+
+                    var tempSetDisplay = '';
+
+                    if (config.inline) {
+                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                    } else {
+                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                    }
+                    tempSetDisplay += styleEffect[key];
+
+                    if (!!obj.blockDisplay === true) {
+                        tempSetDisplay += styleEffect.block;
+                    } else if (!!obj.inlineBlockDisplay === true) {
+                        tempSetDisplay += styleEffect.inlineBlock;
+                    } else if (!!obj.table === true) {
+                        tempSetDisplay += styleEffect.table;
+                    }
+
+                    if (!!obj.borderRadius === true) {
+                        tempSetDisplay += styleEffect.borderRadius(obj.borderRadius);
+                    }
+
+                    if (!!obj.rightAlign === true) {
+                        tempSetDisplay += styleEffect.rightAlign;
+                    }
+
+                    tempSetDisplay += '}';
+                    temp += tempSetDisplay;
+
                 }
 
-                temp += styleEffect[key];
-                styleText += '\n' + temp + hover;
+                styleText += temp;
 
             }
         }
@@ -965,33 +997,52 @@ function handleFB(config) {
         for (var pos in selector.fb.flip) {
             for (var key in selector.fb.flip[pos]) {
                 var temp = '';
-                var hover = '';
                 for (var i = 0; i < selector.fb.flip[pos][key].length; i++) {
 
                     var obj = selector.fb.flip[pos][key][i];
 
-                    temp += obj.selector;
-                    var tempSetDisplay = '';
-                    if (!!obj.blockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.block);
-                    } else if (!!obj.inlineBlockDisplay === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.inlineBlock);
-                    } else if (!!obj.table === true) {
-                        tempSetDisplay = styleEffect[key].replace(/.$/, styleEffect.table);
-                    } else tempSetDisplay = styleEffect[key];
-                    if (!!obj.width === true) {
-                        tempSetDisplay = tempSetDisplay.replace(/.$/, styleEffect.width);
+                    // Select only component will apply effect
+                    var foundComponent = false;
+                    for (var _i = 0; _i < config.arrComponents.length; _i++) {
+                        if (obj.isComponent === config.arrComponents[_i]) {
+                            foundComponent = true;
+                            break;
+                        }
                     }
-                    temp += tempSetDisplay;
+                    if (!foundComponent) continue;
+                    // Select only component will apply effect
 
-                    if (config.inline) hover += obj.inline + ':hover ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + styleEffect['un' + key];
-                    else {
-                        hover += obj.block + ':hover ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + styleEffect['un' + key] + '';
+                    var tempSetDisplay = '';
+
+                    if (config.inline) {
+                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                    } else {
+                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
+                    tempSetDisplay += styleEffect[key];
+
+                    if (!!obj.blockDisplay === true) {
+                        tempSetDisplay += styleEffect.block;
+                    } else if (!!obj.inlineBlockDisplay === true) {
+                        tempSetDisplay += styleEffect.inlineBlock;
+                    } else if (!!obj.table === true) {
+                        tempSetDisplay += styleEffect.table;
+                    }
+
+                    if (!!obj.borderRadius === true) {
+                        tempSetDisplay += styleEffect.borderRadius(obj.borderRadius);
+                    }
+
+                    if (!!obj.rightAlign === true) {
+                        tempSetDisplay += styleEffect.rightAlign;
+                    }
+
+                    tempSetDisplay += '}';
+                    temp += tempSetDisplay;
 
                 }
 
-                styleText += '\n' + temp + hover;
+                styleText += temp;
 
             }
         }
