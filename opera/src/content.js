@@ -783,14 +783,14 @@ var selector = {
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>div>a',
                     inline: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(1)>div>a',
-                    block: 'div.fbDockChatTabFlyout',
+                    block: 'div#ChatTabsPagelet',
                     blockDisplay: true
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type',
                     inline: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     inlineSelector: 'div>div>div:nth-child(2)>div:first-of-type',
-                    block: 'div.fbDockChatTabFlyout',
+                    block: 'div#ChatTabsPagelet',
                     blockDisplay: true
                 }
                 // , {
