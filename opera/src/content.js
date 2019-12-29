@@ -1044,12 +1044,12 @@ function checkData( timestamp ){
         console.log(rs);
         if( !rs ) console.log('Can\'t check version of dataset');
         else if ( +rs > timestamp ){
-            updateDataset();
+            updateDataset(rs);
         }
     });
 }
 
-function updateDataset(){
+function updateDataset(timestamp){
     httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt', function(rs){
         if( !rs ) console.log('Can\'t get dataset');
         else {
@@ -1057,8 +1057,10 @@ function updateDataset(){
                 var dataset = JSON.parse(rs);
                 chrome.storage.local.set({
                     dataset: rs,
-                }, function(items) {
-                    console.log('Save dataset success', items);
+                    lastUpdate: timestamp
+                }, function() {
+                    console.log('Save dataset success');
+                    selector = JSON.parse(rs);
                 });
             } catch( e ){
                 console.log('Can\' parse dataset');
