@@ -408,13 +408,13 @@ var selector = {
                         inlineSelector: 'div>div:first-child',
                         block: 'div[role="main"]'
                     }
-                    , {
-                        isComponent: "avatar",
-                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
-                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                        inlineSelector: 'div:first-of-type>div:first-child',
-                        block: 'div[role="main"]'
-                    }
+                    // , {
+                    //     isComponent: "avatar",
+                    //     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
+                    //     inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                    //     inlineSelector: 'div:first-of-type>div:first-child',
+                    //     block: 'div[role="main"]'
+                    // }
                     , {
                         isComponent: "message",
                         selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
