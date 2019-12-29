@@ -363,7 +363,7 @@ var selector = {
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
                     inlineSelector: 'div>h5',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true,
+                    rightAlign: true,
                     inlineNears: true,
                     blockNears: false,
                 }, {
