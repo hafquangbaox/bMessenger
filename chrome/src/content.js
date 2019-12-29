@@ -10,7 +10,7 @@ var styleEffect = {
     blur10: 'filter:blur(10px);',
     blur25: 'filter:blur(25px);',
     overflowHidden: 'overflow:hidden!important;',
-    flipMirror: '-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-o-transform:rotateY(180deg);-ms-transform:rotateY(180deg);unicode-bidi:bidi-override;',
+    flipMirror: 'transform: rotateY(180deg);-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-o-transform:rotateY(180deg);-ms-transform:rotateY(180deg);unicode-bidi:bidi-override;',
     none: 'display:none;',
     // Append
     borderRadius: function(x) {
@@ -849,9 +849,9 @@ function handleM(config) {
                     var tempSetDisplay = '';
 
                     if (config.inline) {
-                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                        tempSetDisplay += obj.inline + ':not(:hover)>' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                        tempSetDisplay += obj.block + ':not(:hover)>' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
                     tempSetDisplay += styleEffect[key];
 
@@ -903,9 +903,9 @@ function handleM(config) {
                     var tempSetDisplay = '';
 
                     if (config.inline) {
-                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                        tempSetDisplay += obj.inline + ':not(:hover)>' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                        tempSetDisplay += obj.block + ':not(:hover)>' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
                     tempSetDisplay += styleEffect[key];
 
