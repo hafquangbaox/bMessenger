@@ -275,7 +275,7 @@ input#toggle:checked ~ label.toggle::before {
 #update-button, #update-button:visited {
   text-align: center;
   color: #000;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 #update-button:hover{
   cursor: pointer;
