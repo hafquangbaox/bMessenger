@@ -309,7 +309,7 @@ var selector = {
                     rightAlign: true,
                     inlineBlockDisplay: true,
                     inlineNears: true,
-                    blockNears: true,
+                    blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
