@@ -404,10 +404,10 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
     saveOptions();
 });
 if (!!document.getElementById('update-button') === true) document.getElementById('update-button').addEventListener('click', function() {
-    checkData();
+    checkDataUpdate();
 });
 
-function checkData(){
+function checkDataUpdate(){
     browser.storage.local.get({
         lastUpdate: 0,
     }, function(items) {
@@ -432,7 +432,7 @@ function updateDataset(timestamp){
                 browser.storage.local.set({
                     dataset: rs
                 }, function() {
-                    
+
                     browser.storage.local.set({
                         lastUpdate: timestamp
                     }, function() {

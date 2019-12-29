@@ -404,10 +404,10 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
     saveOptions();
 });
 if (!!document.getElementById('update-button') === true) document.getElementById('update-button').addEventListener('click', function() {
-    checkData();
+    checkDataUpdate();
 });
 
-function checkData(){
+function checkDataUpdate(){
     chrome.storage.sync.get({
         lastUpdate: 0,
     }, function(items) {
@@ -432,7 +432,7 @@ function updateDataset(timestamp){
                 chrome.storage.local.set({
                     dataset: rs
                 }, function() {
-                    
+
                     chrome.storage.sync.set({
                         lastUpdate: timestamp
                     }, function() {
