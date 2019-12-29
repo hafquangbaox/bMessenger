@@ -1013,12 +1013,12 @@ function httpGet(theUrl, callback) {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             console.log(xmlhttp.responseText);
-            callback(xmlhttp.responseText);
+            callback(this);
         } else {
             callback(null);
         }
     }
-    xmlhttp.open("GET", theUrl, false);
+    xmlhttp.open("GET", theUrl, true);
     xmlhttp.send();
 }
 
