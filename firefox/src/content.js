@@ -1051,7 +1051,21 @@ function checkData( timestamp ){
 }
 
 function updateDataset(){
-
+    httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt', function(rs){
+        if( !rs ) console.log('Can\'t get dataset');
+        else {
+            try {
+                var dataset = JSON.parse(rs);
+                browser.storage.local.set({
+                    dataset: rs,
+                }, function(items) {
+                    console.log('Save dataset success');
+                });
+            } catch( e ){
+                console.log('Can\' parse dataset');
+            }
+        }
+    });
 }
 
 function handleStyle(config) {
