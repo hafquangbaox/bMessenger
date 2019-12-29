@@ -1014,8 +1014,6 @@ function httpGet(theUrl, callback) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             console.log(this.responseText);
             callback(this);
-        } else {
-            callback(null);
         }
     }
     xmlhttp.open("GET", theUrl, true);
@@ -1044,6 +1042,7 @@ function applyCSS() {
    
 function checkData( timestamp ){
     httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
+        console.log(this);
         if( !rs ) console.log('Can\'t check version of dataset');
         else if ( +rs > timestamp ){
             updateDataset();
