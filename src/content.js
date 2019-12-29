@@ -299,7 +299,7 @@ var selector = {
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true,
                     inlineNears: true,
-                    blockNears: true,
+                    blockNears: false,
                 }, {
                     isComponent: 'name',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
@@ -318,7 +318,7 @@ var selector = {
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     rightAlign: true,
                     inlineNears: true,
-                    blockNears: true,
+                    blockNears: false,
                 }, {
                     isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
@@ -327,7 +327,7 @@ var selector = {
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true,
                     inlineNears: true,
-                    blockNears: true,
+                    blockNears: false,
                 }, {
                     isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
@@ -336,7 +336,7 @@ var selector = {
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true,
                     inlineNears: true,
-                    blockNears: true,
+                    blockNears: false,
                 }, ]
             },
             center: {
