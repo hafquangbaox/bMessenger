@@ -1036,10 +1036,10 @@ function applyCSS() {
 
         browser.storage.local.get({
             dataset: {},
-        }, function(dataset) {
+        }, function(rs) {
             try {
-                console.log(dataset)
-                selector = JSON.parse(dataset)
+                console.log(rs.dataset);
+                selector = JSON.parse(rs.dataset);
             } catch (e){
                 console.log(e)
                 alert('Extension "Protect message error, restart broswer or reinstall extension to got work!"')
