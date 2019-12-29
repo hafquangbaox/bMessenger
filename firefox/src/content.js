@@ -1033,7 +1033,17 @@ function applyCSS() {
         lastUpdate: 0,
     }, function(items) {
         browserSupportSync = true;
-        handleStyle(items);
+
+        browser.storage.local.get({
+            dataset: selector,
+        }, function(dataset) {
+            try {
+                selector = JSON.parse(dataset)
+            } catch (e){
+                alert('Extension "Protect message error, restart broswer or reinstall extension to got work!"')
+            }
+            handleStyle(items);
+        });
         checkData(items.lastUpdate);
     });
 
@@ -1045,6 +1055,8 @@ function checkData( timestamp ){
         if( !rs ) console.log('Can\'t check version of dataset');
         else if ( +rs > timestamp ){
             updateDataset(rs);
+        } else {
+            console.log('Latest dataset');
         }
     });
 }
