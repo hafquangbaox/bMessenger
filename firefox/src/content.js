@@ -396,7 +396,7 @@ var selector = {
                     isComponent: 'message',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                    inlineSelector: 'div>div>div>a>blockquote',
+                    inlineSelector: 'div>div>div>a',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineNears: true,
                     blockNears: false,
