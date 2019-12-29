@@ -1013,7 +1013,7 @@ function httpGet(theUrl, callback) {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             console.log(this.responseText);
-            callback(this);
+            callback(this.responseText);
         }
     }
     xmlhttp.open("GET", theUrl, true);
