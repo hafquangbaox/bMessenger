@@ -1037,7 +1037,6 @@ function applyCSS() {
         checkData(items.lastUpdate);
     });
 
-
 }
    
 function checkData( timestamp ){
@@ -1059,7 +1058,7 @@ function updateDataset(){
                 browser.storage.local.set({
                     dataset: rs,
                 }, function(items) {
-                    console.log('Save dataset success');
+                    console.log('Save dataset success', items);
                 });
             } catch( e ){
                 console.log('Can\' parse dataset');
