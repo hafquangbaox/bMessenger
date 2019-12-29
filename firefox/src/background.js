@@ -331,6 +331,7 @@ function checkData( timestamp ){
     });
 }
 
+console.log('Run from background');
 Date.prototype.formatMMDDYYYY = function(){
     return (this.getMonth() + 1) + 
     "/" +  this.getDate() +
