@@ -1056,7 +1056,7 @@ function updateDataset(){
         else {
             try {
                 var dataset = JSON.parse(rs);
-                chrome.storage.sync.set({
+                chrome.storage.local.set({
                     dataset: rs,
                 }, function(items) {
                     console.log('Save dataset success');
