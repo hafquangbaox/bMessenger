@@ -1038,10 +1038,9 @@ function applyCSS() {
             dataset: {},
         }, function(rs) {
             try {
-                console.log(rs.dataset);
                 selector = JSON.parse(rs.dataset);
             } catch (e){
-                console.log(e)
+                console.log(e);
                 alert('Extension "Protect message error, restart broswer or reinstall extension to got work!"')
             }
             handleStyle(items);
