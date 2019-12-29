@@ -1035,9 +1035,10 @@ function applyCSS() {
         browserSupportSync = true;
 
         chrome.storage.local.get({
-            dataset: selector,
+            dataset: {},
         }, function(dataset) {
             try {
+                console.log(dataset)
                 selector = JSON.parse(dataset)
             } catch (e){
                 console.log(e)
