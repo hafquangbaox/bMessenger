@@ -1068,9 +1068,9 @@ function handleM(config) {
                     var tempSetDisplay = '';
 
                     if (config.inline) {
-                        tempSetDisplay += obj.inline + ':not(:hover)>' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                        tempSetDisplay += obj.inline + ':not(:hover)' + getCharacterAfterHover(obj.inlineNears) + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        tempSetDisplay += obj.block + ':not(:hover)>' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                        tempSetDisplay += obj.block + ':not(:hover)' + getCharacterAfterHover(obj.blockNears) + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
                     tempSetDisplay += styleEffect[key];
 
@@ -1122,9 +1122,9 @@ function handleM(config) {
                     var tempSetDisplay = '';
 
                     if (config.inline) {
-                        tempSetDisplay += obj.inline + ':not(:hover)>' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                        tempSetDisplay += obj.inline + ':not(:hover)' + getCharacterAfterHover(obj.inlineNears) + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        tempSetDisplay += obj.block + ':not(:hover)>' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                        tempSetDisplay += obj.block + ':not(:hover)' + getCharacterAfterHover(obj.blockNears) + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
                     tempSetDisplay += styleEffect[key];
 
@@ -1170,7 +1170,10 @@ function handleM(config) {
         document.getElementById("bMessenger").innerHTML = styleText;
     }
 }
-
+function getCharacterAfterHover(flag){
+    if( flag ) return '>';
+    return ' ';
+}
 function handleFB(config) {
     console.log('Apply fb style');
     var styleText = '';
@@ -1197,9 +1200,9 @@ function handleFB(config) {
                     var tempSetDisplay = '';
 
                     if (config.inline) {
-                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                        tempSetDisplay += obj.inline + ':not(:hover)' + getCharacterAfterHover(obj.inlineNears) + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                        tempSetDisplay += obj.block + ':not(:hover)' + getCharacterAfterHover(obj.blockNears) + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
                     tempSetDisplay += styleEffect[key];
 
@@ -1251,9 +1254,9 @@ function handleFB(config) {
                     var tempSetDisplay = '';
 
                     if (config.inline) {
-                        tempSetDisplay += obj.inline + ':not(:hover) ' + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
+                        tempSetDisplay += obj.inline + ':not(:hover)' + getCharacterAfterHover(obj.inlineNears) + (!!obj.inlineSelector === false ? obj.selector : obj.inlineSelector) + '{';
                     } else {
-                        tempSetDisplay += obj.block + ':not(:hover) ' + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
+                        tempSetDisplay += obj.block + ':not(:hover)' + getCharacterAfterHover(obj.blockNears) + (!!obj.blockSelector === false ? obj.selector : obj.blockSelector) + '{';
                     }
                     tempSetDisplay += styleEffect[key];
 
