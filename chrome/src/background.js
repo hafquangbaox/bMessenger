@@ -331,8 +331,6 @@ function checkData( timestamp ){
     });
 }
 
-console.log('Run from background');
-alert('Run from background');
 Date.prototype.formatMMDDYYYY = function(){
     return (this.getMonth() + 1) + 
     "/" +  this.getDate() +
@@ -405,6 +403,49 @@ if (!!document.getElementById('turn-message') === true) document.getElementById(
 if (!!document.getElementById('turn-other') === true) document.getElementById('turn-other').addEventListener('change', function() {
     saveOptions();
 });
+if (!!document.getElementById('update-button') === true) document.getElementById('update-button').addEventListener('click', function() {
+    checkData();
+});
+
+function checkData(){
+    chrome.storage.sync.get({
+        lastUpdate: 0,
+    }, function(items) {
+        var timestamp = items.lastUpdate;
+        httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
+            if( !rs ) console.log('Can\'t check version of dataset');
+            else if ( +rs > timestamp ){
+                updateDataset(rs);
+            } else {
+                alert('Latest dataset');
+            }
+        });
+    });
+}
+
+function updateDataset(timestamp){
+    httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt', function(rs){
+        if( !rs ) console.log('Can\'t get dataset');
+        else {
+            try {
+                var dataset = JSON.parse(rs);
+                chrome.storage.local.set({
+                    dataset: rs
+                }, function() {
+                    
+                    chrome.storage.sync.set({
+                        lastUpdate: timestamp
+                    }, function() {
+                        saveOptions();
+                        alert('Save dataset success');
+                    });
+                });
+            } catch( e ){
+                console.log('Can\' parse dataset');
+            }
+        }
+    });
+}
 
 function httpGet(theUrl, callback) {
     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
