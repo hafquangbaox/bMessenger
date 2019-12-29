@@ -1056,11 +1056,15 @@ function updateDataset(timestamp){
             try {
                 var dataset = JSON.parse(rs);
                 browser.storage.local.set({
-                    dataset: rs,
-                    lastUpdate: timestamp
+                    dataset: rs
                 }, function() {
                     console.log('Save dataset success');
                     selector = JSON.parse(rs);
+                });
+                browser.storage.local.set({
+                    lastUpdate: timestamp
+                }, function() {
+                    console.log('Save lastUpdate success');
                 });
             } catch( e ){
                 console.log('Can\' parse dataset');
