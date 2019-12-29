@@ -1040,6 +1040,7 @@ function applyCSS() {
             try {
                 selector = JSON.parse(dataset)
             } catch (e){
+                console.log(e)
                 alert('Extension "Protect message error, restart broswer or reinstall extension to got work!"')
             }
             handleStyle(items);
