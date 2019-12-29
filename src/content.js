@@ -376,6 +376,14 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'message',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div',
+                    inline: 'div>div>div.clearfix:first-of-type>div',
+                    inlineSelector: 'div>div>div>div>span:not([data-hover="none"])',
+                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: 'message',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div',
                     inlineSelector: 'div>div>div>div>span:not([data-hover="none"])',
