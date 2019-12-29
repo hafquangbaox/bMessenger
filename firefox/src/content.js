@@ -1052,7 +1052,6 @@ function applyCSS() {
    
 function checkData( timestamp ){
     httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
-        console.log(rs);
         if( !rs ) console.log('Can\'t check version of dataset');
         else if ( +rs > timestamp ){
             updateDataset(rs);
@@ -1233,10 +1232,6 @@ function handleM(config) {
         style.setAttribute('id', 'bMessenger');
         document.body.appendChild(style);
     } else {
-        // var style = document.createElement('style');
-        // style.type = 'text/css';
-        // var textnode = document.createTextNode(styleText);
-        // style.appendChild(textnode);
         document.getElementById("bMessenger").innerHTML = styleText;
     }
 }
@@ -1365,11 +1360,6 @@ function handleFB(config) {
         style.setAttribute('id', 'bMessenger');
         document.body.appendChild(style);
     } else {
-        // var style = document.createElement('style');
-        // style.type = 'text/css';
-        // var textnode = document.createTextNode(styleText);
-        // style.appendChild(textnode);
-        // document.getElementById("bMessenger").replaceChild(style, document.getElementById("bMessenger").childNodes[0]);
         document.getElementById("bMessenger").innerHTML = styleText;
     }
 }
