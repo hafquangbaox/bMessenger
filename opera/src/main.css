@@ -272,9 +272,12 @@ input#toggle:checked ~ label.toggle::before {
   content: "-";
 }
 
-#update-button{
+#update-button, #update-button:visited {
   text-align: center;
+  color: #000;
+  font-size: 0.8rem;
 }
 #update-button:hover{
   cursor: pointer;
+  color: #ff5000;
 }
