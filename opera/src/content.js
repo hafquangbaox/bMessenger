@@ -386,7 +386,15 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>a',
+                    inline: 'div.uiScrollableAreaContent>div>div>div>div',
+                    inlineSelector: 'div>div>div>div>a',
+                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: 'message',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div',
                     inlineSelector: 'div>div>div>a>blockquote',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
