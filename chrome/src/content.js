@@ -1004,7 +1004,7 @@ var selector = {
     }
 };
 
-function httpGet(theUrl) {
+function httpGet(theUrl, callback) {
     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
     } else { // code for IE6, IE5
@@ -1012,7 +1012,9 @@ function httpGet(theUrl) {
     }
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            return xmlhttp.responseText;
+            callback(xmlhttp.responseText);
+        } else {
+            callback(null);
         }
     }
     xmlhttp.open("GET", theUrl, false);
@@ -1029,10 +1031,26 @@ function applyCSS() {
         turnName: true,
         turnMessage: true,
         turnOther: true,
+        lastUpdate: 0,
     }, function(items) {
         browserSupportSync = true;
         handleStyle(items);
+        checkData(items.lastUpdate);
     });
+
+
+}
+   
+function checkData( timestamp ){
+    httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
+        if( !rs ) console.log('Can\'t check version of dataset');
+        else if ( +rs > timestamp ){
+            updateDataset();
+        }
+    });
+}
+
+function updateDataset(){
 
 }
 
@@ -1324,8 +1342,15 @@ function handleFB(config) {
     }
 }
 
-applyCSS();
-console.log('Running');
+function main(){
+
+    applyCSS();
+    console.log('Running');
+    
+
+}
+
+main();
 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
