@@ -326,10 +326,17 @@ function checkData( timestamp ){
     httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
         if( !rs ) console.log('Can\'t check version of dataset');
         else {
-            document.getElementById("update-button").innerHTML = 'Database last updated at' + new Date(+rs) + '. Click here for updates.';
+            document.getElementById("update-button").innerHTML = 'Last updated at ' + new Date(+rs * 1000).formatMMDDYYYY() + '. Click here for updates.';
         }
     });
 }
+
+Date.prototype.formatMMDDYYYY = function(){
+    return (this.getMonth() + 1) + 
+    "/" +  this.getDate() +
+    "/" +  this.getFullYear();
+}
+
 function updateContextSetting(configs) {
     console.log('Update', configs);
     var browserSupportSync = false;
