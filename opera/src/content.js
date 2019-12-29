@@ -248,7 +248,7 @@ var selector = {
                     isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'a>div>div>div:last-child>span',
+                    inlineSelector: 'div>a>div>div>div:last-child>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     rightAlign: true,
                 }, {
