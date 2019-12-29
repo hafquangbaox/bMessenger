@@ -272,4 +272,9 @@ input#toggle:checked ~ label.toggle::before {
   content: "-";
 }
 
-
+#update-button{
+  text-align: center;
+}
+#update-button:hover{
+  cursor: pointer;
+}
