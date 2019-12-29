@@ -375,10 +375,10 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 }, {
-                    isComponent: 'message',
+                    isComponent: 'name',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div',
-                    inline: 'div>div>div.clearfix:first-of-type>div',
-                    inlineSelector: 'div>div>div>div>span:not([data-hover="none"])',
+                    inline: 'div.uiScrollableAreaContent>div>div>div>div',
+                    inlineSelector: 'div>div>div.clearfix:first-of-type>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineNears: true,
                     blockNears: false,
