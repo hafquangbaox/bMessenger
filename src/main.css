@@ -238,7 +238,6 @@ label.toggle {
   display: block;
   padding: 0.5em;
   text-align: center;
-  border-bottom: 1px solid #CCC;
   font-size: 1.0rem;
   font-weight: bolder;
 }
@@ -261,6 +260,7 @@ label.toggle::before {
   height: 0px;
   overflow: hidden;
   transition: height 0.5s;
+  border-bottom: 1px solid #CCC;
 }
 div#expand>section {
   padding: 0 20px;

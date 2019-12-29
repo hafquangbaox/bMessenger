@@ -203,7 +203,10 @@ function restoreOptions() {
         if (!!document.getElementById('turn-message') === true) document.getElementById('turn-message').checked = items.turnMessage;
         if (!!document.getElementById('turn-other') === true) document.getElementById('turn-other').checked = items.turnOther;
 
+    });
 
+    var version = getHTML('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs) {
+        console.log(rs);
     });
 
 }
@@ -388,19 +391,17 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
     saveOptions();
 });
 
-// // Standard Google Universal Analytics code
-// (function(i, s, o, g, r, a, m) {
-//     i['GoogleAnalyticsObject'] = r;
-//     i[r] = i[r] || function() {
-//         (i[r].q = i[r].q || []).push(arguments)
-//     }, i[r].l = 1 * new Date();
-//     a = s.createElement(o),
-//         m = s.getElementsByTagName(o)[0];
-//     a.async = 1;
-//     a.src = g;
-//     m.parentNode.insertBefore(a, m)
-// })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga'); // Note: https protocol here
+function getHTML(url, callback) {
 
-// ga('create', 'UA-109078055-6', 'auto');
-// ga('set', 'checkProtocolTask', function() {});
-// ga('send', 'pageview', '/popup.html');
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            callback(xhr.responseText);
+        } else {
+            console.log('Request failed.  Returned status of ' + xhr.status);
+        }
+    };
+    xhr.send();
+
+};
