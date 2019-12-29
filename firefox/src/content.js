@@ -376,9 +376,9 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'name',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div',
+                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div.direction_ltr',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                    inlineSelector: 'div>div>div.clearfix:first-of-type>div',
+                    inlineSelector: 'div>div>div.clearfix:first-of-type>div.direction_ltr',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineNears: true,
                     blockNears: false,
