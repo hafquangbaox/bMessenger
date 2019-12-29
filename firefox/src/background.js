@@ -326,7 +326,7 @@ function checkData( timestamp ){
     httpGet( 'https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs){
         if( !rs ) console.log('Can\'t check version of dataset');
         else {
-            document.getElementById("update-button").innerHTML = 'Latest data ' + new Date(+rs * 1000).formatMMDDYYYY() + '<br>-> Update now <-';
+            if (!!document.getElementById('update-button') === true) document.getElementById('update-button').innerHTML = 'Latest data ' + new Date(+rs * 1000).formatMMDDYYYY() + '<br>-> Update now <-';
         }
     });
 }
