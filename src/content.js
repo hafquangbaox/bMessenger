@@ -29,28 +29,28 @@ var selector = {
             left: {
                 'blur10': [{
                     isComponent: 'name',
-                    selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
+                    selector: 'ul>li[role="row"] a>div>div>div:first-of-type>span',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'div>a>div>div>div:first-of-type>span',
+                    inlineSelector: 'a>div>div>div:first-of-type>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
-                    inlineNears: true,
+                    inlineNears: false,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
-                    selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
+                    selector: 'ul>li[role="row"] a>div>div>div:last-of-type>span',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'a>div>div>div:last-child>span',
+                    inlineSelector: 'a>div>div>div:last-of-type>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
-                    inlineNears: true,
+                    inlineNears: false,
                     blockNears: false,
                 }, ],
                 'blur25': [{
                     isComponent: 'avatar',
-                    selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
+                    selector: 'ul>li[role="row"] a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
-                    inlineNears: true,
+                    inlineNears: false,
                     blockNears: false,
                 }, {
                     isComponent: 'other',
@@ -293,7 +293,7 @@ var selector = {
             left: {
                 'flipMirror': [{
                     isComponent: 'avatar',
-                    selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
+                    selector: 'ul>li[role="row"] >a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div>a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
@@ -302,7 +302,7 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'name',
-                    selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
+                    selector: 'ul>li[role="row"] >a>div>div>div:first-of-type>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div>a>div>div>div:first-of-type>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
@@ -312,7 +312,7 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'message',
-                    selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
+                    selector: 'ul>li[role="row"] >a>div>div>div:last-child>span',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div>a>div>div>div:last-child>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
@@ -321,7 +321,7 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'other',
-                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
+                    selector: 'ul>li[role="row"] div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
@@ -330,12 +330,12 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: 'other',
-                    selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
+                    selector: 'ul>li[role="row"] div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     inline: 'ul>li[role="row"]',
                     inlineSelector: 'div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true,
-                    inlineNears: true,
+                    inlineNears: false,
                     blockNears: false,
                 }, ]
             },
