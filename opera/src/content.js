@@ -94,6 +94,7 @@ var selector = {
                     inlineSelector: 'div>div:not(:first-child)',
                     block: 'div[role="main"]',
                     inlineNears: true,
+                    borderRadius: "50%",
                     blockNears: false,
                 }, {
                     isComponent: 'message',
