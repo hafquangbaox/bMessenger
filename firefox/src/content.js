@@ -351,7 +351,7 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
-                    selector: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type>div',
+                    selector: 'div.info_panel div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type>div',
                     inline: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
                     inlineSelector: 'div:first-of-type>div:first-of-type>div',
                     block: 'div[role="main"]',
@@ -367,7 +367,7 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "name",
-                    selector: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)>div',
+                    selector: 'div.info_panel div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)>div',
                     inline: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
                     inlineSelector: 'div:first-of-type>div:nth-of-type(2)>div',
                     block: 'div[role="main"]',
