@@ -298,7 +298,7 @@ var selector = {
                     inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true,
-                    inlineNears: true,
+                    inlineNears: false,
                     blockNears: false,
                 }, {
                     isComponent: 'name',
