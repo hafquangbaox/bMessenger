@@ -295,10 +295,10 @@ var selector = {
                     isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'a>div>div[data-tooltip-position="right"]>div',
+                    inlineSelector: 'div>a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineBlockDisplay: true,
-                    inlineNears: false,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'name',
