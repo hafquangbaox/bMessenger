@@ -31,7 +31,7 @@ var selector = {
                     isComponent: 'name',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
                     inline: 'ul>li[role="row"]',
-                    inlineSelector: 'div>a>div>div>div>span',
+                    inlineSelector: 'div>a>div>div>div:first-of-type>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineNears: true,
                     blockNears: false,
