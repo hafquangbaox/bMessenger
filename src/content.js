@@ -202,6 +202,7 @@ var selector = {
                         inline: 'div[role="main"]>span>div:first-child',
                         inlineSelector: 'div>div:first-child',
                         block: 'div[role="main"]',
+                        borderRadius: "50%",
                         inlineNears: true,
                         blockNears: false,
                     }, {
