@@ -73,8 +73,8 @@ var selector = {
             center: {
                 'blur10': [{
                     isComponent: "name",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                    selector: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
+                    inline: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
                     inlineSelector: 'div:first-of-type>div:nth-of-type(2)',
                     block: 'div[role="main"]',
                     inlineNears: true,
@@ -94,7 +94,6 @@ var selector = {
                     inlineSelector: 'div>div:not(:first-child)',
                     block: 'div[role="main"]',
                     inlineNears: true,
-                    borderRadius: "50%",
                     blockNears: false,
                 }, {
                     isComponent: 'message',
@@ -202,13 +201,12 @@ var selector = {
                         inline: 'div[role="main"]>span>div:first-child',
                         inlineSelector: 'div>div:first-child',
                         block: 'div[role="main"]',
-                        borderRadius: "50%",
                         inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "avatar",
-                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
-                        inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        selector: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
+                        inline: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
                         inlineSelector: 'div:first-of-type>div:first-child',
                         block: 'div[role="main"]',
                         inlineNears: true,
