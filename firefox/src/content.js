@@ -340,13 +340,23 @@ var selector = {
                 }, ]
             },
             center: {
-                'flipMirror': [{
+                'flipMirror': [
+                {
                     isComponent: "avatar",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
                     inlineSelector: 'div:first-child>div.uiPopover>div>div>img',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    borderRadius: '25%',
+                    // borderRadius: '25%',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: "avatar",
+                    selector: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div:first-of-type>div:first-of-type>div:first-of-type',
+                    inline: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div:first-of-type>div:first-of-type',
+                    inlineSelector: 'div:first-of-type',
+                    block: 'div[role="main"]',
+                    // borderRadius: '25%',
                     inlineNears: true,
                     blockNears: false,
                 }, {
