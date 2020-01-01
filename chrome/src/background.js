@@ -404,7 +404,7 @@ if (!!document.getElementById('turn-other') === true) document.getElementById('t
     saveOptions();
 });
 if (!!document.getElementById('update-button') === true) document.getElementById('update-button').addEventListener('click', function() {
-    checkDataUpdate();
+    // checkDataUpdate();
 });
 
 function checkDataUpdate(){
