@@ -1042,18 +1042,18 @@ function applyCSS() {
     }, function(items) {
         browserSupportSync = true;
 
-        chrome.storage.local.get({
-            dataset: {},
-        }, function(rs) {
-            try {
-                selector = JSON.parse(rs.dataset);
-            } catch (e){
-                console.log(e);
-                alert('Extension "Protect message error, restart broswer or reinstall extension to got work!"')
-            }
+        // chrome.storage.local.get({
+        //     dataset: {},
+        // }, function(rs) {
+        //     try {
+        //         selector = JSON.parse(rs.dataset);
+        //     } catch (e){
+        //         console.log(e);
+        //         alert('Extension "Protect message error, restart broswer or reinstall extension to got work!"')
+        //     }
             handleStyle(items);
-        });
-        checkData(items.lastUpdate);
+        // });
+        // checkData(items.lastUpdate);
     });
 
 }
