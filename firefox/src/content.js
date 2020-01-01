@@ -424,17 +424,7 @@ var selector = {
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineNears: true,
                     blockNears: false,
-                }
-                // , {
-                //     isComponent: "message",
-                //     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix>div',
-                //     inline: 'div.uiScrollableAreaContent>div>div>div>div',
-                //     inlineSelector: 'div>div>div.clearfix>div',
-                //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                //     inlineNears: true,
-                //     blockNears: false,
-                // }
-                , {
+                }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
@@ -495,15 +485,6 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 }
-                // , {
-                //     isComponent: "message",
-                //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
-                //     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
-                //     inlineSelector: 'div>div.clearfix>div>div>a>div',
-                //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                //     inlineNears: true,
-                //     blockNears: false,
-                // }
                 , {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
