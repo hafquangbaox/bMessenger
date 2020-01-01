@@ -267,17 +267,7 @@ var selector = {
                         block: 'div[role="main"]',
                         inlineNears: true,
                         blockNears: false,
-                    },
-                    //  {
-                    //     isComponent: "other",
-                    //     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
-                    //     inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    //     inlineSelector: 'div>div>span>div>div>ul>li',
-                    //     block: 'div[role="main"]',
-                    //     inlineNears: true,
-                    //     blockNears: false,
-                    // },
-                    {
+                    }, {
                         isComponent: "other",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
                         inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
@@ -285,16 +275,15 @@ var selector = {
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         inlineNears: true,
                         blockNears: false,
+                    }, {
+                        isComponent: "other",
+                        selector: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul>li',
+                        inline: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                        inlineSelector: 'div>div>span>div>div>ul>li',
+                        block: 'div[role="main"]',
+                        inlineNears: false,
+                        blockNears: false,
                     },
-                    //  {
-                    //     isComponent: "other",
-                    //     selector: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul>li',
-                    //     inline: 'div[data-testid="info_panel"] div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    //     inlineSelector: 'div>div>span>div>div>ul>li',
-                    //     block: 'div[role="main"]',
-                    //     inlineNears: false,
-                    //     blockNears: false,
-                    // },
 
                 ],
                 'overflowHidden': [],
