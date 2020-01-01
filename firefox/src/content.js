@@ -366,6 +366,14 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 }, {
+                    isComponent: "name",
+                    selector: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)>div:first-of-type',
+                    inline: 'div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
+                    inlineSelector: 'div:first-of-type',
+                    block: 'div[role="main"]',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
                     isComponent: 'name',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
                     inline: 'div.uiScrollableAreaContent>div>div>div>div.clearfix',
