@@ -175,15 +175,17 @@ var selector = {
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineNears: true,
                     blockNears: false,
-                }, {
-                    isComponent: "other",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:last-child',
-                    inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
-                    inlineSelector: 'div:first-of-type>div:last-child',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }],
+                },
+                //  {
+                //     isComponent: "other",
+                //     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:last-child',
+                //     inline: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
+                //     inlineSelector: 'div:first-of-type>div:last-child',
+                //     block: 'div[role="main"]',
+                //     inlineNears: true,
+                //     blockNears: false,
+                // }
+                ],
                 'blur25': [
 
                     {
