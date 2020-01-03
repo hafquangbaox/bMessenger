@@ -357,7 +357,7 @@ var selector = {
                     inline: 'div[data-testid="info_panel"] div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
                     inlineSelector: 'div:first-of-type>div:first-of-type>div',
                     block: 'div[role="main"]',
-                    inlineNears: false,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
@@ -373,7 +373,7 @@ var selector = {
                     inline: 'div[data-testid="info_panel"] div.uiScrollableArea.fade.contentAfter>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div',
                     inlineSelector: 'div:first-of-type>div:nth-of-type(2)>div',
                     block: 'div[role="main"]',
-                    inlineNears: false,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'name',
