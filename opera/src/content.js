@@ -1017,7 +1017,7 @@ function httpGet(theUrl, callback) {
             callback(null);
         }
     }
-    xmlhttp.open("GET", theUrl, false);
+    xmlhttp.open("GET", theUrl, true);
     xmlhttp.send();
 }
 
