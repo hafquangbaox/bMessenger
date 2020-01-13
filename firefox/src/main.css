@@ -18,6 +18,8 @@ body {
 }
 .author-center{
   text-align: justify;
+  top: 5px;
+  position: relative;
 }
 .line-1-rem{
     font-size: 1rem;
