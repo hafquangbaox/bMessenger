@@ -240,6 +240,7 @@ label.toggle {
   text-align: center;
   font-size: 1.0rem;
   font-weight: bolder;
+  cursor: pointer;
 }
 label.toggle:hover {
   color: #000;
