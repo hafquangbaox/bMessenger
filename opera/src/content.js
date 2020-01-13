@@ -60,12 +60,6 @@ var selector = {
             },
             center: {
                 'blur10': [{
-                    isComponent: "name",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
                     isComponent: 'name',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
@@ -273,6 +267,18 @@ var selector = {
                 }, {
                     isComponent: "avatar",
                     selector: 'span>div:first-child>div>div:first-child>div>img',
+                    block: 'div[role="main"]',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: "avatar",
+                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
+                    block: 'div[role="main"]',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: "name",
+                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
                     block: 'div[role="main"]',
                     inlineNears: true,
                     blockNears: false,
