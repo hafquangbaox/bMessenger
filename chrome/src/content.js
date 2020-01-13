@@ -16,6 +16,7 @@ var styleEffect = {
         return 'border-radius:' + x + ';';
     },
     rightAlign: 'text-align:right;',
+    inlineBlock: 'display:inline-block;',
     block: 'display:block;',
     table: 'display:table;',
     width: 'width:fit-content;',
@@ -28,27 +29,32 @@ var selector = {
                     isComponent: 'name',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, ],
                 'blur25': [{
                     isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, ]
             },
@@ -57,71 +63,85 @@ var selector = {
                     isComponent: "name",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'name',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'span>div:first-child>div>div:not(:first-child)',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div[data-hover="tooltip"]>div>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>span>span>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>span>span>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "other",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:last-child',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }],
                 'blur25': [{
@@ -129,61 +149,73 @@ var selector = {
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     borderRadius: '25%',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'span>div:first-child>div>div:first-child>div>img',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>img',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div[role="img"]',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "other",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
                     block: 'div[role="main"]',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "other",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    inlineNears: true,
                     blockNears: false,
                 }, ],
                 'overflowHidden': [],
@@ -195,28 +227,37 @@ var selector = {
                     isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineBlockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'name',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:first-of-type>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     rightAlign: true,
+                    inlineBlockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'message',
                     selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>img',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineBlockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: 'other',
                     selector: 'ul>li[role="row"]>div[role="gridcell"]:nth-child(2)>div[aria-haspopup="true"][role="button"]>div>div',
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
+                    inlineBlockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, ]
             },
@@ -226,101 +267,142 @@ var selector = {
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         borderRadius: '25%',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "avatar",
                         selector: 'span>div:first-child>div>div:first-child>div>img',
                         block: 'div[role="main"]',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'name',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         rightAlign: true,
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "name",
                         selector: 'span>div:first-child>div>div:not(:first-child)',
                         block: 'div[role="main"]',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'name',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div.direction_ltr',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'message',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         rightAlign: true,
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'message',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>a',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'message',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }
+                    // , {
+                    //     isComponent: "message",
+                    //     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix>div',
+                    //
+                    //
+                    //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    //     inlineNears: true,
+                    //     blockNears: false,
+                    // }
                     , {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'message',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div[data-hover="tooltip"]>div>div',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: 'message',
                         selector: 'div.uiScrollableAreaContent>div>div>div>div>span>span>span',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>div',
                         rightAlign: true,
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>div',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>span>span>span',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
                         blockNears: false,
                     }
+                    // , {
+                    //     isComponent: "message",
+                    //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
+                    //
+                    //
+                    //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                    //     inlineNears: true,
+                    //     blockNears: false,
+                    // }
                     , {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "message",
                         selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
                         block: 'div[role="main"]',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "other",
                         selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
                         block: 'div[role="main"]',
+                        inlineNears: true,
                         blockNears: false,
                     }, {
                         isComponent: "other",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
                         blockNears: false,
                     },
                 ],
@@ -336,12 +418,14 @@ var selector = {
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)',
+                    inlineNears: true,
                     blockNears: false,
                 }],
                 'blur25': [{
@@ -349,6 +433,7 @@ var selector = {
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
+                    inlineNears: true,
                     blockNears: false,
                 }]
             },
@@ -357,67 +442,87 @@ var selector = {
                     isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(2)>div>div>a>span',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:nth-child(1)>div>a>span',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(2)>div:nth-child(1)>div>a>span',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div:nth-child(2)>div:nth-child(1)',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.seen>span',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr blockquote',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>div>div>div>span',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div>div:first-child',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>span',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>span>span',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>div>div',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div[data-hover="tooltip"]',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div>div>div>div:nth-child(1)>div.direction_ltr>div>div:nth-child(1)>div:nth-child(2)>div>span',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div>div>div>div:nth-child(1)>div.clearfix:nth-child(1)>div.direction_ltr',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }],
                 'blur25': [{
@@ -425,74 +530,102 @@ var selector = {
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(1)>a>div',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div:nth-child(1)>div>a>div>img',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div>span>div>div>a>div>div',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div[role="img"]',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>img',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>div>div>span>div>img',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div>div>div>table',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>div>div>a>div>div>div',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>div>div>div',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>div>div>a>img',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner div.direction_ltr span>div>img.img',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "other",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner div.fbNubFlyoutFooter div[role="presentation"]>ul>li:last-child',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, ],
                 'overflowHidden': [
+                    // {
+                    //     isComponent: "message",
+                    //     selector: 'div.direction_ltr>div[maxwidth="158"]',
+                    //
+                    //     block: 'div.fbDockChatTabFlyout'
+                    // }
                 ]
             }
         },
@@ -503,18 +636,22 @@ var selector = {
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
                     block: 'div.uiScrollableAreaWithShadow',
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
+                    inlineBlockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }]
             },
@@ -523,62 +660,75 @@ var selector = {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div:nth-child(1)>div>a>div>img',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(1)>a>div',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "avatar",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(2)>div>div>a>span',
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>div>a',
                     block: 'div#ChatTabsPagelet',
                     blockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type>div>a',
                     block: 'div#ChatTabsPagelet',
                     blockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineBlockDisplay: true,
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.seen>span',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineBlockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "name",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div>div:nth-child(1)',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
                     blockSelector: 'div>div>div:nth-child(1)>a>div',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
@@ -586,39 +736,46 @@ var selector = {
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true,
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>div:nth-child(1)>div',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>a>div>div>div',
                     block: 'div.fbDockChatTabFlyout',
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>div>div',
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div:nth-child(1)>div.direction_ltr',
                     block: 'div.fbDockChatTabFlyout',
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div:first-child>div>div:not(:first-child)>div>div>a>blockquote',
                     block: 'div.fbDockChatTabFlyout',
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
@@ -626,23 +783,30 @@ var selector = {
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true,
                     rightAlign: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>span',
+
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>span>span',
+
                     block: 'div.fbDockChatTabFlyout',
                     blockDisplay: true,
+                    inlineNears: true,
                     blockNears: false,
                 }, {
                     isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>div>div',
+
                     block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
                     blockNears: false,
                 }],
             }
@@ -672,6 +836,7 @@ function applyCSS() {
     chrome.storage.sync.get({
         turnOn: true,
         blur: false,
+
         turnAvatar: true,
         turnName: true,
         turnMessage: true,
@@ -924,6 +1089,7 @@ function handleFB(config) {
 function main() {
     applyCSS();
     console.log('Running');
+
 }
 main();
 chrome.runtime.onMessage.addListener(
