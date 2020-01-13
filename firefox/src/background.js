@@ -131,18 +131,15 @@ function saveOptions() {
     var browserSupportSync = false;
     var turnOn = document.getElementsByName('turn-on')[0].checked;
     var blur = document.querySelector('input[name="effect"]:checked').value;
-    var inline = document.querySelector('input[name="hover"]:checked').value;
     var turnAvatar = document.getElementsByName('turn-avatar')[0].checked;
     var turnName = document.getElementsByName('turn-name')[0].checked;
     var turnMessage = document.getElementsByName('turn-message')[0].checked;
     var turnOther = document.getElementsByName('turn-other')[0].checked;
     blur = (blur === 'blur' ? true : false);
-    inline = (inline === 'inline' ? true : false);
     try {
         browser.storage.local.set({
             turnOn: turnOn,
             blur: blur,
-            inline: inline,
             turnAvatar: turnAvatar,
             turnName: turnName,
             turnMessage: turnMessage,
@@ -187,7 +184,6 @@ function restoreOptions() {
     browser.storage.local.get({
         turnOn: true,
         blur: false,
-        inline: false,
         turnAvatar: true,
         turnName: true,
         turnMessage: true,
@@ -197,7 +193,6 @@ function restoreOptions() {
 
         if (!!document.getElementById('turn-on') === true) document.getElementById('turn-on').checked = items.turnOn;
         if (!!document.getElementById('effect-blur') === true && items.blur) document.getElementById('effect-blur').checked = items.blur;
-        if (!!document.getElementById('hover-inline') === true && items.inline) document.getElementById('hover-inline').checked = items.inline;
         if (!!document.getElementById('turn-avatar') === true) document.getElementById('turn-avatar').checked = items.turnAvatar;
         if (!!document.getElementById('turn-name') === true) document.getElementById('turn-name').checked = items.turnName;
         if (!!document.getElementById('turn-message') === true) document.getElementById('turn-message').checked = items.turnMessage;
@@ -249,21 +244,6 @@ function createContextMenu(config) {
         browser.contextMenus.create({
             type: 'separator'
         });
-
-        browser.contextMenus.create({
-            type: 'radio',
-            id: "inline",
-            title: 'Hover inline',
-            checked: config.inline === true ? true : false,
-            onclick: getActionContext
-        });
-        browser.contextMenus.create({
-            type: 'radio',
-            id: "block",
-            title: 'Hover block',
-            checked: config.inline === true ? false : true,
-            onclick: getActionContext
-        });
     });
     console.log('Run create context');
 
@@ -281,16 +261,12 @@ function getActionContext(info, tab) {
         valueChange = info.menuItemId === 'blur' ? true : false;
 
         keyChange = 'blur';
-    } else if (info.menuItemId === 'inline' || info.menuItemId === 'block') {
-        valueChange = info.menuItemId === 'inline' ? true : false;
-        keyChange = 'inline';
     }
 
     var browserSupportSync = false;
     browser.storage.local.get({
         turnOn: true,
         blur: false,
-        inline: false,
         turnAvatar: true,
         turnName: true,
         turnMessage: true,
@@ -311,7 +287,6 @@ function initConfig() {
     browser.storage.local.get({
         turnOn: true,
         blur: false,
-        inline: false,
         turnAvatar: true,
         turnName: true,
         turnMessage: true,
@@ -370,12 +345,6 @@ if (!!document.getElementById('effect-blur') === true) document.getElementById('
     saveOptions();
 });
 if (!!document.getElementById('effect-flip') === true) document.getElementById('effect-flip').addEventListener('change', function() {
-    saveOptions();
-});
-if (!!document.getElementById('hover-inline') === true) document.getElementById('hover-inline').addEventListener('change', function() {
-    saveOptions();
-});
-if (!!document.getElementById('hover-block') === true) document.getElementById('hover-block').addEventListener('change', function() {
     saveOptions();
 });
 if (!!document.getElementById('turn-avatar') === true) document.getElementById('turn-avatar').addEventListener('change', function() {
