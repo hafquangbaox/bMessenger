@@ -265,15 +265,6 @@ var selector = {
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         blockNears: false,
                     }
-                    // , {
-                    //     isComponent: "message",
-                    //     selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix>div',
-                    //
-                    //
-                    //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    //
-                    //     blockNears: false,
-                    // }
                     , {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
@@ -311,15 +302,6 @@ var selector = {
                         block: 'div[role="presentation"]>div>div.uiScrollableArea',
                         blockNears: false,
                     }
-                    // , {
-                    //     isComponent: "message",
-                    //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
-                    //
-                    //
-                    //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    //
-                    //     blockNears: false,
-                    // }
                     , {
                         isComponent: "message",
                         selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
@@ -511,12 +493,6 @@ var selector = {
                     blockNears: false,
                 }, ],
                 'overflowHidden': [
-                    // {
-                    //     isComponent: "message",
-                    //     selector: 'div.direction_ltr>div[maxwidth="158"]',
-                    //
-                    //     block: 'div.fbDockChatTabFlyout'
-                    // }
                 ]
             }
         },
