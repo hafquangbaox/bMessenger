@@ -587,6 +587,13 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "message",
+                    selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>div>div',
+
+                    block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: "message",
                     selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div>div>div>div',
 
                     block: 'div.fbDockChatTabFlyout',
