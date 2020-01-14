@@ -766,11 +766,19 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>div>div',
+                    selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div',
                     block: 'div.fbDockChatTabFlyout',
                     inlineNears: true,
                     blockNears: false,
-                }, {
+                },
+                //  {
+                //     isComponent: "message",
+                //     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>div>div',
+                //     block: 'div.fbDockChatTabFlyout',
+                //     inlineNears: true,
+                //     blockNears: false,
+                // },
+                 {
                     isComponent: "message",
                     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div:nth-child(1)>div.direction_ltr',
                     block: 'div.fbDockChatTabFlyout',
