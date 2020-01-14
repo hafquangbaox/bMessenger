@@ -828,11 +828,13 @@ function httpGet(theUrl, callback) {
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            callback(xmlhttp.responseText);
-        } else {
-            console.log(xmlhttp);
-            callback(null);
+        if (xmlhttp.readyState == 4) {
+            if (xmlhttp.status == 200) {
+                callback(xmlhttp.responseText);
+            } else {
+                console.log(xmlhttp);
+                callback(null);
+            }
         }
     }
     xmlhttp.open("GET", theUrl, true);
@@ -861,7 +863,7 @@ function applyCSS() {
 function checkData(timestamp) {
     console.log('Run checkData');
     httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs) {
-        console.log('DKM',rs);
+        console.log('DKM', rs);
         if (!rs) console.log('Can\'t check version of dataset');
         else if (+rs > timestamp) {
             updateDataset();
