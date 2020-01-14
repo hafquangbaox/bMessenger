@@ -472,6 +472,13 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "message",
+                    selector: 'span[data-testid="log_message_text"]',
+
+                    block: 'div.fbDockChatTabFlyout',
+                    inlineNears: true,
+                    blockNears: false,
+                }, {
+                    isComponent: "message",
                     selector: 'span[data-testid="log_message_text"]>span>div>span',
 
                     block: 'div.fbDockChatTabFlyout',
