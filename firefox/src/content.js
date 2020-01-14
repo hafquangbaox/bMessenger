@@ -789,7 +789,7 @@ var selector = {
                     isComponent: "message",
                     selector: 'div.clearfix div a blockquote',
                     block: 'div.fbDockChatTabFlyout',
-                    rightAlign: true,
+                    // rightAlign: true,
                     inlineNears: true,
                     blockNears: false,
                 }, {
