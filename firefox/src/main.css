@@ -12,12 +12,14 @@ body {
     height: auto;
     width: auto;
     min-width: 230px;
-    min-height: 300px;
+    min-height: 200px;
     margin: 0px;
     font-size: 0.8rem;
 }
 .author-center{
   text-align: justify;
+  top: 5px;
+  position: relative;
 }
 .line-1-rem{
     font-size: 1rem;
@@ -240,6 +242,7 @@ label.toggle {
   text-align: center;
   font-size: 1.0rem;
   font-weight: bolder;
+  cursor: pointer;
 }
 label.toggle:hover {
   color: #000;
