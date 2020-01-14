@@ -859,6 +859,7 @@ function applyCSS() {
 
 function checkData(timestamp) {
     httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs) {
+        console.log('DKM',rs);
         if (!rs) console.log('Can\'t check version of dataset');
         else if (+rs > timestamp) {
             updateDataset();
