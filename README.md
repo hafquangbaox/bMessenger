@@ -33,6 +33,7 @@ Some images of extension on chrome browser <br />
 ~~Add domain https://www.facebook.com/messages~~<br />
 ~~Porting an extension from chrome to opera~~<br />
 ~~Add contexts menu~~<br />
-`Submit into opera store`<br />
-`Setting with input dynamic css`<br />
-`Porting an extension from chrome to edge browser`<br />
+~~Refactor~~<br />
+`Submit into opera store(Waitting approve)`<br />
+~~`Setting with input dynamic css`~~<br />
+`Porting an extension from chrome to edge browser(Waitting approve)`<br />
