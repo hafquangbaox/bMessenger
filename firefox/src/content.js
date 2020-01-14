@@ -840,7 +840,6 @@ function httpGet(theUrl, callback) {
             if (xmlhttp.status == 200) {
                 callback(xmlhttp.responseText);
             } else {
-                console.log(xmlhttp);
                 callback(null);
             }
         }
@@ -850,7 +849,6 @@ function httpGet(theUrl, callback) {
 }
 
 function applyCSS() {
-    console.log('Run applyCSS');
     var browserSupportSync = false;
     browser.storage.local.get({
         turnOn: true,
@@ -869,9 +867,7 @@ function applyCSS() {
 }
 
 function checkData(timestamp) {
-    console.log('Run checkData');
     httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs) {
-        console.log('DKM', rs);
         if (!rs) console.log('Can\'t check version of dataset');
         else if (+rs > timestamp) {
             updateDataset();
@@ -909,7 +905,6 @@ function handleStyle(config) {
 }
 
 function handleM(config) {
-    console.log('Apply m style');
     var styleText = '';
     if (config.blur) {
         for (var pos in selector.m.blur) {
@@ -1010,7 +1005,6 @@ function getCharacterAfterHover(flag) {
 }
 
 function handleFB(config) {
-    console.log('Apply fb style');
     var styleText = '';
     if (config.blur) {
         for (var pos in selector.fb.blur) {
@@ -1109,8 +1103,6 @@ function handleFB(config) {
 
 function main() {
     applyCSS();
-    console.log('Running');
-
 }
 main();
 browser.runtime.onMessage.addListener(
