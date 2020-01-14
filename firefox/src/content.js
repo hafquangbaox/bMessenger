@@ -840,6 +840,7 @@ function httpGet(theUrl, callback) {
 }
 
 function applyCSS() {
+    console.log('Run applyCSS');
     var browserSupportSync = false;
     browser.storage.local.get({
         turnOn: true,
