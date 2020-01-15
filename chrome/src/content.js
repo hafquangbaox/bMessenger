@@ -401,9 +401,9 @@ var selector = {
             drop: {
                 'blur10': [{
                     isComponent: "name",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     inlineNears: true,
                     blockNears: false,
                 }, {
@@ -647,9 +647,9 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "name",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     inlineNears: true,
                     blockNears: false,
                 }, {
