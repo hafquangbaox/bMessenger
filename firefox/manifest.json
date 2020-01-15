@@ -45,6 +45,7 @@
   ],
   "permissions": [
     "storage",
+    "tabs",
     "contextMenus",
     "*://*.fb.com/*",
     "*://*.facebook.com/*",
