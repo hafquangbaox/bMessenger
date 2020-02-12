@@ -200,10 +200,6 @@ function restoreOptions() {
 
     });
 
-    var version = getHTML('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt?t=' + Date.now(), function(rs) {
-        console.log(rs);
-    });
-
 }
 
 function createContextMenu(config) {
