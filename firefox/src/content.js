@@ -872,7 +872,7 @@ function applyCSS() {
 }
 
 function checkData(timestamp) {
-    httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt', function(rs) {
+    httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt?t=' + Date.now() function(rs) {
         if (!rs) console.log('Can\'t check version of dataset');
         else if (+rs > timestamp) {
             updateDataset();
@@ -881,7 +881,7 @@ function checkData(timestamp) {
 }
 
 function updateDataset(timestamp) {
-    httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt', function(rs) {
+    httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt?t=' + Date.now(), function(rs) {
         if (!rs) console.log('Can\'t get dataset');
         else {
             try {
