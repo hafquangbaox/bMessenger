@@ -4,6 +4,7 @@
  * @github lozthiensu <https://github.com/lozthiensu/bMessenger>
  * This extension is called bMessenger on firefox add-ons store. But the bastard who reviews this extension on browser.extensions doesn't allow using that name. So I had to change the name to "Protect message". But its name on github is still https://github.com/lozthiensu/bMessenger
  */
+var itemConfigs = null;
 var styleEffect = {
     // One attr
     blur10: 'filter:blur(10px);',
@@ -858,7 +859,6 @@ function applyCSS() {
     browser.storage.local.get({
         turnOn: true,
         blur: false,
-
         turnAvatar: true,
         turnName: true,
         turnMessage: true,
@@ -867,36 +867,19 @@ function applyCSS() {
     }, function(items) {
         browserSupportSync = true;
         handleStyle(items);
-        checkData(items.lastUpdate);
+        itemConfigs = items;
+        updateDataset(itemConfigs);
     });
 }
 
-function checkData(timestamp) {
-    httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/version.txt?t=' + Date.now(), function(rs) {
-        if (!rs) console.log('Can\'t check version of dataset');
-        else if (+rs > timestamp) {
-            updateDataset();
-        }
-    });
-}
-
-function updateDataset(timestamp) {
+function updateDataset(itemConfigs) {
     httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt?t=' + Date.now(), function(rs) {
         if (!rs) console.log('Can\'t get dataset');
         else {
             try {
                 var dataset = JSON.parse(rs);
-                browser.storage.local.set({
-                    dataset: rs
-                }, function() {
-                    console.log('Save dataset success');
-                    selector = JSON.parse(rs);
-                });
-                browser.storage.local.set({
-                    lastUpdate: timestamp
-                }, function() {
-                    console.log('Save lastUpdate success');
-                });
+                selector = dataset;
+                handleStyle(itemConfigs);
             } catch (e) {
                 console.log('Can\' parse dataset');
             }
