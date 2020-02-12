@@ -114,13 +114,16 @@ var selector = {
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
                     inlineNears: true,
                     blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
+                }
+                // Remove by bug hover emotion reaction ...
+                // , {
+                //     isComponent: "message",
+                //     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>span',
+                //     block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                //     inlineNears: true,
+                //     blockNears: false,
+                // }
+                , {
                     isComponent: "message",
                     selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
@@ -401,9 +404,9 @@ var selector = {
             drop: {
                 'blur10': [{
                     isComponent: "name",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     inlineNears: true,
                     blockNears: false,
                 }, {
@@ -647,9 +650,9 @@ var selector = {
                     blockNears: false,
                 }, {
                     isComponent: "name",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author>span:nth-child(1)',
+                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
                     inlineNears: true,
                     blockNears: false,
                 }, {
