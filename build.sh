@@ -44,4 +44,3 @@ echo $(date +%s) > version.txt
 
 git add .
 git commit -am 'Auto commit with build'
-
