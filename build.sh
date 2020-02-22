@@ -40,7 +40,7 @@ cd firefox && zip -r firefox.zip . -x "*.DS_Store" && cd ..
 cd opera && zip -r opera.zip . -x "*.DS_Store" && cd ..
 
 # Make version by timestamp
-echo $(date +%s) > version.txt
+# echo $(date +%s) > version.txt
 
 git add .
 git commit -am 'Auto commit with build'
