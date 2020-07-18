@@ -789,7 +789,7 @@ var selector = {
                         blockNears: false,
                     },
                     /*Version 2 end*/
-                    
+
                     {
                         isComponent: "avatar",
                         selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
@@ -812,7 +812,8 @@ var selector = {
                         inlineBlockDisplay: true,
                         inlineNears: true,
                         blockNears: false,
-                    },]
+                    },
+                ]
             },
             window: {
                 'flipMirror': [
