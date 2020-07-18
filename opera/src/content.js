@@ -454,15 +454,24 @@ var selector = {
                     blockSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
                     inlineNears: true,
                     blockNears: false,
-                },
+                }
                 /*Version 2 start*/
-                {
+                    ,{
                     isComponent: "avatar",
                     block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
                     blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:first-child',
                     inlineNears: true,
                     blockNears: false,
-                }
+                } ,
+                    {
+                        isComponent: "avatar",
+                        block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul>li div[role="button"]',
+                        blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:first-child',
+                        inlineNears: true,
+                        blockNears: false,
+                    }
+
+
                 /*Version 2 end*/
 
                 ]
