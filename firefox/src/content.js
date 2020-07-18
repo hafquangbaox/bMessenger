@@ -527,8 +527,8 @@ var selector = {
                 /*Version 2*/
                 {
                     isComponent: "avatar",
-                    selector: 'div[data-pagelet="root"]div[data-pagelet="ChatTab"]div[data-visualcompletion="ignore-dynamic"]div[role="region"]>div>div>div>div:first-child>div img',
-                    block: 'div[data-pagelet="root"]div[data-pagelet="ChatTab"]div[data-visualcompletion="ignore-dynamic"]div[role="region"]>div>div>div>div:first-child>div',
+                    selector: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div img',
+                    block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
                     blockSelector: 'div>div>div:nth-child(1)>a>div',
                     inlineNears: true,
                     blockNears: false,
