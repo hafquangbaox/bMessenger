@@ -421,9 +421,17 @@ var selector = {
                 },
                 /*Version 2 start*/
                 {
-                    isComponent: "message",
+                    isComponent: "name",
                     block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
                     blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:first-child',
+                    inlineNears: true,
+                    blockNears: false,
+                },
+
+                {
+                    isComponent: "message",
+                    block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
+                    blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:last-child',
                     inlineNears: true,
                     blockNears: false,
                 }
