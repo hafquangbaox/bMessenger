@@ -536,7 +536,7 @@ var selector = {
                     {
                         isComponent: "avatar",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div',
-                        blockSelector: '>div:first-child div[data-testid="incoming_group"] > div:first-child img',
+                        blockSelector: ' div:first-child div[data-testid="incoming_group"] > div:first-child img',
                         inlineNears: true,
                         blockNears: false,
                     },
