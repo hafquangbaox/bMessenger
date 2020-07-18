@@ -874,6 +874,13 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
+                    {
+                        isComponent: "message",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
+                        blockSelector: ' div>div:first-child div[data-testid="incoming_group"] > div:last-child div[role="row"]>div>div>div:not([data-testid]) div[data-scope="messages_table"]>span>div',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
                     /*Version 2 end*/{
                         isComponent: "avatar",
                         selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
