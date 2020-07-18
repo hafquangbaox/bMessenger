@@ -576,7 +576,7 @@ var selector = {
                     blockNears: false,
                 }],
                 'blur25': [
-                    /*Version 2*/
+                    /*Version 2 start*/
                     {
                         isComponent: "avatar",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
@@ -633,7 +633,7 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-                    /*Version 1*/
+                    /*Version 2 end*/
                     {
                         isComponent: "avatar",
                         selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
@@ -754,174 +754,233 @@ var selector = {
         },
         flip: {
             drop: {
-                'flipMirror': [{
-                    isComponent: "avatar",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
-                    block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
-                    block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
-                    block: 'div.uiScrollableAreaWithShadow',
-                    blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
-                    inlineBlockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                },
-                /*Version 2 start*/
+                'flipMirror': [
+                    /*Version 2 start*/
 
-                {
-                    isComponent: "name",
-                    block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
-                    blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:first-child>span',
-                    inlineNears: true,
-                    inlineBlockDisplay: true,
-                    blockNears: false,
-                },
+                    {
+                        isComponent: "name",
+                        block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
+                        blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:first-child>span',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    },
 
-                {
-                    isComponent: "message",
-                    block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
-                    blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:last-child>span',
-                    inlineNears: true,
-                    inlineBlockDisplay: true,
-                    blockNears: false,
-                } 
-                , {
-                    isComponent: "avatar",
-                    block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
-                    blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:first-child',
-                    inlineNears: true,
-                    blockNears: false,
-                },
-                {
-                    isComponent: "other",
-                    block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul',
-                    blockSelector: ' li div[role="button"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }
-
-                /*Version 2 end*/]
+                    {
+                        isComponent: "message",
+                        block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
+                        blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:last-child>span',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    }
+                    , {
+                        isComponent: "avatar",
+                        block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
+                        blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:first-child',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "other",
+                        block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul',
+                        blockSelector: ' li div[role="button"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    /*Version 2 end*/
+                    
+                    {
+                        isComponent: "avatar",
+                        selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
+                        block: 'div.uiScrollableAreaWithShadow',
+                        blockSelector: 'div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
+                        block: 'div.uiScrollableAreaWithShadow',
+                        blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div.author span:nth-child(1)',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'a.messagesContent>div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
+                        block: 'div.uiScrollableAreaWithShadow',
+                        blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)>div>span:nth-child(2)',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    },]
             },
             window: {
-                'flipMirror': [{
-                    isComponent: "avatar",
-                    selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div:nth-child(1)>div>a>div>img',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
-                    block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
-                    blockSelector: 'div>div>div:nth-child(1)>a>div',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(2)>div>div>a>span',
-                    block: 'div.fbDockChatTabFlyout',
-                    blockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>div>a',
-                    block: 'div#ChatTabsPagelet',
-                    blockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type>div>a',
-                    block: 'div#ChatTabsPagelet',
-                    blockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineBlockDisplay: true,
-                    rightAlign: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div.seen>span',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineBlockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div>div:nth-child(1)',
-                    block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
-                    blockSelector: 'div>div>div:nth-child(1)>a>div',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>span>span',
-                    block: 'div.fbDockChatTabFlyout',
-                    blockDisplay: true,
-                    rightAlign: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>div:nth-child(1)>div',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>a>div>div>div',
-                    block: 'div.fbDockChatTabFlyout',
-                    rightAlign: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div',
-                    block: 'div.fbDockChatTabFlyout',
-                    inlineNears: true,
-                    blockNears: false,
-                },
+                'flipMirror': [
+                    /*Version 2 start*/
+                    {
+                        isComponent: "avatar",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
+                        blockSelector: 'img',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "avatar",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div',
+                        blockSelector: ' div:first-child div[data-testid="incoming_group"] > div:first-child img',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "avatar",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
+                        blockSelector: ' div[data-testid="Keycommand_wrapper"]>div[role="grid"]>div:last-child:not([data-testid])',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "name",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
+                        blockSelector: ' div[data-testid="messenger-chat-title-text"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "name",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child div>div:first-child',
+                        blockSelector: '  div[data-testid="incoming_group"] > div:last-child > div:first-child[class] div',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "name",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
+                        blockSelector: ' div[data-testid="outgoing_group"]>div[class]',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "message",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
+                        blockSelector: ' div[data-testid="outgoing_group"]>div:not([class])',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "message",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
+                        blockSelector: 'div>div:first-child div[data-testid="incoming_group"] > div:last-child div[role="row"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    /*Version 2 end*/{
+                        isComponent: "avatar",
+                        selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div:nth-child(1)>div>a>div>img',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
+                        block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
+                        blockSelector: 'div>div>div:nth-child(1)>a>div',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div.titlebar>div:nth-child(1)>div:nth-child(1)>div:nth-child(1)>a',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(2)>div>div>a>span',
+                        block: 'div.fbDockChatTabFlyout',
+                        blockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>div>a',
+                        block: 'div#ChatTabsPagelet',
+                        blockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(2)>div:first-of-type>div>a',
+                        block: 'div#ChatTabsPagelet',
+                        blockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div>div>div>div>div>div:nth-child(2)>div[class="_4tdx"]:nth-child(1)',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineBlockDisplay: true,
+                        rightAlign: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div.seen>span',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div>div:nth-child(1)',
+                        block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
+                        blockSelector: 'div>div>div:nth-child(1)>a>div',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>span>span',
+                        block: 'div.fbDockChatTabFlyout',
+                        blockDisplay: true,
+                        rightAlign: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div>div>div>div>div[data-testid="attachment_root"]>span>div',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>div:nth-child(1)>div',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>a>div>div>div',
+                        block: 'div.fbDockChatTabFlyout',
+                        rightAlign: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.direction_ltr>div[data-testid="attachment_root"]>span>div',
+                        block: 'div.fbDockChatTabFlyout',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
                     //  {
                     //     isComponent: "message",
                     //     selector: 'div.fbNubFlyoutOuter>div.fbNubFlyoutInner>div:nth-child(2)>div>div>div>div:nth-child(2)>div>div:nth-child(1)>div>div>div>div>div>div>div.direction_ltr>div[data-testid="attachment_root"]>span:nth-child(1)>div>div>div>div',
