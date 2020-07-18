@@ -540,7 +540,7 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-                    
+
                     {
                         isComponent: "name",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
@@ -559,7 +559,7 @@ var selector = {
 
                     {
                         isComponent: "message",
-                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child div[data-testid="incoming_group"] > div:last-child > div:last-child > div[role="row"]',
                         blockSelector: '  div[data-testid="ingoing_group"]',
                         inlineNears: true,
                         blockNears: false,
