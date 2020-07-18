@@ -795,7 +795,7 @@ var selector = {
                     inlineNears: true,
                     inlineBlockDisplay: true,
                     blockNears: false,
-                }
+                } 
                 , {
                     isComponent: "avatar",
                     block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
