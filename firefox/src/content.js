@@ -523,7 +523,19 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 }],
-                'blur25': [{
+                'blur25': [
+                /*Version 2*/
+                    {
+                        isComponent: "avatar",
+                        selector: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"] >div > div >div >div:first-child img',
+                        block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
+                        blockSelector: 'div>div>div:nth-child(1)>a>div',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+
+                /*Version 1*/
+                {
                     isComponent: "avatar",
                     selector: 'div.fbNubGroup>div>div>div>div>div.titlebar>div>div>div:nth-child(1)>a>div',
                     block: 'div.fbNubGroup>div>div>div>div>div.titlebar',
