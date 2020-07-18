@@ -535,7 +535,7 @@ var selector = {
                 {
                     isComponent: "name",
                     block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
-                    blockSelector: 'img',
+                    blockSelector: ' div[data-testid="messenger-chat-title-text"]',
                     inlineNears: true,
                     blockNears: false,
                 },
