@@ -849,7 +849,7 @@ var selector = {
                     {
                         isComponent: "name",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child div>div:first-child',
-                        blockSelector: '  div[data-testid="incoming_group"] > div:last-child > div:first-child[class] div',
+                        blockSelector: '  div[data-testid="incoming_group"] > div:last-child > div:first-child[class] > div >div',
                         inlineNears: true,
                         blockNears: false,
                     },
