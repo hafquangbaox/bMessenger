@@ -870,7 +870,7 @@ var selector = {
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
-                        blockSelector: ' div>div:first-child div[data-testid="incoming_group"] > div:last-child div[role="row"] div[data-scope="messages_table"]>span',
+                        blockSelector: ' div>div:first-child div[data-testid="incoming_group"] > div:last-child div[role="row"]>div>div>div[data-testid="Keycommand_wrapper"] div[data-scope="messages_table"]>span>div',
                         inlineNears: true,
                         blockNears: false,
                     },
