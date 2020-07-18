@@ -527,7 +527,13 @@ var selector = {
                 /*Version 2*/
                 {
                     isComponent: "avatar",
-                    selector: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div img',
+                    block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
+                    blockSelector: 'img',
+                    inlineNears: true,
+                    blockNears: false,
+                },
+                {
+                    isComponent: "name",
                     block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
                     blockSelector: 'img',
                     inlineNears: true,
