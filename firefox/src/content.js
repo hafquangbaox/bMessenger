@@ -880,7 +880,7 @@ function applyCSS() {
         browserSupportSync = true;
         handleStyle(items);
         itemConfigs = items;
-        updateDataset(itemConfigs);
+        // updateDataset(itemConfigs);
     });
 }
 
