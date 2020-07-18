@@ -549,6 +549,17 @@ var selector = {
                         blockNears: false,
                     },
 
+
+                    {
+                        isComponent: "name",
+                        block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child div>div:first-child div[data-testid="incoming_group"] > div:last-child > div:first-child[class]',
+                        blockSelector: ' div',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+
+
+
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
