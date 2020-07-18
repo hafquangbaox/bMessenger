@@ -801,7 +801,7 @@ var selector = {
                     blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:last-child div[role="grid"] div[role="row"]',
                     inlineNears: true,
                     blockNears: false,
-                }
+                } 
                 /*Version 2 end*/]
             },
             window: {
