@@ -532,7 +532,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "avatar",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div',
@@ -540,7 +539,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "avatar",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
@@ -548,7 +546,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "name",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:first-child>div',
@@ -556,7 +553,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "name",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child div>div:first-child',
@@ -564,7 +560,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "name",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
@@ -572,8 +567,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
-
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
@@ -581,7 +574,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
@@ -589,7 +581,6 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     /*Version 1*/
                     {
                         isComponent: "avatar",
