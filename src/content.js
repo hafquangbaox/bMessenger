@@ -465,8 +465,8 @@ var selector = {
                 } ,
                     {
                         isComponent: "avatar",
-                        block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul>li div[role="button"]',
-                        blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:first-child',
+                        block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul',
+                        blockSelector: ' li div[role="button"]',
                         inlineNears: true,
                         blockNears: false,
                     }
