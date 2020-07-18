@@ -38,7 +38,11 @@ var selector = {
                     block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
                     inlineNears: true,
                     blockNears: false,
-                },],
+                },
+
+                    /*Version 2 start*/
+                    /*Version 2 end*/
+                ],
                 'blur25': [{
                     isComponent: 'avatar',
                     selector: 'ul>li[role="row"]>div>a>div>div[data-tooltip-position="right"]>div',
