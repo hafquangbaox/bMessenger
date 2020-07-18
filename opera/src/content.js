@@ -560,7 +560,7 @@ var selector = {
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
-                        blockSelector: '  div[data-testid="outgoing_group"] div[role="row"]',
+                        blockSelector: '  div[data-testid="outgoing_group"] div[role="row"] div[role="gridcell"]',
                         inlineNears: true,
                         blockNears: false,
                     },
