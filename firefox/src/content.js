@@ -463,13 +463,13 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 } ,
-                    {
-                        isComponent: "avatar",
-                        block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul',
-                        blockSelector: ' li div[role="button"]',
-                        inlineNears: true,
-                        blockNears: false,
-                    }
+                {
+                    isComponent: "avatar",
+                    block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul',
+                    blockSelector: ' li div[role="button"]',
+                    inlineNears: true,
+                    blockNears: false,
+                }
 
 
                 /*Version 2 end*/
