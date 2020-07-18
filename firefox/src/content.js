@@ -795,17 +795,7 @@ var selector = {
                     inlineNears: true,
                     inlineBlockDisplay: true,
                     blockNears: false,
-                },
-
-                {
-                    isComponent: "avatar",
-                    block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
-                    blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:last-child div[role="grid"] div[role="row"]',
-                    inlineNears: true,
-                    inlineBlockDisplay: true,
-                    blockNears: false,
                 }
-
                 , {
                     isComponent: "avatar",
                     block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
