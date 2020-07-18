@@ -41,13 +41,6 @@ var selector = {
                 },
 
                     /*Version 2 start*/
-                    {
-                        isComponent: 'name',
-                        selector: 'ul>li[role="row"]>div>a>div>div>div:last-child>span',
-                        block: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div[role="navigation"]',
-                        inlineNears: true,
-                        blockNears: false,
-                    },
                     /*Version 2 end*/
                 ],
                 'blur25': [{
@@ -455,6 +448,7 @@ var selector = {
                         blockNears: false,
                     }
 
+                    
 
                     /*Version 2 end*/
                 ],
