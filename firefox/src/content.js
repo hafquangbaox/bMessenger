@@ -464,7 +464,7 @@ var selector = {
                     blockNears: false,
                 } ,
                 {
-                    isComponent: "avatar",
+                    isComponent: "other",
                     block: 'body>div:first-child>div>div[data-pagelet="root"]>div>div:last-child>div:first-child>div:last-child ul',
                     blockSelector: ' li div[role="button"]',
                     inlineNears: true,
