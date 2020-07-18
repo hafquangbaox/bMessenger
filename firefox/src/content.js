@@ -835,7 +835,7 @@ var selector = {
                     {
                         isComponent: "avatar",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
-                        blockSelector: ' div[data-testid="Keycommand_wrapper"]>div[role="grid"]>div:last-child:not([data-testid])',
+                        blockSelector: ' div[data-testid="Keycommand_wrapper"]>div[role="grid"]>div:last-child:not([data-testid])>div',
                         inlineNears: true,
                         blockNears: false,
                     },
