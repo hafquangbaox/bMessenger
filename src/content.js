@@ -418,7 +418,17 @@ var selector = {
                     blockSelector: 'div[direction="left"]>div:nth-child(2)>div>div:nth-child(2)>div>div:nth-child(2)',
                     inlineNears: true,
                     blockNears: false,
-                }],
+                },
+                /*Version 2 start*/
+                {
+                    isComponent: "message",
+                    block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
+                    blockSelector: ' div:not(:first-child)>div:first-child a>div:first-child>div:last-child>div:first-child>div>div>div:first-child',
+                    inlineNears: true,
+                    blockNears: false,
+                }
+                /*Version 2 end*/
+                ],
                 'blur25': [{
                     isComponent: "avatar",
                     selector: 'a.messagesContent>div[direction="left"]>div:nth-child(1)>div>div>div>div>div',
@@ -427,6 +437,7 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 },
+                /*Version 2 start*/
                 {
                     isComponent: "avatar",
                     block: 'div[data-pagelet="root"] div[role="banner"] div[data-testid="Keycommand_wrapper_ModalLayer"] div[role="dialog"] div[data-testid="MWJewelThreadListContainer"]',
@@ -434,8 +445,7 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 }
-
-
+                /*Version 2 end*/
 
                 ]
             },
