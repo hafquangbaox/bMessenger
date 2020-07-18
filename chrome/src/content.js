@@ -863,14 +863,14 @@ var selector = {
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child>div>div:first-child',
-                        blockSelector: ' div[data-testid="outgoing_group"]>div:not([class])',
+                        blockSelector: ' div[data-testid="outgoing_group"]>div:not([class]) data-scope="messages_table">span',
                         inlineNears: true,
                         blockNears: false,
                     },
                     {
                         isComponent: "message",
                         block: 'div[data-pagelet="root"] div[data-pagelet="ChatTab"] div[data-visualcompletion="ignore-dynamic"] div[role="region"]>div>div>div>div:last-child',
-                        blockSelector: 'div>div:first-child div[data-testid="incoming_group"] > div:last-child div[role="row"]',
+                        blockSelector: 'div>div:first-child div[data-testid="incoming_group"] > div:last-child div[role="row"] data-scope="messages_table">span',
                         inlineNears: true,
                         blockNears: false,
                     },
