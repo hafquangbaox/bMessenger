@@ -1,5 +1,5 @@
 {
-  "name": "Protect message",
+  "name": "Censored message",
   "short_name": "bMessage",
   "version": "2.0.0",
   "description": "This extension allow users to prevent peeking messages on Messenger and Facebook by blurring or reverse mirror effect.",
