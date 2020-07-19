@@ -20,9 +20,6 @@ function checkURLchange(currentURL, config){
     }
 
     oldURL = window.location.href;
-    setInterval(function() {
-        checkURLchange(window.location.href);
-    }, 1000);
 }
 
 var itemConfigs = null;
@@ -1172,7 +1169,10 @@ function handleStyle(config) {
         console.log('No same domain');
     }
 
-    checkURLchange();
+    setInterval(function() {
+        checkURLchange(window.location.href, config);
+    }, 1000);
+    // checkURLchange();
 
 }
 
