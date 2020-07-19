@@ -1353,11 +1353,7 @@ function appendCSS(styleText, iframe){
 
         function intervalTrigger() {
             return window.setInterval( function() {
-                if (timedCount >= markers.length) {
-                    timedCount = 0;
-                }
                 var iframe = document.querySelector('iframe');
-
                 iframe.onload = function() {
                     console.log("WHen iframe load");
                     console.log(iframe);
@@ -1375,7 +1371,6 @@ function appendCSS(styleText, iframe){
                     }
                     window.clearInterval(intervalListener);
                 };
-                timedCount++;
             }, 500 );
         };
         var id = intervalTrigger();
