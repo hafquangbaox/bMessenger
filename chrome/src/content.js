@@ -1350,39 +1350,40 @@ function handleFB(config) {
 function appendCSS(styleText, hasIframe) {
     if (hasIframe) {
         console.log("YES co iframe");
-        var iframe = document.querySelector('iframe');
-        if (!!iframe === true && iframe?.contentWindow && iframe?.contentWindow?.document) {
-            console.log(iframe);
-            console.log(iframe.contentWindow);
-            console.log(iframe.contentWindow.document);
+        let iframeFB = document.querySelector('iframe');
+        if (!!iframeFB === true && iframe?.contentWindow && iframeFB?.contentWindow?.document) {
+            console.log(iframeFB);
+            console.log(iframeFB.contentWindow);
+            console.log(iframeFB.contentWindow.document);
             console.log("When iframe loaded");
             console.log(styleText);
-            if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
+            if (!!iframeFB.contentWindow.document.getElementById("bMessenger") === false) {
                 console.log("Create iframe bMessenger");
-                var style = iframe.contentWindow.document.createElement('style');
+                var style = iframeFB.contentWindow.document.createElement('style');
                 style.type = 'text/css';
-                var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                var textnode = iframeFB.contentWindow.document.createTextNode(styleText);
                 style.appendChild(textnode);
                 style.setAttribute('id', 'bMessenger');
-                iframe.contentWindow.document.body.appendChild(style);
+                iframeFB.contentWindow.document.body.appendChild(style);
             } else {
-                iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+                iframeFB.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
             }
         } else {
             function intervalTrigger() {
                 return window.setInterval(function () {
-                    iframe.onload = function () {
+                    document.querySelector('iframe').onload = function () {
                         console.log("When wait iframe load");
                         console.log(styleText);
-                        if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
-                            var style = iframe.contentWindow.document.createElement('style');
+                        let iframeFBLoad = document.querySelector('iframe');
+                        if (!!iframeFBLoad.contentWindow.document.getElementById("bMessenger") === false) {
+                            var style = iframeFBLoad.contentWindow.document.createElement('style');
                             style.type = 'text/css';
-                            var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                            var textnode = iframeFBLoad.contentWindow.document.createTextNode(styleText);
                             style.appendChild(textnode);
                             style.setAttribute('id', 'bMessenger');
-                            iframe.contentWindow.document.body.appendChild(style);
+                            iframeFBLoad.contentWindow.document.body.appendChild(style);
                         } else {
-                            iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+                            iframeFBLoad.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
                         }
                         window.clearInterval(id);
                     };
