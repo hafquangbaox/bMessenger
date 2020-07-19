@@ -318,7 +318,16 @@ var selector = {
                     block: 'div[role="main"]',
                     inlineNears: true,
                     blockNears: false,
-                }, {
+                },
+                    {
+                        isComponent: "avatar",
+                        selector: ' div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div[aria-hidden="true"]>div>div>img',
+                        block: 'div[role="main"] span',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+
+                    {
                     isComponent: "name",
                     selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
                     block: 'div[role="main"]',
