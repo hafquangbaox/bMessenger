@@ -1359,9 +1359,9 @@ function appendCSS(styleText, hasIframe) {
             console.log(styleText);
             if (!!iframeFB.contentWindow.document.getElementById("bMessenger") === false) {
                 console.log("Create iframe bMessenger");
-                var style = iframeFB.contentWindow.document.createElement('style');
+                let style = iframeFB.contentWindow.document.createElement('style');
                 style.type = 'text/css';
-                var textnode = iframeFB.contentWindow.document.createTextNode(styleText);
+                let textnode = iframeFB.contentWindow.document.createTextNode(styleText);
                 style.appendChild(textnode);
                 style.setAttribute('id', 'bMessenger');
                 iframeFB.contentWindow.document.body.appendChild(style);
@@ -1376,9 +1376,9 @@ function appendCSS(styleText, hasIframe) {
                         console.log(styleText);
                         let iframeFBLoad = document.querySelector('iframe');
                         if (!!iframeFBLoad.contentWindow.document.getElementById("bMessenger") === false) {
-                            var style = iframeFBLoad.contentWindow.document.createElement('style');
+                            let style = iframeFBLoad.contentWindow.document.createElement('style');
                             style.type = 'text/css';
-                            var textnode = iframeFBLoad.contentWindow.document.createTextNode(styleText);
+                            let textnode = iframeFBLoad.contentWindow.document.createTextNode(styleText);
                             style.appendChild(textnode);
                             style.setAttribute('id', 'bMessenger');
                             iframeFBLoad.contentWindow.document.body.appendChild(style);
