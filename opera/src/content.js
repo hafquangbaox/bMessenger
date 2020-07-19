@@ -1367,25 +1367,22 @@ function main() {
 }
 window.addEventListener('locationchange', function(){
     console.log('location changed!', window.location);
-})
-/* These are the modifications: */
-history.pushState = ( f => function pushState(){
-    var ret = f.apply(this, arguments);
-    window.dispatchEvent(new Event('pushstate'));
-    window.dispatchEvent(new Event('locationchange'));
-    return ret;
-})(history.pushState);
-
-history.replaceState = ( f => function replaceState(){
-    var ret = f.apply(this, arguments);
-    window.dispatchEvent(new Event('replacestate'));
-    window.dispatchEvent(new Event('locationchange'));
-    return ret;
-})(history.replaceState);
-
-window.addEventListener('popstate',()=>{
-    window.dispatchEvent(new Event('locationchange'))
 });
+function hashHandler(){
+    this.oldHash = window.location.hash;
+    this.Check;
+
+    var that = this;
+    var detect = function(){
+        if(that.oldHash!=window.location.hash){
+            alert("HASH CHANGED - new has" + window.location.hash);
+            that.oldHash = window.location.hash;
+        }
+    };
+    this.Check = setInterval(function(){ detect() }, 100);
+}
+
+var hashDetection = new hashHandler();
 
 main();
 chrome.runtime.onMessage.addListener(
