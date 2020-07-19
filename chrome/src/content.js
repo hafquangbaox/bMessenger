@@ -1365,24 +1365,11 @@ function checkIframe(){
 function main() {
     applyCSS();
 }
-window.addEventListener('locationchange', function(){
-    console.log('location changed!', window.location);
-});
-function hashHandler(){
-    this.oldHash = window.location.hash;
-    this.Check;
-
-    var that = this;
-    var detect = function(){
-        if(that.oldHash!=window.location.hash){
-            alert("HASH CHANGED - new has" + window.location.hash);
-            that.oldHash = window.location.hash;
-        }
-    };
-    this.Check = setInterval(function(){ detect() }, 100);
-}
-
-var hashDetection = new hashHandler();
+var pushState = history.pushState;
+history.pushState = function () {
+    pushState.apply(history, arguments);
+    fireEvents('pushState', arguments);  // Some event-handling function
+};
 
 main();
 chrome.runtime.onMessage.addListener(
