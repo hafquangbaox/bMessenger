@@ -1393,6 +1393,7 @@ function appendCSS(styleText, hasIframe) {
 
                         let iframeFB = document.querySelector('iframe');
                         if (!!iframeFB === true && iframe?.contentWindow && iframeFB?.contentWindow?.document) {
+                            console.log("Da vao duoc cai nay");
                             window.clearInterval(intervalCheckIframeLoaded);
                         }
                     } catch (e) {
