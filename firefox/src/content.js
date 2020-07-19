@@ -1351,19 +1351,25 @@ function appendCSS(styleText, iframe){
     if(iframe){
         console.log("YES co iframe");
         var iframe = document.querySelector('iframe');
-        console.log(iframe);
-        console.log(iframe.contentWindow);
-        console.log(iframe.contentWindow.document);
-        if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
-            var style = iframe.contentWindow.document.createElement('style');
-            style.type = 'text/css';
-            var textnode = iframe.contentWindow.document.createTextNode(styleText);
-            style.appendChild(textnode);
-            style.setAttribute('id', 'bMessenger');
-            iframe.contentWindow.document.body.appendChild(style);
-        } else {
-            iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
-        }
+
+        iframe.onload = function() {
+            console.log("WHen iframe load");
+            console.log(iframe);
+            console.log(iframe.contentWindow);
+            console.log(iframe.contentWindow.document);
+            if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
+                var style = iframe.contentWindow.document.createElement('style');
+                style.type = 'text/css';
+                var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                style.appendChild(textnode);
+                style.setAttribute('id', 'bMessenger');
+                iframe.contentWindow.document.body.appendChild(style);
+            } else {
+                iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+            }
+
+        }; // before setting 'src'
+
 
     } else {
 
