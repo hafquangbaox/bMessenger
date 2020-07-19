@@ -1326,6 +1326,18 @@ function handleFB(config) {
 function appendCSS(styleText, iframe){
     if(iframe){
         console.log("YES co iframe");
+        var iframe = document.querySelector('iframe');
+        if (!!iframe.getElementById("bMessenger") === false) {
+            var style = iframe.createElement('style');
+            style.type = 'text/css';
+            var textnode = iframe.createTextNode(styleText);
+            style.appendChild(textnode);
+            style.setAttribute('id', 'bMessenger');
+            iframe.body.appendChild(style);
+        } else {
+            iframe.getElementById("bMessenger").innerHTML = styleText;
+        }
+
     } else {
 
         console.log("NO co iframe");
@@ -1343,7 +1355,6 @@ function appendCSS(styleText, iframe){
 }
 
 function checkIframe(){
-    var iframe = document.querySelector('iframe');
     if(!!iframe === true) return true;
     return false;
 }
