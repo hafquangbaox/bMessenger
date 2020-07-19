@@ -1390,6 +1390,8 @@ function appendCSS(styleText, iframe) {
                             window.clearInterval(id);
                         };
                     }
+                } else {
+                    console.log("Chua load duoc iframe");
                 }
             }, 500);
         };
