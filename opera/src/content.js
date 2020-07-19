@@ -1349,8 +1349,28 @@ function handleFB(config) {
     }
 }
 
-function checkIframe(){
+function appendCSS(styleText){
+    if(checkIframe()){
+        console.log("DKM co iframe");
+    } else {
 
+        if (!!document.getElementById("bMessenger") === false) {
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            var textnode = document.createTextNode(styleText);
+            style.appendChild(textnode);
+            style.setAttribute('id', 'bMessenger');
+            document.body.appendChild(style);
+        } else {
+            document.getElementById("bMessenger").innerHTML = styleText;
+        }
+    }
+}
+
+function checkIframe(){
+    var iframe = document.querySelector('iframe');
+    if(!!iframe === true) return true;
+    return false;
 }
 
 function main() {
