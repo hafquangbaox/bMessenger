@@ -7,6 +7,7 @@
 
 var oldURL = "";
 var currentURL = window.location.href;
+var intervalCheckIframeLoaded;
 
 function checkURLchange(currentURL, config) {
     if (currentURL != oldURL) {
@@ -1386,7 +1387,7 @@ function appendCSS(styleText, hasIframe) {
                         } else {
                             iframeFBLoad.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
                         }
-                        window.clearInterval(id);
+                        window.clearInterval(intervalCheckIframeLoaded);
                     };
                     console.log("Chua load duoc iframe");
 
@@ -1395,7 +1396,7 @@ function appendCSS(styleText, hasIframe) {
                     }
                 }, 500);
             };
-            let id = intervalTrigger();
+            intervalCheckIframeLoaded = intervalTrigger();
         }
 
 
