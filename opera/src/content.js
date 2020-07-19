@@ -1391,6 +1391,10 @@ function appendCSS(styleText, hasIframe) {
                         };
                         console.log("Chua load duoc iframe");
 
+                        let iframeFB = document.querySelector('iframe');
+                        if (!!iframeFB === true && iframe?.contentWindow && iframeFB?.contentWindow?.document) {
+                            window.clearInterval(intervalCheckIframeLoaded);
+                        }
                     } catch (e) {
                         console.log(e);
                     }
