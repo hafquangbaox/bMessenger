@@ -1371,6 +1371,7 @@ function appendCSS(styleText, hasIframe) {
         } else {
             function intervalTrigger() {
                 return window.setInterval(function () {
+                    try{
                     document.querySelector('iframe').onload = function () {
                         console.log("When wait iframe load");
                         console.log(styleText);
@@ -1388,6 +1389,10 @@ function appendCSS(styleText, hasIframe) {
                         window.clearInterval(id);
                     };
                     console.log("Chua load duoc iframe");
+
+                    } catch(e){
+                        console.log(e);
+                    }
                 }, 500);
             };
             let id = intervalTrigger();
