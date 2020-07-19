@@ -1350,20 +1350,31 @@ function handleFB(config) {
 function appendCSS(styleText, iframe) {
     if (iframe) {
         console.log("YES co iframe");
-
-        function intervalTrigger() {
-            return window.setInterval(function () {
-                var iframe = document.querySelector('iframe');
-                console.log(iframe);
-                console.log(iframe.contentWindow);
-                console.log(iframe.contentWindow.document);
-                if (!!iframe === true) {
-                    console.log("Load vao co iframe");
-                    if(iframe.contentWindow && iframe.contentWindow.document) {
-                        console.log("When iframe loaded");
+        var iframe = document.querySelector('iframe');
+        if (!!iframe === true && iframe?.contentWindow && iframe?.contentWindow?.document) {
+            console.log(iframe);
+            console.log(iframe.contentWindow);
+            console.log(iframe.contentWindow.document);
+            console.log("When iframe loaded");
+            console.log(styleText);
+            if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
+                console.log("Create iframe bMessenger");
+                var style = iframe.contentWindow.document.createElement('style');
+                style.type = 'text/css';
+                var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                style.appendChild(textnode);
+                style.setAttribute('id', 'bMessenger');
+                iframe.contentWindow.document.body.appendChild(style);
+            } else {
+                iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+            }
+        } else {
+            function intervalTrigger() {
+                return window.setInterval(function () {
+                    iframe.onload = function () {
+                        console.log("When wait iframe load");
                         console.log(styleText);
                         if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
-                            console.log("Create iframe bMessenger");
                             var style = iframe.contentWindow.document.createElement('style');
                             style.type = 'text/css';
                             var textnode = iframe.contentWindow.document.createTextNode(styleText);
@@ -1374,29 +1385,13 @@ function appendCSS(styleText, iframe) {
                             iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
                         }
                         window.clearInterval(id);
-                    } else {
-                        iframe.onload = function () {
-                            console.log("When wait iframe load");
-                            console.log(styleText);
-                            if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
-                                var style = iframe.contentWindow.document.createElement('style');
-                                style.type = 'text/css';
-                                var textnode = iframe.contentWindow.document.createTextNode(styleText);
-                                style.appendChild(textnode);
-                                style.setAttribute('id', 'bMessenger');
-                                iframe.contentWindow.document.body.appendChild(style);
-                            } else {
-                                iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
-                            }
-                            window.clearInterval(id);
-                        };
-                    }
-                } else {
+                    };
                     console.log("Chua load duoc iframe");
-                }
-            }, 500);
-        };
-        var id = intervalTrigger();
+                }, 500);
+            };
+            var id = intervalTrigger();
+        }
+
 
     } else {
 
