@@ -1323,7 +1323,7 @@ function handleFB(config) {
     appendCSS(styleText);
 }
 
-function appendCSS(styleText){
+function appendCSS(styleText, iframe){
     if(checkIframe()){
         console.log("YES co iframe");
     } else {
