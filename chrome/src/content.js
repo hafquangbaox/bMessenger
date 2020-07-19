@@ -1347,8 +1347,8 @@ function handleFB(config) {
     appendCSS(styleText);
 }
 
-function appendCSS(styleText, iframe) {
-    if (iframe) {
+function appendCSS(styleText, hasIframe) {
+    if (hasIframe) {
         console.log("YES co iframe");
         var iframe = document.querySelector('iframe');
         if (!!iframe === true && iframe?.contentWindow && iframe?.contentWindow?.document) {
