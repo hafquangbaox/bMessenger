@@ -1325,9 +1325,10 @@ function handleFB(config) {
 
 function appendCSS(styleText){
     if(checkIframe()){
-        console.log("DKM co iframe");
+        console.log("YES co iframe");
     } else {
 
+        console.log("NO co iframe");
         if (!!document.getElementById("bMessenger") === false) {
             var style = document.createElement('style');
             style.type = 'text/css';
