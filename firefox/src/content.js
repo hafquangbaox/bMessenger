@@ -1371,8 +1371,14 @@ var oldURL = "";
 var currentURL = window.location.href;
 function checkURLchange(currentURL){
     if(currentURL != oldURL){
-        alert("url changed!");
+        console.log("url changed!");
         oldURL = currentURL;
+        var href = document.location.href;
+        if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
+            handleM(config, iframe = true);
+        } else {
+            handleFB(config);
+        }
     }
 
     oldURL = window.location.href;
