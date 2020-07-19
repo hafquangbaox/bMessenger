@@ -1367,6 +1367,8 @@ function main() {
 }
 var pushState = history.pushState;
 history.pushState = function () {
+
+    console.log('location changed!', window.location);
     pushState.apply(history, arguments);
     fireEvents('pushState', arguments);  // Some event-handling function
 };
