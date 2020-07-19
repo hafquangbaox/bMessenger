@@ -1232,7 +1232,7 @@ function handleM(config, iframe = false) {
         }
     }
 
-    appendCSS(styleText);
+    appendCSS(styleText, iframe);
 }
 
 function getCharacterAfterHover(flag) {
