@@ -329,7 +329,7 @@ var selector = {
 
                     {
                         isComponent: "name",
-                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
+                        selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>span a[data-hovercard]',
                         block: 'div[role="main"]',
                         inlineNears: true,
                         blockNears: false,
