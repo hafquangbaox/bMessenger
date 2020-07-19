@@ -1171,6 +1171,9 @@ function handleStyle(config) {
     } else {
         console.log('No same domain');
     }
+
+    checkURLchange();
+
 }
 
 function handleM(config, iframe = false) {
