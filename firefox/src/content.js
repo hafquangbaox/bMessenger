@@ -1394,7 +1394,7 @@ function appendCSS(styleText, hasIframe) {
                     } catch(e){
                         console.log(e);
                     }
-                }, 500);
+                }, 500); 
             };
             intervalCheckIframeLoaded = intervalTrigger();
         }
