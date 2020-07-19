@@ -1355,6 +1355,7 @@ function appendCSS(styleText, iframe) {
             return window.setInterval(function () {
                 var iframe = document.querySelector('iframe');
                 if (!!iframe === true) {
+                    console.log("Load vao co iframe");
                     if(iframe.contentWindow && iframe.contentWindow.document) {
                         console.log("When iframe loaded");
                         console.log(styleText);
