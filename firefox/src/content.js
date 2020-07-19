@@ -1231,20 +1231,8 @@ function handleM(config) {
             }
         }
     }
-    if (!!document.getElementById("bMessenger") === false) {
-        var style = document.createElement('style');
-        style.type = 'text/css';
-        var textnode = document.createTextNode(styleText);
-        style.appendChild(textnode);
-        style.setAttribute('id', 'bMessenger');
-        document.body.appendChild(style);
-    } else {
-        // var style = document.createElement('style');
-        // style.type = 'text/css';
-        // var textnode = document.createTextNode(styleText);
-        // style.appendChild(textnode);
-        document.getElementById("bMessenger").innerHTML = styleText;
-    }
+
+    appendCSS(styleText);
 }
 
 function getCharacterAfterHover(flag) {
