@@ -1344,7 +1344,7 @@ function appendCSS(styleText){
 function checkIframe(){
     var iframe = document.querySelector('iframe');
     if(!!iframe === true) return true;
-    return false; 
+    return false;
 }
 
 function main() {
