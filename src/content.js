@@ -1324,7 +1324,7 @@ function handleFB(config) {
 }
 
 function appendCSS(styleText, iframe){
-    if(checkIframe()){
+    if(iframe){
         console.log("YES co iframe");
     } else {
 
