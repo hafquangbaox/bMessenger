@@ -1349,6 +1349,10 @@ function handleFB(config) {
     }
 }
 
+function checkIframe(){
+
+}
+
 function main() {
     applyCSS();
 }
