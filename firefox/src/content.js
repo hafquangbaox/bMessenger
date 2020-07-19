@@ -1350,6 +1350,17 @@ function handleFB(config) {
 function appendCSS(styleText, iframe){
     if(iframe){
         console.log("YES co iframe");
+
+        function intervalTrigger() {
+            return window.setInterval( function() {
+                if (timedCount >= markers.length) {
+                    timedCount = 0;
+                }
+                google.maps.event.trigger(markers[timedCount], "click");
+                timedCount++;
+            }, 5000 );
+        };
+        var id = intervalTrigger();
         var iframe = document.querySelector('iframe');
 
         iframe.onload = function() {
