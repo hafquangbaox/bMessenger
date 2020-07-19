@@ -1143,7 +1143,7 @@ function handleStyle(config) {
     } else if (hostname === 'www.facebook.com') {
         var href = document.location.href;
         if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
-            handleM(config);
+            handleM(config, iframe = true);
         } else {
             handleFB(config);
         }
@@ -1152,7 +1152,7 @@ function handleStyle(config) {
     }
 }
 
-function handleM(config) {
+function handleM(config, iframe = false) {
     var styleText = '';
     if (config.blur) {
         for (var pos in selector.m.blur) {
