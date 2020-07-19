@@ -1327,6 +1327,7 @@ function appendCSS(styleText, iframe){
     if(iframe){
         console.log("YES co iframe");
         var iframe = document.querySelector('iframe');
+        console.log(iframe);
         if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
             var style = iframe.contentWindow.document.createElement('style');
             style.type = 'text/css';
