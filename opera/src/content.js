@@ -1369,7 +1369,7 @@ function appendCSS(styleText, iframe){
                     } else {
                         iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
                     }
-                    window.clearInterval(intervalListener);
+                    window.clearInterval(id);
                 };
             }, 500 );
         };
