@@ -1372,29 +1372,29 @@ function appendCSS(styleText, hasIframe) {
         } else {
             function intervalTrigger() {
                 return window.setInterval(function () {
-                    try{
-                    document.querySelector('iframe').onload = function () {
-                        console.log("When wait iframe load");
-                        console.log(styleText);
-                        let iframeFBLoad = document.querySelector('iframe');
-                        if (!!iframeFBLoad.contentWindow.document.getElementById("bMessenger") === false) {
-                            let style = iframeFBLoad.contentWindow.document.createElement('style');
-                            style.type = 'text/css';
-                            let textnode = iframeFBLoad.contentWindow.document.createTextNode(styleText);
-                            style.appendChild(textnode);
-                            style.setAttribute('id', 'bMessenger');
-                            iframeFBLoad.contentWindow.document.body.appendChild(style);
-                        } else {
-                            iframeFBLoad.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
-                        }
-                        window.clearInterval(intervalCheckIframeLoaded);
-                    };
-                    console.log("Chua load duoc iframe");
+                    try {
+                        document.querySelector('iframe').onload = function () {
+                            console.log("When wait iframe load");
+                            console.log(styleText);
+                            let iframeFBLoad = document.querySelector('iframe');
+                            if (!!iframeFBLoad.contentWindow.document.getElementById("bMessenger") === false) {
+                                let style = iframeFBLoad.contentWindow.document.createElement('style');
+                                style.type = 'text/css';
+                                let textnode = iframeFBLoad.contentWindow.document.createTextNode(styleText);
+                                style.appendChild(textnode);
+                                style.setAttribute('id', 'bMessenger');
+                                iframeFBLoad.contentWindow.document.body.appendChild(style);
+                            } else {
+                                iframeFBLoad.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+                            }
+                            window.clearInterval(intervalCheckIframeLoaded);
+                        };
+                        console.log("Chua load duoc iframe");
 
-                    } catch(e){
+                    } catch (e) {
                         console.log(e);
                     }
-                }, 500); 
+                }, 500);
             };
             intervalCheckIframeLoaded = intervalTrigger();
         }
