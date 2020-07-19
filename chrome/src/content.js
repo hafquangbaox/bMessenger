@@ -4,6 +4,27 @@
  * @github lozthiensu <https://github.com/lozthiensu/bMessenger>
  * This extension is called bMessenger on firefox add-ons store. But the bastard who reviews this extension on chrome extensions doesn't allow using that name. So I had to change the name to "Protect message". But its name on github is still https://github.com/lozthiensu/bMessenger
  */
+
+var oldURL = "";
+var currentURL = window.location.href;
+function checkURLchange(currentURL, config){
+    if(currentURL != oldURL){
+        console.log("url changed!");
+        oldURL = currentURL;
+        var href = document.location.href;
+        if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
+            handleM(config, iframe = true);
+        } else {
+            handleFB(config);
+        }
+    }
+
+    oldURL = window.location.href;
+    setInterval(function() {
+        checkURLchange(window.location.href);
+    }, 1000);
+}
+
 var itemConfigs = null;
 var styleEffect = {
     // One attr
@@ -1365,30 +1386,6 @@ function checkIframe(){
 function main() {
     applyCSS();
 }
-
-
-var oldURL = "";
-var currentURL = window.location.href;
-function checkURLchange(currentURL){
-    if(currentURL != oldURL){
-        console.log("url changed!");
-        oldURL = currentURL;
-        var href = document.location.href;
-        if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
-            handleM(config, iframe = true);
-        } else {
-            handleFB(config);
-        }
-    }
-
-    oldURL = window.location.href;
-    setInterval(function() {
-        checkURLchange(window.location.href);
-    }, 1000);
-}
-
-checkURLchange();
-
 
 main();
 chrome.runtime.onMessage.addListener(
