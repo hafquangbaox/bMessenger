@@ -7,8 +7,9 @@
 
 var oldURL = "";
 var currentURL = window.location.href;
-function checkURLchange(currentURL, config){
-    if(currentURL != oldURL){
+
+function checkURLchange(currentURL, config) {
+    if (currentURL != oldURL) {
         console.log("url changed!");
         oldURL = currentURL;
         var href = document.location.href;
@@ -20,7 +21,7 @@ function checkURLchange(currentURL, config){
     }
 
     oldURL = window.location.href;
-    setInterval(function() {
+    setInterval(function () {
         checkURLchange(window.location.href, config);
     }, 1000);
 }
@@ -926,7 +927,6 @@ var selector = {
                     },
 
 
-
                     /*Version 2 end*/{
                         isComponent: "avatar",
                         selector: 'div.fbNubFlyoutInner>div>div>div>div:nth-child(1)>a>div>img',
@@ -1347,31 +1347,33 @@ function handleFB(config) {
     appendCSS(styleText);
 }
 
-function appendCSS(styleText, iframe){
-    if(iframe){
+function appendCSS(styleText, iframe) {
+    if (iframe) {
         console.log("YES co iframe");
 
         function intervalTrigger() {
-            return window.setInterval( function() {
+            return window.setInterval(function () {
                 var iframe = document.querySelector('iframe');
-                iframe.onload = function() {
-                    console.log("WHen iframe load");
-                    console.log(iframe);
-                    console.log(iframe.contentWindow);
-                    console.log(iframe.contentWindow.document);
-                    if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
-                        var style = iframe.contentWindow.document.createElement('style');
-                        style.type = 'text/css';
-                        var textnode = iframe.contentWindow.document.createTextNode(styleText);
-                        style.appendChild(textnode);
-                        style.setAttribute('id', 'bMessenger');
-                        iframe.contentWindow.document.body.appendChild(style);
-                    } else {
-                        iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
-                    }
-                    window.clearInterval(id);
-                };
-            }, 500 );
+                if (!!iframe === true) {
+                    iframe.onload = function () {
+                        console.log("WHen iframe load");
+                        console.log(iframe);
+                        console.log(iframe.contentWindow);
+                        console.log(iframe.contentWindow.document);
+                        if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
+                            var style = iframe.contentWindow.document.createElement('style');
+                            style.type = 'text/css';
+                            var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                            style.appendChild(textnode);
+                            style.setAttribute('id', 'bMessenger');
+                            iframe.contentWindow.document.body.appendChild(style);
+                        } else {
+                            iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+                        }
+                        window.clearInterval(id);
+                    };
+                }
+            }, 500);
         };
         var id = intervalTrigger();
 
@@ -1391,8 +1393,8 @@ function appendCSS(styleText, iframe){
     }
 }
 
-function checkIframe(){
-    if(!!iframe === true) return true;
+function checkIframe() {
+    if (!!iframe === true) return true;
     return false;
 }
 
