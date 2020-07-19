@@ -1352,7 +1352,7 @@ function appendCSS(styleText, hasIframe) {
     if (hasIframe) {
         console.log("YES co iframe");
         let iframeFB = document.querySelector('iframe');
-        if (!!iframeFB === true && iframe?.contentWindow && iframeFB?.contentWindow?.document) {
+        if (!!iframeFB === true && iframeFB?.contentWindow && iframeFB?.contentWindow?.document) {
             console.log(iframeFB);
             console.log(iframeFB.contentWindow);
             console.log(iframeFB.contentWindow.document);
