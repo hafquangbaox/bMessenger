@@ -1392,8 +1392,8 @@ function appendCSS(styleText, hasIframe) {
                         console.log("Chua load duoc iframe");
 
                         let iframeFB = document.querySelector('iframe');
-                        console.log(!!iframeFB === true, iframe?.contentWindow, iframeFB?.contentWindow?.document);
-                        if (!!iframeFB === true && iframe?.contentWindow && iframeFB?.contentWindow?.document) {
+                        console.log(!!iframeFB === true, iframeFB?.contentWindow, iframeFB?.contentWindow?.document);
+                        if (!!iframeFB === true && iframeFB?.contentWindow && iframeFB?.contentWindow?.document) {
                             console.log("Da vao duoc cai nay");
                             window.clearInterval(intervalCheckIframeLoaded);
                         }
