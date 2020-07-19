@@ -1365,6 +1365,9 @@ function checkIframe(){
 function main() {
     applyCSS();
 }
+window.addEventListener('locationchange', function(){
+    console.log('location changed!', window.location);
+})
 
 main();
 chrome.runtime.onMessage.addListener(
