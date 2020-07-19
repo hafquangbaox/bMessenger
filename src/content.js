@@ -1354,8 +1354,11 @@ function appendCSS(styleText, iframe) {
         function intervalTrigger() {
             return window.setInterval(function () {
                 var iframe = document.querySelector('iframe');
+                console.log(iframe);
+                console.log(iframe.contentWindow);
+                console.log(iframe.contentWindow.document);
                 if (!!iframe === true) {
-                    console.log("Load vao co iframe"); 
+                    console.log("Load vao co iframe");
                     if(iframe.contentWindow && iframe.contentWindow.document) {
                         console.log("When iframe loaded");
                         console.log(styleText);
