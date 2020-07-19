@@ -1370,7 +1370,7 @@ function appendCSS(styleText, iframe) {
                         window.clearInterval(id);
                     } else {
                         iframe.onload = function () {
-                            console.log("When iframe load");
+                            console.log("When wait iframe load");
                             if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
                                 var style = iframe.contentWindow.document.createElement('style');
                                 style.type = 'text/css';
