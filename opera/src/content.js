@@ -14,11 +14,7 @@ function checkURLchange(currentURL, config) {
         console.log("url changed!");
         oldURL = currentURL;
         var href = document.location.href;
-        if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
-            handleM(config, iframe = true);
-        } else {
-            handleFB(config);
-        }
+        applyCSS();
     }
 
     oldURL = window.location.href;
