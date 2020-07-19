@@ -1365,13 +1365,24 @@ function checkIframe(){
 function main() {
     applyCSS();
 }
-var pushState = history.pushState;
-history.pushState = function () {
 
-    console.log('location changed!', window.location);
-    pushState.apply(history, arguments);
-    fireEvents('pushState', arguments);  // Some event-handling function
-};
+
+var oldURL = "";
+var currentURL = window.location.href;
+function checkURLchange(currentURL){
+    if(currentURL != oldURL){
+        alert("url changed!");
+        oldURL = currentURL;
+    }
+
+    oldURL = window.location.href;
+    setInterval(function() {
+        checkURLchange(window.location.href);
+    }, 1000);
+}
+
+checkURLchange();
+
 
 main();
 chrome.runtime.onMessage.addListener(
