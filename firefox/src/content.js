@@ -1357,6 +1357,7 @@ function appendCSS(styleText, iframe) {
                 if (!!iframe === true) {
                     if(iframe.contentWindow && iframe.contentWindow.document) {
                         console.log("When iframe loaded");
+                        console.log(styleText);
                         if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
                             var style = iframe.contentWindow.document.createElement('style');
                             style.type = 'text/css';
@@ -1371,6 +1372,7 @@ function appendCSS(styleText, iframe) {
                     } else {
                         iframe.onload = function () {
                             console.log("When wait iframe load");
+                            console.log(styleText);
                             if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
                                 var style = iframe.contentWindow.document.createElement('style');
                                 style.type = 'text/css';
