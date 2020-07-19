@@ -1356,7 +1356,7 @@ function appendCSS(styleText, iframe) {
                 var iframe = document.querySelector('iframe');
                 if (!!iframe === true) {
                     iframe.onload = function () {
-                        console.log("WHen iframe load");
+                        console.log("When iframe load");
                         console.log(iframe);
                         console.log(iframe.contentWindow);
                         console.log(iframe.contentWindow.document);
