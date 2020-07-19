@@ -1356,31 +1356,29 @@ function appendCSS(styleText, iframe){
                 if (timedCount >= markers.length) {
                     timedCount = 0;
                 }
-                google.maps.event.trigger(markers[timedCount], "click");
+                var iframe = document.querySelector('iframe');
+
+                iframe.onload = function() {
+                    console.log("WHen iframe load");
+                    console.log(iframe);
+                    console.log(iframe.contentWindow);
+                    console.log(iframe.contentWindow.document);
+                    if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
+                        var style = iframe.contentWindow.document.createElement('style');
+                        style.type = 'text/css';
+                        var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                        style.appendChild(textnode);
+                        style.setAttribute('id', 'bMessenger');
+                        iframe.contentWindow.document.body.appendChild(style);
+                    } else {
+                        iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+                    }
+                    window.clearInterval(intervalListener);
+                };
                 timedCount++;
-            }, 5000 );
+            }, 500 );
         };
         var id = intervalTrigger();
-        var iframe = document.querySelector('iframe');
-
-        iframe.onload = function() {
-            console.log("WHen iframe load");
-            console.log(iframe);
-            console.log(iframe.contentWindow);
-            console.log(iframe.contentWindow.document);
-            if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
-                var style = iframe.contentWindow.document.createElement('style');
-                style.type = 'text/css';
-                var textnode = iframe.contentWindow.document.createTextNode(styleText);
-                style.appendChild(textnode);
-                style.setAttribute('id', 'bMessenger');
-                iframe.contentWindow.document.body.appendChild(style);
-            } else {
-                iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
-            }
-
-        }; // before setting 'src'
-
 
     } else {
 
