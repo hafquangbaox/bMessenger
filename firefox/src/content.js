@@ -1390,7 +1390,7 @@ function appendCSS(styleText, hasIframe) {
                     console.log("Chua load duoc iframe");
                 }, 500);
             };
-            var id = intervalTrigger();
+            let id = intervalTrigger();
         }
 
 
