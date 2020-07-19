@@ -1355,11 +1355,8 @@ function appendCSS(styleText, iframe) {
             return window.setInterval(function () {
                 var iframe = document.querySelector('iframe');
                 if (!!iframe === true) {
-                    iframe.onload = function () {
-                        console.log("When iframe load");
-                        console.log(iframe);
-                        console.log(iframe.contentWindow);
-                        console.log(iframe.contentWindow.document);
+                    if(iframe.contentWindow && iframe.contentWindow.document) {
+                        console.log("When iframe loaded");
                         if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
                             var style = iframe.contentWindow.document.createElement('style');
                             style.type = 'text/css';
@@ -1371,7 +1368,22 @@ function appendCSS(styleText, iframe) {
                             iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
                         }
                         window.clearInterval(id);
-                    };
+                    } else {
+                        iframe.onload = function () {
+                            console.log("When iframe load");
+                            if (!!iframe.contentWindow.document.getElementById("bMessenger") === false) {
+                                var style = iframe.contentWindow.document.createElement('style');
+                                style.type = 'text/css';
+                                var textnode = iframe.contentWindow.document.createTextNode(styleText);
+                                style.appendChild(textnode);
+                                style.setAttribute('id', 'bMessenger');
+                                iframe.contentWindow.document.body.appendChild(style);
+                            } else {
+                                iframe.contentWindow.document.getElementById("bMessenger").innerHTML = styleText;
+                            }
+                            window.clearInterval(id);
+                        };
+                    }
                 }
             }, 500);
         };
