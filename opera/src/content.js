@@ -1337,7 +1337,7 @@ function appendCSS(styleText, iframe){
         } else {
             iframe.getElementById("bMessenger").innerHTML = styleText;
         }
-
+ 
     } else {
 
         console.log("NO co iframe");
