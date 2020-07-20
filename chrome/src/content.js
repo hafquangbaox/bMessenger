@@ -335,6 +335,7 @@ var selector = {
                         inlineBlockDisplay: true,
                         blockNears: false,
                     },
+
                     // {
                     //     isComponent: "name",
                     //     selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>div>div div[data-contents="true"] span',
@@ -345,9 +346,6 @@ var selector = {
                     // },
                     //
 
-                    //
-                    //
-                    //
                     // {
                     //     isComponent: "name",
                     //     selector: 'div>div:first-of-type div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div:first-of-type>span>span',
@@ -356,7 +354,6 @@ var selector = {
                     //     inlineBlockDisplay: true,
                     //     blockNears: false,
                     // },
-
 
                     {
                         isComponent: "name",
