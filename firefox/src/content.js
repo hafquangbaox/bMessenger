@@ -358,15 +358,15 @@ var selector = {
                     // },
                     //
 
-                    // {
-                    //     isComponent: "name",
-                    //     selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-child div span>div>a',
-                    //     block: 'div[role="main"]>span',
-                    //     inlineNears: true,
-                    //     inlineBlockDisplay: true,
-                    //     blockNears: false,
-                    // },
-                    //
+                    {
+                        isComponent: "name",
+                        selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-child div span>div>a',
+                        block: 'div[role="main"]>span',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    },
+
 
 
                     {
