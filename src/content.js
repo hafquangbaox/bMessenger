@@ -340,6 +340,7 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
+                    
                     {
                         isComponent: "name",
                         selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>span a[data-hovercard]',
