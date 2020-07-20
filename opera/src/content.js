@@ -335,6 +335,14 @@ var selector = {
                         inlineBlockDisplay: true,
                         blockNears: false,
                     },
+                    {
+                        isComponent: "name",
+                        selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>div>div div[data-contents="true"] span',
+                        block: 'div[aria-labelledby][role="main"] span ',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    },
 
 
 
