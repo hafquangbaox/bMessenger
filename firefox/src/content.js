@@ -333,6 +333,15 @@ var selector = {
                         inlineNears: true,
                         blockNears: false,
                     },
+                    {
+                        isComponent: "avatar",
+                        selector: 'span>div:nth-child(2)>div:first-child div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div ul li',
+                        block: 'div[role="main"],
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+
+
 
                     {
                         isComponent: "name",
