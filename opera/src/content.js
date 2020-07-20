@@ -319,6 +319,7 @@ var selector = {
                     inlineNears: true,
                     blockNears: false,
                 },
+                    //*Fix css messagerv2*/
                     {
                         isComponent: "avatar",
                         selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div[aria-hidden="true"]>div>div>img',
