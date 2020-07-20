@@ -335,8 +335,8 @@ var selector = {
                     },
                     {
                         isComponent: "avatar",
-                        selector: 'span>div:nth-child(2)>div:first-child div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div ul li',
-                        block: 'div[role="main"],
+                        selector: 'div:nth-child(2)>div:first-child div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div ul li',
+                        block: 'div[role="main"] span',
                         inlineNears: true,
                         blockNears: false,
                     },
