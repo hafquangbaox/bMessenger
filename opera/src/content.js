@@ -335,12 +335,11 @@ var selector = {
                     },
                     {
                         isComponent: "avatar",
-                        selector: 'div:nth-child(2)>div:first-child div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div ul li',
+                        selector: 'div:nth-child(2)>div:first-child div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div ul>li',
                         block: 'div[role="main"] span',
                         inlineNears: true,
                         blockNears: false,
                     },
-
                     {
                         isComponent: "name",
                         selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>span a[data-hovercard]',
