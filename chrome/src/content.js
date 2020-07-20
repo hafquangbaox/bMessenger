@@ -338,7 +338,7 @@ var selector = {
 
                     {
                         isComponent: "name",
-                        selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>div>div div[data-contents="true"] span',
+                        selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>div>div div[data-contents="true"]>div>div>span',
                         block: 'div[role="main"] span',
                         inlineNears: true,
                         inlineBlockDisplay: true,
