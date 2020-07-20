@@ -354,7 +354,6 @@ var selector = {
                     //     block: 'div[role="main"]>span',
                     //     inlineNears: true,
                     //     inlineBlockDisplay: true,
-                    //     inlineBlockDisplay: true,
                     //     blockNears: false,
                     // },
                     //
@@ -364,7 +363,6 @@ var selector = {
                         selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-child div span>div>a',
                         block: 'div[role="main"]>span',
                         inlineNears: true,
-                        inlineBlockDisplay: true,
                         inlineBlockDisplay: true,
                         blockNears: false,
                     },
