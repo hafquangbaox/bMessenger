@@ -347,17 +347,17 @@ var selector = {
 
 
 
-
-                    {
-                        isComponent: "name",
-                        selector: 'div>div:first-of-type div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div:first-of-type>span>span',
-                        block: 'div[role="main"]>span',
-                        inlineNears: true,
-                        inlineBlockDisplay: true,
-                        inlineBlockDisplay: true,
-                        blockNears: false,
-                    },
-
+                    //
+                    // {
+                    //     isComponent: "name",
+                    //     selector: 'div>div:first-of-type div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div:first-of-type>span>span',
+                    //     block: 'div[role="main"]>span',
+                    //     inlineNears: true,
+                    //     inlineBlockDisplay: true,
+                    //     inlineBlockDisplay: true,
+                    //     blockNears: false,
+                    // },
+                    //
 
                     {
                         isComponent: "name",
