@@ -9,6 +9,9 @@ var oldURL = "";
 var currentURL = window.location.href;
 var intervalCheckIframeLoaded;
 
+/* 1 = facebook, 2 = facebook/messages, 3 = messenger*/
+var currentState = 1;
+
 function checkURLchange(currentURL, config) {
     if (currentURL != oldURL) {
         console.log("url changed!");
@@ -1304,6 +1307,7 @@ function handleStyle(config) {
         if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
             handleM(config, iframe = true);
         } else {
+
             handleFB(config);
         }
     } else {
