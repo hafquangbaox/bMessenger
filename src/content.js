@@ -1573,7 +1573,13 @@ function locationHashChanged() {
 function main() {
     applyCSS();
     window.onhashchange = locationHashChanged;
-
+    let url = location.href;
+    document.body.addEventListener('click', ()=>{
+        requestAnimationFrame(()=>{
+            url!==location.href&&console.log('url changed');
+            url = location.href;
+        });
+    }, true);
 }
 
 main();
