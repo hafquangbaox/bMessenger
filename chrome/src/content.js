@@ -1570,15 +1570,9 @@ function checkIframe() {
     return false;
 }
 
-function locationHashChanged() {
-    if (location.hash === '#cool-feature') {
-        console.log("You're visiting a cool feature!");
-    }
-}
-
 function main() {
     applyCSS();
-    window.onhashchange = locationHashChanged;
+
     let url = location.href;
 
     document.body.addEventListener('click', ()=>{
