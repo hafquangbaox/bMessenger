@@ -9,23 +9,6 @@ var oldURL = "";
 var currentURL = window.location.href;
 var intervalCheckIframeLoaded;
 
-/* 1 = facebook, 2 = facebook/messages, 3 = messenger*/
-var currentState = 1;
-
-function checkURLchange(currentURL, config) {
-    if (currentURL != oldURL) {
-        console.log("url changed!");
-        oldURL = currentURL;
-        var href = document.location.href;
-        applyCSS();
-    }
-
-    oldURL = window.location.href;
-    setInterval(function () {
-        checkURLchange(window.location.href, config);
-    }, 1000);
-}
-
 var itemConfigs = null;
 var styleEffect = {
     // One attr
@@ -259,79 +242,79 @@ var selector = {
                     //*Fix css messengerv2*/
 
                     {
-                    isComponent: "avatar",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    borderRadius: '25%',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "avatar",
-                    selector: 'span>div:first-child>div>div:first-child>div>img',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "avatar",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>img',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div[role="img"]',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "other",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "other",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                },],
+                        isComponent: "avatar",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        borderRadius: '25%',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'span>div:first-child>div>div:first-child>div>img',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "avatar",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:first-of-type',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-of-type(2)',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>img',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>div[role="img"]',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>a>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "other",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "other",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    },],
                 'overflowHidden': [],
             },
         },
@@ -469,115 +452,115 @@ var selector = {
                     //*Fix css messengerv2*/
 
                     {
-                    isComponent: 'name',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    rightAlign: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "name",
-                    selector: 'span>div:first-child>div>div:not(:first-child)',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: 'name',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div.direction_ltr',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    rightAlign: true,
-                    inlineBlockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>a',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div[data-hover="tooltip"]>div>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: 'message',
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div>span>span>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>div',
-                    rightAlign: true,
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>span>span>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineBlockDisplay: true,
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "message",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "other",
-                    selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
-                    block: 'div[role="main"]',
-                    inlineNears: true,
-                    blockNears: false,
-                }, {
-                    isComponent: "other",
-                    selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
-                    block: 'div[role="presentation"]>div>div.uiScrollableArea',
-                    inlineNears: true,
-                    blockNears: false,
-                },],
+                        isComponent: 'name',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>h5',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        rightAlign: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "name",
+                        selector: 'span>div:first-child>div>div:not(:first-child)',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: 'name',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div.clearfix:first-of-type>div.direction_ltr',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>span:not([data-hover="none"])',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        rightAlign: true,
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>div>a',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>div>div>div>a>blockquote',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>a',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div[data-hover="tooltip"]>div>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: 'message',
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div>span>span>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>div>div>div',
+                        rightAlign: true,
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>span>span>div>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>span>span>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineBlockDisplay: true,
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div>div>div>div>span>div',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "message",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-of-type>div>span>div',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "other",
+                        selector: 'div[data-testid="info_panel"]>div>div>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div>div>span>div>div>ul',
+                        block: 'div[role="main"]',
+                        inlineNears: true,
+                        blockNears: false,
+                    }, {
+                        isComponent: "other",
+                        selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div>div.clearfix>span',
+                        block: 'div[role="presentation"]>div>div.uiScrollableArea',
+                        inlineNears: true,
+                        blockNears: false,
+                    },],
                 'overflowHidden': [],
             }
         }
@@ -1316,8 +1299,6 @@ function handleStyle(config) {
         console.log('No same domain');
     }
 
-    // checkURLchange(window.location.href, config);
-
 }
 
 function handleM(config, iframe = false) {
@@ -1575,12 +1556,12 @@ function main() {
 
     let url = location.href;
 
-    document.body.addEventListener('click', ()=>{
-        requestAnimationFrame(()=>{
+    document.body.addEventListener('click', () => {
+        requestAnimationFrame(() => {
             console.log(url, location.href);
 
-            if(url!==location.href){
-                applyCSS()&&console.log('url changed');
+            if (url !== location.href) {
+                applyCSS() && console.log('url changed');
             }
             url = location.href;
         });
