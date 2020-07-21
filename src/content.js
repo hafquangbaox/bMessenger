@@ -1261,7 +1261,7 @@ function updateDataset(itemConfigs) {
         else {
             try {
                 var dataset = JSON.parse(rs);
-                selector = dataset; 
+                selector = dataset;
                 handleStyle(itemConfigs);
             } catch (e) {
                 console.log('Can\' parse dataset');
