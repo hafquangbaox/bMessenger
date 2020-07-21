@@ -316,7 +316,7 @@ function updateContextSetting(configs) {
                             chrome.tabs.sendMessage(tabs[i].id, {
                                 action: "reloadCSS"
                             }, function(response) {});
-                        }
+                        } 
                     } else {
                         console.log('Not have tabs match with query');
                     }
