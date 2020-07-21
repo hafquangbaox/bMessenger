@@ -1236,7 +1236,7 @@ function handleStyle(config) {
         console.log('No same domain');
     }
 
-    checkURLchange(window.location.href, config);
+    // checkURLchange(window.location.href, config);
 
 }
 
