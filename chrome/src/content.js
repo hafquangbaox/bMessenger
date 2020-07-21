@@ -26,8 +26,8 @@ function checkURLchange(currentURL, config) {
 var itemConfigs = null;
 var styleEffect = {
     // One attr
-    blur10: 'filter:blur(10px);',
-    blur25: 'filter:blur(25px);',
+    blur10: 'filter:blur(10px) !important;',
+    blur25: 'filter:blur(25px) !important;',
     overflowHidden: 'overflow:hidden!important;',
     flipMirror: 'transform: rotateY(180deg);-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-o-transform:rotateY(180deg);-ms-transform:rotateY(180deg);unicode-bidi:bidi-override;',
     none: 'display:none;',
