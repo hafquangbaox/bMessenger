@@ -1301,13 +1301,15 @@ function handleStyle(config) {
     if (config.turnOther) arrComponents.push('other');
     config.arrComponents = arrComponents;
     if (hostname === 'www.messenger.com') {
+        currentState = 3;
         handleM(config);
     } else if (hostname === 'www.facebook.com') {
         var href = document.location.href;
         if (href.indexOf('https://www.facebook.com/messages/t/') >= 0) {
+            currentState = 2;
             handleM(config, iframe = true);
         } else {
-
+            currentState = 1;
             handleFB(config);
         }
     } else {
@@ -1578,6 +1580,7 @@ function main() {
     applyCSS();
     window.onhashchange = locationHashChanged;
     let url = location.href;
+
     document.body.addEventListener('click', ()=>{
         requestAnimationFrame(()=>{
             url!==location.href&&console.log('url changed');
