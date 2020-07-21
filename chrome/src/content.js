@@ -1578,7 +1578,10 @@ function main() {
     document.body.addEventListener('click', ()=>{
         requestAnimationFrame(()=>{
             console.log(url, location.href);
-            url!==location.href&&console.log('url changed');
+
+            if(url!==location.href){
+                applyCSS()&&console.log('url changed');
+            }
             url = location.href;
         });
     }, true);
