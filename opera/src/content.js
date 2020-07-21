@@ -181,7 +181,81 @@ var selector = {
                         blockNears: false,
                     }
                 ],
-                'blur25': [{
+                'blur25': [
+
+                    //*Fix css messengerv2*/
+                    {
+                        isComponent: "avatar",
+                        selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div[aria-hidden="true"]>div>div>img',
+                        block: 'div[role="main"] span',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "avatar",
+                        selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:first-of-type>div:nth-child(1)',
+                        block: 'div[role="main"] span',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+                    {
+                        isComponent: "avatar",
+                        selector: 'div:nth-child(2)>div:first-child div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div ul>li',
+                        block: 'div[role="main"] span',
+                        inlineNears: true,
+                        blockNears: false,
+                    },
+
+                    {
+                        isComponent: "name",
+                        selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>span a[data-hovercard]',
+                        block: 'div[role="main"] span',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    },
+
+                    {
+                        isComponent: "name",
+                        selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>div>div div[data-contents="true"]>div>div>span',
+                        block: 'div[role="main"] span',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    },
+
+                    // {
+                    //     isComponent: "name",
+                    //     selector: 'div:nth-child(2) div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div>div>div div[data-contents="true"] span',
+                    //     block: 'div[aria-labelledby][role="main"] span ',
+                    //     inlineNears: true,
+                    //     inlineBlockDisplay: true,
+                    //     blockNears: false,
+                    // },
+                    //
+
+                    // {
+                    //     isComponent: "name",
+                    //     selector: 'div>div:first-of-type div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent div:nth-child(2)>div:first-of-type>span>span',
+                    //     block: 'div[role="main"]>span',
+                    //     inlineNears: true,
+                    //     inlineBlockDisplay: true,
+                    //     blockNears: false,
+                    // },
+
+                    {
+                        isComponent: "name",
+                        selector: 'div.uiScrollableArea>div.uiScrollableAreaWrap>div.uiScrollableAreaBody>div.uiScrollableAreaContent>div>div:last-child div span>div>a',
+                        block: 'div[role="main"]>span',
+                        inlineNears: true,
+                        inlineBlockDisplay: true,
+                        blockNears: false,
+                    },
+
+
+                    //*Fix css messengerv2*/
+
+                    {
                     isComponent: "avatar",
                     selector: 'div.uiScrollableAreaContent>div>div>div>div.clearfix>div:first-child>div.uiPopover>div>div>img',
                     block: 'div[role="presentation"]>div>div.uiScrollableArea',
