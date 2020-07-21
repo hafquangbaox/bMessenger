@@ -1251,7 +1251,7 @@ function applyCSS() {
         browserSupportSync = true;
         handleStyle(items);
         itemConfigs = items;
-        // updateDataset(itemConfigs);
+        updateDataset(itemConfigs);
     });
 }
 
@@ -1474,16 +1474,9 @@ function handleFB(config) {
 
 function appendCSS(styleText, hasIframe) {
     if (hasIframe) {
-        console.log("YES co iframe");
         let iframeFB = document.querySelector('iframe');
         if (!!iframeFB === true && iframeFB?.contentWindow && iframeFB?.contentWindow?.document) {
-            console.log(iframeFB);
-            console.log(iframeFB.contentWindow);
-            console.log(iframeFB.contentWindow.document);
-            console.log("When iframe loaded");
-            console.log(styleText);
             if (!!iframeFB.contentWindow.document.getElementById("bMessenger") === false) {
-                console.log("Create iframe bMessenger");
                 let style = iframeFB.contentWindow.document.createElement('style');
                 style.type = 'text/css';
                 let textnode = iframeFB.contentWindow.document.createTextNode(styleText);
@@ -1498,8 +1491,6 @@ function appendCSS(styleText, hasIframe) {
                 return window.setInterval(function () {
                     try {
                         document.querySelector('iframe').onload = function () {
-                            console.log("When wait iframe load");
-                            console.log(styleText);
                             let iframeFBLoad = document.querySelector('iframe');
                             if (!!iframeFBLoad.contentWindow.document.getElementById("bMessenger") === false) {
                                 let style = iframeFBLoad.contentWindow.document.createElement('style');
@@ -1513,12 +1504,9 @@ function appendCSS(styleText, hasIframe) {
                             }
                             window.clearInterval(intervalCheckIframeLoaded);
                         };
-                        console.log("Chua load duoc iframe");
 
                         let iframeFB = document.querySelector('iframe');
-                        console.log(!!iframeFB === true, iframeFB?.contentWindow, iframeFB?.contentWindow?.document);
                         if (!!iframeFB === true && iframeFB?.contentWindow && iframeFB?.contentWindow?.document) {
-                            console.log("Da vao duoc cai nay");
                             window.clearInterval(intervalCheckIframeLoaded);
                         }
                     } catch (e) {
@@ -1531,8 +1519,6 @@ function appendCSS(styleText, hasIframe) {
 
 
     } else {
-
-        console.log("NO co iframe");
         if (!!document.getElementById("bMessenger") === false) {
             var style = document.createElement('style');
             style.type = 'text/css';
@@ -1558,10 +1544,8 @@ function main() {
 
     document.body.addEventListener('click', () => {
         requestAnimationFrame(() => {
-            console.log(url, location.href);
-
             if (url !== location.href) {
-                applyCSS() && console.log('url changed');
+                applyCSS() && console.log('Url changed, re-apply css');
             }
             url = location.href;
         });
