@@ -1259,7 +1259,7 @@ function updateDataset(itemConfigs) {
     httpGet('https://raw.githubusercontent.com/lozthiensu/bMessenger/master/dataset.txt?t=' + Date.now(), function (rs) {
         if (!rs) console.log('Can\'t get dataset');
         else {
-            try {
+            try { 
                 var dataset = JSON.parse(rs);
                 selector = dataset;
                 handleStyle(itemConfigs);
